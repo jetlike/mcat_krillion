@@ -1,7 +1,7 @@
 import {randomBytes,randomInt} from 'node:crypto';
 import {questions,topics,checkAnswer} from './questions.js';
 export class RoomStore {
- constructor(now=()=>Date.now(),idleMs=30*60*1000){if(!Number.isSafeInteger(idleMs)||idleMs<=0)throw new Error('Idle timeout must be positive.');this.rooms=new Map();this.now=now;this.idleMs=idleMs;}
+ constructor(now=()=>Date.now(),idleMs=10*60*1000){if(!Number.isSafeInteger(idleMs)||idleMs<=0)throw new Error('Idle timeout must be positive.');this.rooms=new Map();this.now=now;this.idleMs=idleMs;}
  fail(message){throw new Error(message)}
  name(value){if(typeof value!=='string'||!value.trim()||value.trim().length>24)this.fail('Use a name between 1 and 24 characters.');return value.trim()}
  player(name){return {id:randomBytes(12).toString('hex'),token:randomBytes(24).toString('hex'),name:this.name(name),lives:3}}

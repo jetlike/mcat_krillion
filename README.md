@@ -20,7 +20,7 @@ The server owns the timer, player order, answer validation, and life deductions.
 
 State updates use Server-Sent Events with HTTP POST actions. WebSockets are not required. A temporary player token in sessionStorage restores a session after reloading the original tab; click **Reconnect to my room**. Connection loss disables answering until the connection returns. Closing the tab or clearing browser storage can lose your seat; host transfer and removing players are not included. Timers continue while players are disconnected.
 
-Rooms live in server memory, expire after 30 minutes without gameplay, and vanish on server restart. No accounts, persistent leaderboards, or public matchmaking. This is a classroom pilot, not a measured production concurrency guarantee.
+Rooms live in server memory, expire after 10 minutes without gameplay, and vanish on server restart. No accounts, persistent leaderboards, or public matchmaking. This is a classroom pilot, not a measured production concurrency guarantee.
 
 ## Deploy
 
@@ -38,10 +38,10 @@ Shared-device mode and untimed practice remain available. Fonts use Google Fonts
 
 ## Idle hosting costs
 
-Enable Railway’s Serverless/App Sleeping option in the service settings if your plan supports it. The application does not turn this hosting setting on automatically. An idle room closes after 30 minutes without a successful player action or a new player joining. Automatic game timer expiration, SSE heartbeats, reading state, and reconnects do not extend that window. This applies to lobbies, paused games, reviews, and completed games too.
+Enable Railway’s Serverless/App Sleeping option in the service settings if your plan supports it. The application does not turn this hosting setting on automatically. An idle room closes after 10 minutes without a successful player action or a new player joining. Automatic game timer expiration, SSE heartbeats, reading state, and reconnects do not extend that window. This applies to lobbies, paused games, reviews, and completed games too.
 
-Connected players get a warning during the final five minutes with a **Keep room open** button; using it starts another 30-minute window. Successful game actions also refresh the window. On expiry the server removes the room, sends a terminal event, and closes every room stream. The client stops reconnecting and clears its stale session. A reconnect to a missing/expired room returns HTTP 204 so EventSource also stops retrying if the browser missed the terminal event. Closure runs on the maintenance cycle (up to 15 seconds after the deadline).
+Connected players get a warning during the final two minutes with a **Keep room open** button; using it starts another 10-minute window. Successful game actions also refresh the window. On expiry the server removes the room, sends a terminal event, and closes every room stream. The client stops reconnecting and clears its stale session. A reconnect to a missing/expired room returns HTTP 204 so EventSource also stops retrying if the browser missed the terminal event. Closure runs on the maintenance cycle (up to 15 seconds after the deadline).
 
 Once no rooms have open connections, their SSE heartbeats stop. Static pages and shared-device practice do not keep a background room connection. The app stays running until the hosting platform decides to sleep it; this change makes idle rooms stop generating traffic, but does not guarantee zero charges or a particular sleep time. Avoid external uptime monitors that continually hit the app if you want it to sleep. A first visit after sleep may take longer, and sleeping/restarting clears in-memory rooms. Keep one production replica and skip an always-on staging service to minimize pilot costs.
 
-The optional positive integer `ROOM_IDLE_TIMEOUT_MS` overrides the 30-minute timeout (in milliseconds), primarily for fast local validation. No extra environment variable is needed in production.
+The optional positive integer `ROOM_IDLE_TIMEOUT_MS` overrides the 10-minute timeout (in milliseconds), primarily for fast local validation. No extra environment variable is needed in production.

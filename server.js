@@ -1,7 +1,7 @@
 import http from 'node:http';
 import {readFile} from 'node:fs/promises';
 import {RoomStore} from './rooms.js';
-const idleMs=Number(process.env.ROOM_IDLE_TIMEOUT_MS||30*60*1000);
+const idleMs=Number(process.env.ROOM_IDLE_TIMEOUT_MS||10*60*1000);
 const store=new RoomStore(undefined,idleMs),streams=new Map(),rates=new Map();
 function send(res,status,data){res.writeHead(status,{'Content-Type':'application/json','Cache-Control':'no-store'});res.end(JSON.stringify(data))}
 function broadcast(r){const body=`data: ${JSON.stringify(store.view(r))}\n\n`;for(const res of streams.get(r.code)||[])res.write(body)}
@@ -27,7 +27,7 @@ if(url.pathname.startsWith('/api/')){
  return send(res,404,{error:'Not found'});
 }
 const name=url.pathname==='/'?'index.html':url.pathname.slice(1);if(!['index.html','style.css','app.js','online.js','questions.js'].includes(name)){res.writeHead(404);return res.end('Not found')}
-const bytes=await readFile(new URL(name,import.meta.url));res.setHeader('Content-Type',({'html':'text/html','css':'text/css','js':'text/javascript'})[name.split('.').pop()]);res.end(bytes);
+const bytes=await readFile(new URL(name,import.meta.url));res.setHeader('Cache-Control','no-cache');res.setHeader('Content-Type',({'html':'text/html','css':'text/css','js':'text/javascript'})[name.split('.').pop()]);res.end(bytes);
 }catch(e){if(!res.headersSent)send(res,400,{error:e.message});else res.end()}});
 const tick=setInterval(()=>{for(const r of store.rooms.values())if(store.expire(r))broadcast(r)},100);
 const maintenance=setInterval(()=>{
@@ -39,7 +39,7 @@ const maintenance=setInterval(()=>{
    streams.delete(code);
   }else{
    const remaining=r.lastActivity+store.idleMs-store.now();
-   if(!r.warned&&remaining<=Math.min(5*60*1000,store.idleMs/6)){
+   if(!r.warned&&remaining<=Math.min(2*60*1000,store.idleMs/5)){
     r.warned=true;
     for(const res of clients)res.write(`event: idle-warning\ndata: ${JSON.stringify({expiresAt:r.lastActivity+store.idleMs,serverNow:store.now()})}\n\n`);
    }
