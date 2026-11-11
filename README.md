@@ -14,9 +14,9 @@ Open the server on port 3000. `PORT` overrides the default. Run `npm test` for a
 
 ## Online classroom pilot
 
-Choose **Create or join a room**. A host creates a four-letter code; 2–8 players join from their own browsers using unique nicknames. The host selects syllabus-based topics, a 30–90 second round timer, and 1–3 lives (default 3).
+Choose **Create or join a room**. A host creates a four-letter code; 2–8 players join from their own browsers using unique nicknames. The host selects syllabus-based topics, a 30–90 second time bank per player per question, and 1–3 lives (default 3).
 
-The server owns the timer, player order, answer validation, and life deductions. A valid unused answer passes the flask without resetting the shared round deadline. Only the current player may answer. At expiration, the holder loses a life. The last player with lives wins. The host starts each next round, pauses/resumes discussion, and can end a round without deducting a life.
+The server owns the timer, player order, answer validation, and life deductions. Each player has a personal time bank that counts down only during their turn. A valid unused answer passes the flask and freezes that player’s remaining time; their clock resumes when the flask returns. Finding every answer automatically advances to a new question, gives the next player the flask, and refreshes everyone’s time bank. Only the current player may answer. When a player’s bank expires, that player loses a life. The last player with lives wins. After a timeout, the host starts the next question with fresh clocks, pauses/resumes discussion, and can end a round without deducting a life.
 
 State updates use Server-Sent Events with HTTP POST actions. WebSockets are not required. A temporary player token in sessionStorage restores a session after reloading the original tab; click **Reconnect to my room**. Connection loss disables answering until the connection returns. Closing the tab or clearing browser storage can lose your seat; host transfer and removing players are not included. Timers continue while players are disconnected.
 
