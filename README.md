@@ -1,6 +1,6 @@
 # Reaction Party — MCAT
 
-An extension of the original OChem recall game: solo challenge, online parties, shared-device play and untimed practice. Six MCAT subjects, 35 selectable subtopics, 48 bounded prompts and 292 canonical answers. CARS is excluded.
+An extension of the original OChem recall game: solo challenge, online parties, shared-device play and untimed practice. Six MCAT subjects, 35 selectable subtopics, 188 bounded prompts and 811 canonical answers. CARS is excluded.
 
 ## Run and verify
 
@@ -24,7 +24,7 @@ Banks show rarity, aliases, explanations, references, sorting and used markers. 
 
 ## Content and recognition
 
-`taxonomy.js` defines hierarchical multi-selection; counts use distinct prompt IDs, including cross-tags. `content/approved-prompts.json` contains the reviewed examples and additional source-referenced sets. `scripts/build-content.mjs` combines those with the 14 original prompts from `questions.js`, validates aliases and score bounds, and creates the versioned `content/catalog.json`.
+`taxonomy.js` defines hierarchical multi-selection; counts use distinct prompt IDs, including cross-tags. `content/approved-prompts.json` contains the reviewed examples and initial source-referenced sets. `content/expanded-prompts.json` adds 140 original prompts and 519 answers, giving every subtopic at least five prompts. Each new bank includes canonical labels, aliases, explanations, an explicit scope and supporting source-page references. New rarity values use labeled educational priors rather than claiming measured frequencies. `scripts/build-content.mjs` combines those with the 14 original prompts from `questions.js`, validates aliases and score bounds, and creates the versioned `content/catalog.json`.
 
 Rarity preserves the approved `0.50 A + 0.30 Y + 0.20 P` baseline. A, Y and P are explicitly labeled educational estimates, **not observed MCAT frequencies**. Ten approved examples retain their reviewed values; additional content uses conservative documented estimates. Change the catalog version when modifying a released bank. Continuous rewards are computed on the server rather than trusting the browser.
 
