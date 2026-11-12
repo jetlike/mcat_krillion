@@ -16,7 +16,7 @@ Open http://localhost:3000. `PORT` overrides the port. `npm run test:e2e` runs d
 
 ## Rules
 
-Each player has a personal time balance that runs only on their turn. A correct unused answer adds `2 + 18 × (rarity/100)^1.6` seconds and passes the flask. Correct answers and prompt changes never reset clocks. Wrong answers leave the turn and deadline running. Every correct unused answer strictly above 90 earns exactly one life, without a cap; exactly 90 earns no life. Aliases resolve to the same canonical answer and cannot be rewarded twice. The server owns deadlines, rewards, eliminations and idempotent submission receipts.
+Each player has a personal time balance that runs only on their turn. A correct unused answer adds `4 + 18 × (rarity/100)^1.6` (the previous reward plus 2) seconds and passes the flask. Correct answers and prompt changes never reset clocks. Wrong answers leave the turn and deadline running. Every correct unused answer strictly above 90 earns exactly one life, without a cap; exactly 90 earns no life. Aliases resolve to the same canonical answer and cannot be rewarded twice. The server owns deadlines, rewards, eliminations and idempotent submission receipts.
 
 Timeout costs one life. A surviving player alone gets their starting time restored, then the next player continues without forced room review. Zero-life players are eliminated. The last survivor wins; solo ends at zero lives. Each prompt lasts one turn per active player (one correct answer or a timeout), so solo advances after every correct answer. All eligible prompts are visited before recycling, with their used-answer sets intact; fully exhausted prompts are removed. Exhausting all selected answers completes the match.
 

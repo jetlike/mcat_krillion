@@ -1,7 +1,7 @@
 {
-  "version": "mcat-rarity-v2",
+  "version": "mcat-rarity-v3",
   "rarityFormula": ".50A+.30Y+.20P",
-  "timeFormula": "2+18*(R/100)^1.6",
+  "timeFormula": "4+18*(R/100)^1.6",
   "subjects": [
     {
       "id": "behavioral",
@@ -207,7 +207,7 @@
           "rarity": 10,
           "explanation": "Committed regulatory step and prominent study anchor; usually recalled early.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 2.452139557671724,
+          "timeBonus": 4.452139557671725,
           "extraLives": 0
         },
         {
@@ -223,7 +223,7 @@
           "rarity": 14,
           "explanation": "First pathway step; glucokinase is an accepted step-equivalent isoenzyme response, not a synonym.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 2.7745997673110603,
+          "timeBonus": 4.77459976731106,
           "extraLives": 0
         },
         {
@@ -238,7 +238,7 @@
           "rarity": 22.5,
           "explanation": "Memorable ATP-producing terminal step, but less immediate than PFK-1.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 3.6548724809116964,
+          "timeBonus": 5.654872480911696,
           "extraLives": 0
         },
         {
@@ -254,7 +254,7 @@
           "rarity": 30,
           "explanation": "NADH-generating step is emphasized; long name reduces spontaneous production.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 4.6222042240831005,
+          "timeBonus": 6.6222042240831005,
           "extraLives": 0
         },
         {
@@ -270,7 +270,7 @@
           "rarity": 35,
           "explanation": "Recognizable cleavage step but less salient than irreversible steps.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 5.355686463880237,
+          "timeBonus": 7.355686463880237,
           "extraLives": 0
         },
         {
@@ -288,7 +288,7 @@
           "rarity": 42.5,
           "explanation": "Standard reversible conversion; full-name recall is less automatic.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 6.578200338915207,
+          "timeBonus": 8.578200338915206,
           "extraLives": 0
         },
         {
@@ -303,7 +303,7 @@
           "rarity": 44.5,
           "explanation": "Important substrate-level ATP step: high educational yield does not guarantee quick name recall.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 6.927748366775528,
+          "timeBonus": 8.927748366775528,
           "extraLives": 0
         },
         {
@@ -316,7 +316,7 @@
           "rarity": 46,
           "explanation": "Named dehydration step, moderately emphasized but not a first-choice anchor.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 7.196190155720851,
+          "timeBonus": 9.196190155720851,
           "extraLives": 0
         },
         {
@@ -333,7 +333,7 @@
           "rarity": 47.5,
           "explanation": "Standard pathway member with lower spontaneous salience.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 7.469936447427351,
+          "timeBonus": 9.46993644742735,
           "extraLives": 0
         },
         {
@@ -350,7 +350,7 @@
           "rarity": 56,
           "explanation": "Less prominent reversible rearrangement; PGM accepted only in this glycolysis context, not glycogen context.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 9.118251827930411,
+          "timeBonus": 11.118251827930411,
           "extraLives": 0
         }
       ]
@@ -380,7 +380,7 @@
           "rarity": 12.5,
           "explanation": "Canonical benzene-containing aromatic amino acid.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 2.646142824685832,
+          "timeBonus": 4.646142824685832,
           "extraLives": 0
         },
         {
@@ -396,7 +396,7 @@
           "rarity": 15,
           "explanation": "Aromatic and polar; hydroxyl group does not remove aromaticity.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 2.865004804334937,
+          "timeBonus": 4.865004804334937,
           "extraLives": 0
         },
         {
@@ -412,7 +412,7 @@
           "rarity": 22.5,
           "explanation": "Indole-containing aromatic amino acid; slightly less immediate but core MCAT material.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 3.6548724809116964,
+          "timeBonus": 5.654872480911696,
           "extraLives": 0
         },
         {
@@ -428,7 +428,7 @@
           "rarity": 52,
           "explanation": "Chemically aromatic imidazole, usually taught under basic side chains. Very high MCAT yield but low spontaneous recall to the aromatic prompt; this is an intentionally surprising correct answer.",
           "confidence": "Scientific H; rarity L (estimated)",
-          "timeBonus": 8.32234010905384,
+          "timeBonus": 10.32234010905384,
           "extraLives": 0
         }
       ]
@@ -459,7 +459,7 @@
           "rarity": 10,
           "explanation": "Highly salient anterior-pituitary example.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 2.452139557671724,
+          "timeBonus": 4.452139557671725,
           "extraLives": 0
         },
         {
@@ -474,7 +474,7 @@
           "rarity": 15,
           "explanation": "Prominent direct hormone for lactation.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 2.865004804334937,
+          "timeBonus": 4.865004804334937,
           "extraLives": 0
         },
         {
@@ -490,7 +490,7 @@
           "rarity": 16,
           "explanation": "Core reproductive-axis hormone.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 2.959101294926958,
+          "timeBonus": 4.959101294926958,
           "extraLives": 0
         },
         {
@@ -507,7 +507,7 @@
           "rarity": 16,
           "explanation": "Core ovulation/Leydig-cell hormone; tied with FSH, not artificially separated.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 2.959101294926958,
+          "timeBonus": 4.959101294926958,
           "extraLives": 0
         },
         {
@@ -524,7 +524,7 @@
           "rarity": 22.5,
           "explanation": "Core thyroid-axis hormone but often recalled after GH/reproductive examples.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 3.6548724809116964,
+          "timeBonus": 5.654872480911696,
           "extraLives": 0
         },
         {
@@ -541,7 +541,7 @@
           "rarity": 25,
           "explanation": "Core adrenal-axis hormone; longer expanded name.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 3.9587387674162793,
+          "timeBonus": 5.958738767416279,
           "extraLives": 0
         }
       ]
@@ -570,7 +570,7 @@
           "rarity": 12.5,
           "explanation": "Classic alveolar/capillary diffusion example.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 2.646142824685832,
+          "timeBonus": 4.646142824685832,
           "extraLives": 0
         },
         {
@@ -585,7 +585,7 @@
           "rarity": 25,
           "explanation": "Well-known intestinal absorption example; same anchor score as cuboidal.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 3.9587387674162793,
+          "timeBonus": 5.958738767416279,
           "extraLives": 0
         },
         {
@@ -600,7 +600,7 @@
           "rarity": 25,
           "explanation": "Well-known renal-tubule example.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 3.9587387674162793,
+          "timeBonus": 5.958738767416279,
           "extraLives": 0
         },
         {
@@ -617,7 +617,7 @@
           "rarity": 30,
           "explanation": "Skin/mucosal protective category; the two qualified alternatives earn the same parent-category credit, not separate lives.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 4.6222042240831005,
+          "timeBonus": 6.6222042240831005,
           "extraLives": 0
         },
         {
@@ -633,7 +633,7 @@
           "rarity": 46,
           "explanation": "Familiar airway histology but less readily named than simple categories.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 7.196190155720851,
+          "timeBonus": 9.196190155720851,
           "extraLives": 0
         },
         {
@@ -650,7 +650,7 @@
           "rarity": 52,
           "explanation": "Urinary stretching specialization; moderately less salient.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 8.32234010905384,
+          "timeBonus": 10.32234010905384,
           "extraLives": 0
         },
         {
@@ -665,7 +665,7 @@
           "rarity": 84.5,
           "explanation": "Uncommon gland/duct category with limited prominence in the supplied MCAT summaries. High recall uncertainty.",
           "confidence": "Scientific H; rarity L (estimated)",
-          "timeBonus": 15.748117632634377,
+          "timeBonus": 17.748117632634376,
           "extraLives": 0
         },
         {
@@ -680,7 +680,7 @@
           "rarity": 94.1,
           "explanation": "Valid rare gland/duct category independently checked in OpenStax; exceptionally low predicted spontaneous production, but the >90 classification is unmeasured.",
           "confidence": "Scientific H; rarity L (estimated)",
-          "timeBonus": 18.331117465496188,
+          "timeBonus": 20.331117465496188,
           "extraLives": 1
         }
       ]
@@ -707,7 +707,7 @@
           "rarity": 15,
           "explanation": "Everyday label and foundational example.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 2.865004804334937,
+          "timeBonus": 4.865004804334937,
           "extraLives": 0
         },
         {
@@ -720,7 +720,7 @@
           "rarity": 20,
           "explanation": "Foundational unconscious exclusion of distressing content; distinct from suppression.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 3.370630835875432,
+          "timeBonus": 5.370630835875432,
           "extraLives": 0
         },
         {
@@ -733,7 +733,7 @@
           "rarity": 25,
           "explanation": "Commonly taught attribution of unacceptable feelings to someone else.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 3.9587387674162793,
+          "timeBonus": 5.958738767416279,
           "extraLives": 0
         },
         {
@@ -746,7 +746,7 @@
           "rarity": 32.5,
           "explanation": "Redirecting affect toward a safer target; standard vignette.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 4.980477740440863,
+          "timeBonus": 6.980477740440863,
           "extraLives": 0
         },
         {
@@ -761,7 +761,7 @@
           "rarity": 32.5,
           "explanation": "Self-protective explanation for behavior; standard vignette, tied with two equally salient examples.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 4.980477740440863,
+          "timeBonus": 6.980477740440863,
           "extraLives": 0
         },
         {
@@ -774,7 +774,7 @@
           "rarity": 32.5,
           "explanation": "Channeling impulses into socially acceptable activity is a standard mature-defense example.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 4.980477740440863,
+          "timeBonus": 6.980477740440863,
           "extraLives": 0
         },
         {
@@ -787,7 +787,7 @@
           "rarity": 40,
           "explanation": "Return to an earlier behavioral pattern under stress.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 6.154975729012775,
+          "timeBonus": 8.154975729012776,
           "extraLives": 0
         },
         {
@@ -800,7 +800,7 @@
           "rarity": 42.5,
           "explanation": "Expressing the opposite of an unacceptable impulse; needs a clear definition.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 6.578200338915207,
+          "timeBonus": 8.578200338915206,
           "extraLives": 0
         },
         {
@@ -815,7 +815,7 @@
           "rarity": 48.5,
           "explanation": "Focusing on abstraction to distance affect; not automatically the same as isolation of affect.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 7.655347382936585,
+          "timeBonus": 9.655347382936585,
           "extraLives": 0
         },
         {
@@ -828,7 +828,7 @@
           "rarity": 55,
           "explanation": "Conscious setting aside, often confused with repression. Lower spontaneous recall despite clear distinction.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 8.915965343084977,
+          "timeBonus": 10.915965343084977,
           "extraLives": 0
         },
         {
@@ -843,7 +843,7 @@
           "rarity": 73.5,
           "explanation": "A defense-function use of humor, not every joke; less obvious as a technical category.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 12.998469318645267,
+          "timeBonus": 14.998469318645267,
           "extraLives": 0
         },
         {
@@ -856,7 +856,7 @@
           "rarity": 75,
           "explanation": "Service to others can function as a mature defense; the prompt-specific role matters, not every helping act.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 13.35979584764277,
+          "timeBonus": 15.35979584764277,
           "extraLives": 0
         },
         {
@@ -873,7 +873,7 @@
           "rarity": 80,
           "explanation": "Indirect expression of hostility; less often first produced as a defense label.",
           "confidence": "Scientific H; rarity L (estimated)",
-          "timeBonus": 14.595531091826565,
+          "timeBonus": 16.595531091826565,
           "extraLives": 0
         },
         {
@@ -886,7 +886,7 @@
           "rarity": 94.9,
           "explanation": "More specialized interpersonal defense involving projection and the other person being induced to experience/embody projected material. Not an alias of projection; supplied notes p.155 explicitly discuss it.",
           "confidence": "Scientific M; rarity L (estimated)",
-          "timeBonus": 18.55382825044972,
+          "timeBonus": 20.55382825044972,
           "extraLives": 1
         }
       ]
@@ -915,7 +915,7 @@
           "rarity": 15,
           "explanation": "Most familiar complete-the-missing-shape example.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 2.865004804334937,
+          "timeBonus": 4.865004804334937,
           "extraLives": 0
         },
         {
@@ -930,7 +930,7 @@
           "rarity": 17.5,
           "explanation": "Core spatial grouping example.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 3.106963708790873,
+          "timeBonus": 5.1069637087908735,
           "extraLives": 0
         },
         {
@@ -945,7 +945,7 @@
           "rarity": 17.5,
           "explanation": "Core feature-based grouping example; tied with proximity.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 3.106963708790873,
+          "timeBonus": 5.1069637087908735,
           "extraLives": 0
         },
         {
@@ -962,7 +962,7 @@
           "rarity": 22.5,
           "explanation": "Separating object from background is a standard perceptual-organization example.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 3.6548724809116964,
+          "timeBonus": 5.654872480911696,
           "extraLives": 0
         },
         {
@@ -979,7 +979,7 @@
           "rarity": 30,
           "explanation": "Preferring smooth continuous contours.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 4.6222042240831005,
+          "timeBonus": 6.6222042240831005,
           "extraLives": 0
         },
         {
@@ -994,7 +994,7 @@
           "rarity": 63.5,
           "explanation": "Grouping by shared movement; less prominent than static grouping cues.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 10.7038313149765,
+          "timeBonus": 12.7038313149765,
           "extraLives": 0
         },
         {
@@ -1009,7 +1009,7 @@
           "rarity": 75,
           "explanation": "Grouping symmetric forms; secondary prominence in the supplied notes.",
           "confidence": "Scientific H; rarity L (estimated)",
-          "timeBonus": 13.35979584764277,
+          "timeBonus": 15.35979584764277,
           "extraLives": 0
         },
         {
@@ -1029,7 +1029,7 @@
           "rarity": 77.5,
           "explanation": "Good/simple organization; unfamiliar terminology adds recall difficulty without making this an invented >90 answer.",
           "confidence": "Scientific H; rarity L (estimated)",
-          "timeBonus": 13.971683566259715,
+          "timeBonus": 15.971683566259715,
           "extraLives": 0
         }
       ]
@@ -1060,7 +1060,7 @@
           "rarity": 12.5,
           "explanation": "Highly familiar biomolecular interaction.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 2.646142824685832,
+          "timeBonus": 4.646142824685832,
           "extraLives": 0
         },
         {
@@ -1079,7 +1079,7 @@
           "rarity": 20,
           "explanation": "Standard universal attraction, with many names for the same category.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 3.370630835875432,
+          "timeBonus": 5.370630835875432,
           "extraLives": 0
         },
         {
@@ -1097,7 +1097,7 @@
           "rarity": 22.5,
           "explanation": "Standard attraction between permanent dipoles. Do not accept bare van der Waals as a unique synonym: it can cover multiple categories.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 3.6548724809116964,
+          "timeBonus": 5.654872480911696,
           "extraLives": 0
         }
       ]
@@ -1127,7 +1127,7 @@
           "rarity": 17.5,
           "explanation": "Prominent oxygen-linked acyl derivative; a lactone is a cyclic ester, not a second family.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 3.106963708790873,
+          "timeBonus": 5.1069637087908735,
           "extraLives": 0
         },
         {
@@ -1143,7 +1143,7 @@
           "rarity": 20,
           "explanation": "Prominent peptide-related acyl derivative; lactams count within this family.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 3.370630835875432,
+          "timeBonus": 5.370630835875432,
           "extraLives": 0
         },
         {
@@ -1160,7 +1160,7 @@
           "rarity": 43.5,
           "explanation": "Named acyl derivative, less immediate than ester/amide; mixed anhydride cases need context.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 6.751768959605048,
+          "timeBonus": 8.751768959605048,
           "extraLives": 0
         },
         {
@@ -1176,7 +1176,7 @@
           "rarity": 53,
           "explanation": "Important in acetyl-CoA biochemistry yet less likely to be volunteered to an organic derivative prompt.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 8.517993101243233,
+          "timeBonus": 10.517993101243233,
           "extraLives": 0
         },
         {
@@ -1193,7 +1193,7 @@
           "rarity": 55,
           "explanation": "Common in broader OChem but less emphasized in the MCAT-specific derivative chapters. The weighted formula can rank it rarer than thioesters despite easier recall—a model concern.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 8.915965343084977,
+          "timeBonus": 10.915965343084977,
           "extraLives": 0
         }
       ]
@@ -1222,7 +1222,7 @@
           "rarity": 12.5,
           "explanation": "Zero equivalent coupling neighbors, one line.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 2.646142824685832,
+          "timeBonus": 4.646142824685832,
           "extraLives": 0
         },
         {
@@ -1237,7 +1237,7 @@
           "rarity": 15,
           "explanation": "One equivalent neighbor, two lines.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 2.865004804334937,
+          "timeBonus": 4.865004804334937,
           "extraLives": 0
         },
         {
@@ -1252,7 +1252,7 @@
           "rarity": 17.5,
           "explanation": "Two equivalent neighbors, three lines.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 3.106963708790873,
+          "timeBonus": 5.1069637087908735,
           "extraLives": 0
         },
         {
@@ -1267,7 +1267,7 @@
           "rarity": 27.5,
           "explanation": "Three equivalent neighbors, four lines.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 4.28141774520795,
+          "timeBonus": 6.28141774520795,
           "extraLives": 0
         },
         {
@@ -1282,7 +1282,7 @@
           "rarity": 61,
           "explanation": "Six equivalent neighbors, seven lines. Isopropyl examples make it more salient than a generic sextet despite higher n.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 10.16206861013303,
+          "timeBonus": 12.16206861013303,
           "extraLives": 0
         },
         {
@@ -1297,7 +1297,7 @@
           "rarity": 62.5,
           "explanation": "Four equivalent neighbors, five lines; less routinely named.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 10.485560473266634,
+          "timeBonus": 12.485560473266634,
           "extraLives": 0
         },
         {
@@ -1310,7 +1310,7 @@
           "rarity": 72.5,
           "explanation": "Five equivalent neighbors, six lines; textbook pattern less often encountered.",
           "confidence": "Scientific H; rarity L (estimated)",
-          "timeBonus": 12.7600258730815,
+          "timeBonus": 14.7600258730815,
           "extraLives": 0
         }
       ]
@@ -1340,7 +1340,7 @@
           "rarity": 15,
           "explanation": "Most immediately familiar band.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 2.865004804334937,
+          "timeBonus": 4.865004804334937,
           "extraLives": 0
         },
         {
@@ -1357,7 +1357,7 @@
           "rarity": 17.5,
           "explanation": "Highly familiar IR/spectroscopy context; tied with UV.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 3.106963708790873,
+          "timeBonus": 5.1069637087908735,
           "extraLives": 0
         },
         {
@@ -1374,7 +1374,7 @@
           "rarity": 17.5,
           "explanation": "Highly familiar UV/biomolecule context.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 3.106963708790873,
+          "timeBonus": 5.1069637087908735,
           "extraLives": 0
         },
         {
@@ -1391,7 +1391,7 @@
           "rarity": 27.5,
           "explanation": "Core broad band, relevant to NMR, sometimes recalled after visible/IR/UV.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 4.28141774520795,
+          "timeBonus": 6.28141774520795,
           "extraLives": 0
         },
         {
@@ -1408,7 +1408,7 @@
           "rarity": 30,
           "explanation": "Common diagnostic high-energy band.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 4.6222042240831005,
+          "timeBonus": 6.6222042240831005,
           "extraLives": 0
         },
         {
@@ -1425,7 +1425,7 @@
           "rarity": 35,
           "explanation": "Recognizable high-energy endpoint.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 5.355686463880237,
+          "timeBonus": 7.355686463880237,
           "extraLives": 0
         },
         {
@@ -1441,7 +1441,7 @@
           "rarity": 48.5,
           "explanation": "Often omitted from a quick list despite familiarity.",
           "confidence": "Scientific H; rarity M (estimated)",
-          "timeBonus": 7.655347382936585,
+          "timeBonus": 9.655347382936585,
           "extraLives": 0
         }
       ]
@@ -1470,7 +1470,7 @@
           "rarity": 23.5,
           "explanation": "These transmit neural signals; their effects depend on receptor and circuit. This finite review set excludes peptide transmitters.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 3.774112209524057,
+          "timeBonus": 5.774112209524057,
           "extraLives": 0
         },
         {
@@ -1485,7 +1485,7 @@
           "rarity": 26,
           "explanation": "These transmit neural signals; their effects depend on receptor and circuit. This finite review set excludes peptide transmitters.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.085594447123326,
+          "timeBonus": 6.085594447123326,
           "extraLives": 0
         },
         {
@@ -1501,7 +1501,7 @@
           "rarity": 28.5,
           "explanation": "These transmit neural signals; their effects depend on receptor and circuit. This finite review set excludes peptide transmitters.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.415595885036096,
+          "timeBonus": 6.415595885036096,
           "extraLives": 0
         },
         {
@@ -1516,7 +1516,7 @@
           "rarity": 31,
           "explanation": "These transmit neural signals; their effects depend on receptor and circuit. This finite review set excludes peptide transmitters.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.763447480735012,
+          "timeBonus": 6.763447480735012,
           "extraLives": 0
         },
         {
@@ -1531,7 +1531,7 @@
           "rarity": 33.5,
           "explanation": "These transmit neural signals; their effects depend on receptor and circuit. This finite review set excludes peptide transmitters.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 5.128557896520958,
+          "timeBonus": 7.128557896520958,
           "extraLives": 0
         },
         {
@@ -1546,7 +1546,7 @@
           "rarity": 36,
           "explanation": "These transmit neural signals; their effects depend on receptor and circuit. This finite review set excludes peptide transmitters.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 5.510399195227624,
+          "timeBonus": 7.510399195227624,
           "extraLives": 0
         },
         {
@@ -1561,7 +1561,7 @@
           "rarity": 38.5,
           "explanation": "These transmit neural signals; their effects depend on receptor and circuit. This finite review set excludes peptide transmitters.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 5.908496004369664,
+          "timeBonus": 7.908496004369664,
           "extraLives": 0
         },
         {
@@ -1574,7 +1574,7 @@
           "rarity": 41,
           "explanation": "These transmit neural signals; their effects depend on receptor and circuit. This finite review set excludes peptide transmitters.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 6.32241713184211,
+          "timeBonus": 8.32241713184211,
           "extraLives": 0
         }
       ]
@@ -1603,7 +1603,7 @@
           "rarity": 23.5,
           "explanation": "Ratio counts responses; interval counts time. Fixed is predictable; variable varies. Continuous reinforcement is outside this intermittent set.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 3.774112209524057,
+          "timeBonus": 5.774112209524057,
           "extraLives": 0
         },
         {
@@ -1618,7 +1618,7 @@
           "rarity": 26,
           "explanation": "Ratio counts responses; interval counts time. Fixed is predictable; variable varies. Continuous reinforcement is outside this intermittent set.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.085594447123326,
+          "timeBonus": 6.085594447123326,
           "extraLives": 0
         },
         {
@@ -1633,7 +1633,7 @@
           "rarity": 28.5,
           "explanation": "Ratio counts responses; interval counts time. Fixed is predictable; variable varies. Continuous reinforcement is outside this intermittent set.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.415595885036096,
+          "timeBonus": 6.415595885036096,
           "extraLives": 0
         },
         {
@@ -1648,7 +1648,7 @@
           "rarity": 31,
           "explanation": "Ratio counts responses; interval counts time. Fixed is predictable; variable varies. Continuous reinforcement is outside this intermittent set.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.763447480735012,
+          "timeBonus": 6.763447480735012,
           "extraLives": 0
         }
       ]
@@ -1677,7 +1677,7 @@
           "rarity": 23.5,
           "explanation": "These are the conventional four cluster B diagnoses. Names are for educational classification, not diagnosing oneself or others.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 3.774112209524057,
+          "timeBonus": 5.774112209524057,
           "extraLives": 0
         },
         {
@@ -1692,7 +1692,7 @@
           "rarity": 26,
           "explanation": "These are the conventional four cluster B diagnoses. Names are for educational classification, not diagnosing oneself or others.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.085594447123326,
+          "timeBonus": 6.085594447123326,
           "extraLives": 0
         },
         {
@@ -1707,7 +1707,7 @@
           "rarity": 28.5,
           "explanation": "These are the conventional four cluster B diagnoses. Names are for educational classification, not diagnosing oneself or others.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.415595885036096,
+          "timeBonus": 6.415595885036096,
           "extraLives": 0
         },
         {
@@ -1722,7 +1722,7 @@
           "rarity": 31,
           "explanation": "These are the conventional four cluster B diagnoses. Names are for educational classification, not diagnosing oneself or others.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.763447480735012,
+          "timeBonus": 6.763447480735012,
           "extraLives": 0
         }
       ]
@@ -1751,7 +1751,7 @@
           "rarity": 23.5,
           "explanation": "These are theoretical lenses with different assumptions and levels of analysis, not interchangeable synonyms. Additional valid perspectives may be suggested.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 3.774112209524057,
+          "timeBonus": 5.774112209524057,
           "extraLives": 0
         },
         {
@@ -1766,7 +1766,7 @@
           "rarity": 26,
           "explanation": "These are theoretical lenses with different assumptions and levels of analysis, not interchangeable synonyms. Additional valid perspectives may be suggested.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.085594447123326,
+          "timeBonus": 6.085594447123326,
           "extraLives": 0
         },
         {
@@ -1779,7 +1779,7 @@
           "rarity": 28.5,
           "explanation": "These are theoretical lenses with different assumptions and levels of analysis, not interchangeable synonyms. Additional valid perspectives may be suggested.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.415595885036096,
+          "timeBonus": 6.415595885036096,
           "extraLives": 0
         },
         {
@@ -1792,7 +1792,7 @@
           "rarity": 31,
           "explanation": "These are theoretical lenses with different assumptions and levels of analysis, not interchangeable synonyms. Additional valid perspectives may be suggested.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.763447480735012,
+          "timeBonus": 6.763447480735012,
           "extraLives": 0
         },
         {
@@ -1807,7 +1807,7 @@
           "rarity": 33.5,
           "explanation": "These are theoretical lenses with different assumptions and levels of analysis, not interchangeable synonyms. Additional valid perspectives may be suggested.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 5.128557896520958,
+          "timeBonus": 7.128557896520958,
           "extraLives": 0
         },
         {
@@ -1820,7 +1820,7 @@
           "rarity": 36,
           "explanation": "These are theoretical lenses with different assumptions and levels of analysis, not interchangeable synonyms. Additional valid perspectives may be suggested.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 5.510399195227624,
+          "timeBonus": 7.510399195227624,
           "extraLives": 0
         },
         {
@@ -1835,7 +1835,7 @@
           "rarity": 38.5,
           "explanation": "These are theoretical lenses with different assumptions and levels of analysis, not interchangeable synonyms. Additional valid perspectives may be suggested.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 5.908496004369664,
+          "timeBonus": 7.908496004369664,
           "extraLives": 0
         }
       ]
@@ -1864,7 +1864,7 @@
           "rarity": 23.5,
           "explanation": "Classifications vary. This question explicitly uses five categories; instrumental/tangible are one answer.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 3.774112209524057,
+          "timeBonus": 5.774112209524057,
           "extraLives": 0
         },
         {
@@ -1879,7 +1879,7 @@
           "rarity": 26,
           "explanation": "Classifications vary. This question explicitly uses five categories; instrumental/tangible are one answer.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.085594447123326,
+          "timeBonus": 6.085594447123326,
           "extraLives": 0
         },
         {
@@ -1894,7 +1894,7 @@
           "rarity": 28.5,
           "explanation": "Classifications vary. This question explicitly uses five categories; instrumental/tangible are one answer.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.415595885036096,
+          "timeBonus": 6.415595885036096,
           "extraLives": 0
         },
         {
@@ -1911,7 +1911,7 @@
           "rarity": 31,
           "explanation": "Classifications vary. This question explicitly uses five categories; instrumental/tangible are one answer.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.763447480735012,
+          "timeBonus": 6.763447480735012,
           "extraLives": 0
         },
         {
@@ -1927,7 +1927,7 @@
           "rarity": 33.5,
           "explanation": "Classifications vary. This question explicitly uses five categories; instrumental/tangible are one answer.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 5.128557896520958,
+          "timeBonus": 7.128557896520958,
           "extraLives": 0
         }
       ]
@@ -1954,7 +1954,7 @@
           "rarity": 23.5,
           "explanation": "Institutions organize persistent social roles and practices. This is a starter set, not a claim that no other institution exists.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 3.774112209524057,
+          "timeBonus": 5.774112209524057,
           "extraLives": 0
         },
         {
@@ -1967,7 +1967,7 @@
           "rarity": 26,
           "explanation": "Institutions organize persistent social roles and practices. This is a starter set, not a claim that no other institution exists.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.085594447123326,
+          "timeBonus": 6.085594447123326,
           "extraLives": 0
         },
         {
@@ -1980,7 +1980,7 @@
           "rarity": 28.5,
           "explanation": "Institutions organize persistent social roles and practices. This is a starter set, not a claim that no other institution exists.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.415595885036096,
+          "timeBonus": 6.415595885036096,
           "extraLives": 0
         },
         {
@@ -1995,7 +1995,7 @@
           "rarity": 31,
           "explanation": "Institutions organize persistent social roles and practices. This is a starter set, not a claim that no other institution exists.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.763447480735012,
+          "timeBonus": 6.763447480735012,
           "extraLives": 0
         },
         {
@@ -2010,7 +2010,7 @@
           "rarity": 33.5,
           "explanation": "Institutions organize persistent social roles and practices. This is a starter set, not a claim that no other institution exists.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 5.128557896520958,
+          "timeBonus": 7.128557896520958,
           "extraLives": 0
         },
         {
@@ -2026,7 +2026,7 @@
           "rarity": 36,
           "explanation": "Institutions organize persistent social roles and practices. This is a starter set, not a claim that no other institution exists.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 5.510399195227624,
+          "timeBonus": 7.510399195227624,
           "extraLives": 0
         }
       ]
@@ -2055,7 +2055,7 @@
           "rarity": 23.5,
           "explanation": "Traditional prep sources list six; modern EC classification adds translocases. Classes describe reaction types.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 3.774112209524057,
+          "timeBonus": 5.774112209524057,
           "extraLives": 0
         },
         {
@@ -2070,7 +2070,7 @@
           "rarity": 26,
           "explanation": "Traditional prep sources list six; modern EC classification adds translocases. Classes describe reaction types.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.085594447123326,
+          "timeBonus": 6.085594447123326,
           "extraLives": 0
         },
         {
@@ -2085,7 +2085,7 @@
           "rarity": 28.5,
           "explanation": "Traditional prep sources list six; modern EC classification adds translocases. Classes describe reaction types.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.415595885036096,
+          "timeBonus": 6.415595885036096,
           "extraLives": 0
         },
         {
@@ -2100,7 +2100,7 @@
           "rarity": 31,
           "explanation": "Traditional prep sources list six; modern EC classification adds translocases. Classes describe reaction types.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.763447480735012,
+          "timeBonus": 6.763447480735012,
           "extraLives": 0
         },
         {
@@ -2115,7 +2115,7 @@
           "rarity": 33.5,
           "explanation": "Traditional prep sources list six; modern EC classification adds translocases. Classes describe reaction types.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 5.128557896520958,
+          "timeBonus": 7.128557896520958,
           "extraLives": 0
         },
         {
@@ -2130,7 +2130,7 @@
           "rarity": 36,
           "explanation": "Traditional prep sources list six; modern EC classification adds translocases. Classes describe reaction types.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 5.510399195227624,
+          "timeBonus": 7.510399195227624,
           "extraLives": 0
         },
         {
@@ -2145,7 +2145,7 @@
           "rarity": 38.5,
           "explanation": "Traditional prep sources list six; modern EC classification adds translocases. Classes describe reaction types.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 5.908496004369664,
+          "timeBonus": 7.908496004369664,
           "extraLives": 0
         }
       ]
@@ -2174,7 +2174,7 @@
           "rarity": 23.5,
           "explanation": "A/G are purines; C/T/U are pyrimidines. Adenosine is a nucleoside, not an alias for adenine.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 3.774112209524057,
+          "timeBonus": 5.774112209524057,
           "extraLives": 0
         },
         {
@@ -2189,7 +2189,7 @@
           "rarity": 26,
           "explanation": "A/G are purines; C/T/U are pyrimidines. Adenosine is a nucleoside, not an alias for adenine.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.085594447123326,
+          "timeBonus": 6.085594447123326,
           "extraLives": 0
         },
         {
@@ -2204,7 +2204,7 @@
           "rarity": 28.5,
           "explanation": "A/G are purines; C/T/U are pyrimidines. Adenosine is a nucleoside, not an alias for adenine.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.415595885036096,
+          "timeBonus": 6.415595885036096,
           "extraLives": 0
         },
         {
@@ -2219,7 +2219,7 @@
           "rarity": 31,
           "explanation": "A/G are purines; C/T/U are pyrimidines. Adenosine is a nucleoside, not an alias for adenine.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.763447480735012,
+          "timeBonus": 6.763447480735012,
           "extraLives": 0
         },
         {
@@ -2234,7 +2234,7 @@
           "rarity": 33.5,
           "explanation": "A/G are purines; C/T/U are pyrimidines. Adenosine is a nucleoside, not an alias for adenine.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 5.128557896520958,
+          "timeBonus": 7.128557896520958,
           "extraLives": 0
         }
       ]
@@ -2263,7 +2263,7 @@
           "rarity": 23.5,
           "explanation": "Methods exploit size, charge, pI or specific binding. Native and SDS-PAGE are distinct because denaturation and charge treatment differ.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 3.774112209524057,
+          "timeBonus": 5.774112209524057,
           "extraLives": 0
         },
         {
@@ -2278,7 +2278,7 @@
           "rarity": 26,
           "explanation": "Methods exploit size, charge, pI or specific binding. Native and SDS-PAGE are distinct because denaturation and charge treatment differ.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.085594447123326,
+          "timeBonus": 6.085594447123326,
           "extraLives": 0
         },
         {
@@ -2293,7 +2293,7 @@
           "rarity": 28.5,
           "explanation": "Methods exploit size, charge, pI or specific binding. Native and SDS-PAGE are distinct because denaturation and charge treatment differ.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.415595885036096,
+          "timeBonus": 6.415595885036096,
           "extraLives": 0
         },
         {
@@ -2308,7 +2308,7 @@
           "rarity": 31,
           "explanation": "Methods exploit size, charge, pI or specific binding. Native and SDS-PAGE are distinct because denaturation and charge treatment differ.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.763447480735012,
+          "timeBonus": 6.763447480735012,
           "extraLives": 0
         },
         {
@@ -2324,7 +2324,7 @@
           "rarity": 33.5,
           "explanation": "Methods exploit size, charge, pI or specific binding. Native and SDS-PAGE are distinct because denaturation and charge treatment differ.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 5.128557896520958,
+          "timeBonus": 7.128557896520958,
           "extraLives": 0
         },
         {
@@ -2337,7 +2337,7 @@
           "rarity": 36,
           "explanation": "Methods exploit size, charge, pI or specific binding. Native and SDS-PAGE are distinct because denaturation and charge treatment differ.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 5.510399195227624,
+          "timeBonus": 7.510399195227624,
           "extraLives": 0
         }
       ]
@@ -2368,7 +2368,7 @@
           "rarity": 23.5,
           "explanation": "Processing usually adds a 5′ cap, removes introns and adds a poly(A) tail. Histone mRNAs illustrate exceptions; this asks for standard steps, not universality.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 3.774112209524057,
+          "timeBonus": 5.774112209524057,
           "extraLives": 0
         },
         {
@@ -2384,7 +2384,7 @@
           "rarity": 26,
           "explanation": "Processing usually adds a 5′ cap, removes introns and adds a poly(A) tail. Histone mRNAs illustrate exceptions; this asks for standard steps, not universality.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.085594447123326,
+          "timeBonus": 6.085594447123326,
           "extraLives": 0
         },
         {
@@ -2400,7 +2400,7 @@
           "rarity": 28.5,
           "explanation": "Processing usually adds a 5′ cap, removes introns and adds a poly(A) tail. Histone mRNAs illustrate exceptions; this asks for standard steps, not universality.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.415595885036096,
+          "timeBonus": 6.415595885036096,
           "extraLives": 0
         }
       ]
@@ -2430,7 +2430,7 @@
           "rarity": 23.5,
           "explanation": "Southern detects DNA, Northern RNA, and Western protein. Other named methods are outside this explicit three-method set.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 3.774112209524057,
+          "timeBonus": 5.774112209524057,
           "extraLives": 0
         },
         {
@@ -2446,7 +2446,7 @@
           "rarity": 26,
           "explanation": "Southern detects DNA, Northern RNA, and Western protein. Other named methods are outside this explicit three-method set.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.085594447123326,
+          "timeBonus": 6.085594447123326,
           "extraLives": 0
         },
         {
@@ -2463,7 +2463,7 @@
           "rarity": 28.5,
           "explanation": "Southern detects DNA, Northern RNA, and Western protein. Other named methods are outside this explicit three-method set.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.415595885036096,
+          "timeBonus": 6.415595885036096,
           "extraLives": 0
         }
       ]
@@ -2490,7 +2490,7 @@
           "rarity": 23.5,
           "explanation": "The ideal model excludes forces that change allele frequencies. A very large population approximates negligible drift; random sampling and random mating are distinct.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 3.774112209524057,
+          "timeBonus": 5.774112209524057,
           "extraLives": 0
         },
         {
@@ -2505,7 +2505,7 @@
           "rarity": 26,
           "explanation": "The ideal model excludes forces that change allele frequencies. A very large population approximates negligible drift; random sampling and random mating are distinct.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.085594447123326,
+          "timeBonus": 6.085594447123326,
           "extraLives": 0
         },
         {
@@ -2521,7 +2521,7 @@
           "rarity": 28.5,
           "explanation": "The ideal model excludes forces that change allele frequencies. A very large population approximates negligible drift; random sampling and random mating are distinct.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.415595885036096,
+          "timeBonus": 6.415595885036096,
           "extraLives": 0
         },
         {
@@ -2536,7 +2536,7 @@
           "rarity": 31,
           "explanation": "The ideal model excludes forces that change allele frequencies. A very large population approximates negligible drift; random sampling and random mating are distinct.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.763447480735012,
+          "timeBonus": 6.763447480735012,
           "extraLives": 0
         },
         {
@@ -2553,7 +2553,7 @@
           "rarity": 33.5,
           "explanation": "The ideal model excludes forces that change allele frequencies. A very large population approximates negligible drift; random sampling and random mating are distinct.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 5.128557896520958,
+          "timeBonus": 7.128557896520958,
           "extraLives": 0
         }
       ]
@@ -2582,7 +2582,7 @@
           "rarity": 23.5,
           "explanation": "DNA replication occurs in S. G0 is quiescence. Individual mitotic stages are not additional cell-cycle phases for this question.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 3.774112209524057,
+          "timeBonus": 5.774112209524057,
           "extraLives": 0
         },
         {
@@ -2598,7 +2598,7 @@
           "rarity": 26,
           "explanation": "DNA replication occurs in S. G0 is quiescence. Individual mitotic stages are not additional cell-cycle phases for this question.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.085594447123326,
+          "timeBonus": 6.085594447123326,
           "extraLives": 0
         },
         {
@@ -2613,7 +2613,7 @@
           "rarity": 28.5,
           "explanation": "DNA replication occurs in S. G0 is quiescence. Individual mitotic stages are not additional cell-cycle phases for this question.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.415595885036096,
+          "timeBonus": 6.415595885036096,
           "extraLives": 0
         },
         {
@@ -2629,7 +2629,7 @@
           "rarity": 31,
           "explanation": "DNA replication occurs in S. G0 is quiescence. Individual mitotic stages are not additional cell-cycle phases for this question.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.763447480735012,
+          "timeBonus": 6.763447480735012,
           "extraLives": 0
         },
         {
@@ -2645,7 +2645,7 @@
           "rarity": 33.5,
           "explanation": "DNA replication occurs in S. G0 is quiescence. Individual mitotic stages are not additional cell-cycle phases for this question.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 5.128557896520958,
+          "timeBonus": 7.128557896520958,
           "extraLives": 0
         }
       ]
@@ -2674,7 +2674,7 @@
           "rarity": 23.5,
           "explanation": "Tricuspid/mitral are AV valves; pulmonary/aortic are semilunar valves.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 3.774112209524057,
+          "timeBonus": 5.774112209524057,
           "extraLives": 0
         },
         {
@@ -2690,7 +2690,7 @@
           "rarity": 26,
           "explanation": "Tricuspid/mitral are AV valves; pulmonary/aortic are semilunar valves.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.085594447123326,
+          "timeBonus": 6.085594447123326,
           "extraLives": 0
         },
         {
@@ -2706,7 +2706,7 @@
           "rarity": 28.5,
           "explanation": "Tricuspid/mitral are AV valves; pulmonary/aortic are semilunar valves.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.415595885036096,
+          "timeBonus": 6.415595885036096,
           "extraLives": 0
         },
         {
@@ -2721,7 +2721,7 @@
           "rarity": 31,
           "explanation": "Tricuspid/mitral are AV valves; pulmonary/aortic are semilunar valves.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.763447480735012,
+          "timeBonus": 6.763447480735012,
           "extraLives": 0
         }
       ]
@@ -2748,7 +2748,7 @@
           "rarity": 23.5,
           "explanation": "The order is duodenum, jejunum, ileum. Ileum is not ilium, a pelvic bone.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 3.774112209524057,
+          "timeBonus": 5.774112209524057,
           "extraLives": 0
         },
         {
@@ -2761,7 +2761,7 @@
           "rarity": 26,
           "explanation": "The order is duodenum, jejunum, ileum. Ileum is not ilium, a pelvic bone.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.085594447123326,
+          "timeBonus": 6.085594447123326,
           "extraLives": 0
         },
         {
@@ -2774,7 +2774,7 @@
           "rarity": 28.5,
           "explanation": "The order is duodenum, jejunum, ileum. Ileum is not ilium, a pelvic bone.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.415595885036096,
+          "timeBonus": 6.415595885036096,
           "extraLives": 0
         }
       ]
@@ -2803,7 +2803,7 @@
           "rarity": 23.5,
           "explanation": "Skeletal/cardiac muscle are striated. Smooth muscle lacks striations. Innervation, nuclei and control also differ.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 3.774112209524057,
+          "timeBonus": 5.774112209524057,
           "extraLives": 0
         },
         {
@@ -2818,7 +2818,7 @@
           "rarity": 26,
           "explanation": "Skeletal/cardiac muscle are striated. Smooth muscle lacks striations. Innervation, nuclei and control also differ.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.085594447123326,
+          "timeBonus": 6.085594447123326,
           "extraLives": 0
         },
         {
@@ -2833,7 +2833,7 @@
           "rarity": 28.5,
           "explanation": "Skeletal/cardiac muscle are striated. Smooth muscle lacks striations. Innervation, nuclei and control also differ.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.415595885036096,
+          "timeBonus": 6.415595885036096,
           "extraLives": 0
         }
       ]
@@ -2862,7 +2862,7 @@
           "rarity": 23.5,
           "explanation": "Isotypes differ in constant heavy-chain regions and biological roles; subclasses are not separate answers.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 3.774112209524057,
+          "timeBonus": 5.774112209524057,
           "extraLives": 0
         },
         {
@@ -2877,7 +2877,7 @@
           "rarity": 26,
           "explanation": "Isotypes differ in constant heavy-chain regions and biological roles; subclasses are not separate answers.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.085594447123326,
+          "timeBonus": 6.085594447123326,
           "extraLives": 0
         },
         {
@@ -2892,7 +2892,7 @@
           "rarity": 28.5,
           "explanation": "Isotypes differ in constant heavy-chain regions and biological roles; subclasses are not separate answers.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.415595885036096,
+          "timeBonus": 6.415595885036096,
           "extraLives": 0
         },
         {
@@ -2907,7 +2907,7 @@
           "rarity": 31,
           "explanation": "Isotypes differ in constant heavy-chain regions and biological roles; subclasses are not separate answers.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.763447480735012,
+          "timeBonus": 6.763447480735012,
           "extraLives": 0
         },
         {
@@ -2922,7 +2922,7 @@
           "rarity": 33.5,
           "explanation": "Isotypes differ in constant heavy-chain regions and biological roles; subclasses are not separate answers.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 5.128557896520958,
+          "timeBonus": 7.128557896520958,
           "extraLives": 0
         }
       ]
@@ -2951,7 +2951,7 @@
           "rarity": 23.5,
           "explanation": "These specify shell, subshell, orbital orientation and spin projection. Quantum numbers are not literal electron paths.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 3.774112209524057,
+          "timeBonus": 5.774112209524057,
           "extraLives": 0
         },
         {
@@ -2968,7 +2968,7 @@
           "rarity": 26,
           "explanation": "These specify shell, subshell, orbital orientation and spin projection. Quantum numbers are not literal electron paths.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.085594447123326,
+          "timeBonus": 6.085594447123326,
           "extraLives": 0
         },
         {
@@ -2984,7 +2984,7 @@
           "rarity": 28.5,
           "explanation": "These specify shell, subshell, orbital orientation and spin projection. Quantum numbers are not literal electron paths.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.415595885036096,
+          "timeBonus": 6.415595885036096,
           "extraLives": 0
         },
         {
@@ -3000,7 +3000,7 @@
           "rarity": 31,
           "explanation": "These specify shell, subshell, orbital orientation and spin projection. Quantum numbers are not literal electron paths.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.763447480735012,
+          "timeBonus": 6.763447480735012,
           "extraLives": 0
         }
       ]
@@ -3029,7 +3029,7 @@
           "rarity": 23.5,
           "explanation": "Isothermal: constant T; isobaric: P; isochoric: V; adiabatic: Q=0. Adiabatic does not mean constant temperature.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 3.774112209524057,
+          "timeBonus": 5.774112209524057,
           "extraLives": 0
         },
         {
@@ -3044,7 +3044,7 @@
           "rarity": 26,
           "explanation": "Isothermal: constant T; isobaric: P; isochoric: V; adiabatic: Q=0. Adiabatic does not mean constant temperature.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.085594447123326,
+          "timeBonus": 6.085594447123326,
           "extraLives": 0
         },
         {
@@ -3060,7 +3060,7 @@
           "rarity": 28.5,
           "explanation": "Isothermal: constant T; isobaric: P; isochoric: V; adiabatic: Q=0. Adiabatic does not mean constant temperature.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.415595885036096,
+          "timeBonus": 6.415595885036096,
           "extraLives": 0
         },
         {
@@ -3075,7 +3075,7 @@
           "rarity": 31,
           "explanation": "Isothermal: constant T; isobaric: P; isochoric: V; adiabatic: Q=0. Adiabatic does not mean constant temperature.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.763447480735012,
+          "timeBonus": 6.763447480735012,
           "extraLives": 0
         }
       ]
@@ -3104,7 +3104,7 @@
           "rarity": 23.5,
           "explanation": "Molarity uses solution volume; molality uses solvent mass. Normality depends on the reaction and equivalents.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 3.774112209524057,
+          "timeBonus": 5.774112209524057,
           "extraLives": 0
         },
         {
@@ -3119,7 +3119,7 @@
           "rarity": 26,
           "explanation": "Molarity uses solution volume; molality uses solvent mass. Normality depends on the reaction and equivalents.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.085594447123326,
+          "timeBonus": 6.085594447123326,
           "extraLives": 0
         },
         {
@@ -3132,7 +3132,7 @@
           "rarity": 28.5,
           "explanation": "Molarity uses solution volume; molality uses solvent mass. Normality depends on the reaction and equivalents.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.415595885036096,
+          "timeBonus": 6.415595885036096,
           "extraLives": 0
         },
         {
@@ -3148,7 +3148,7 @@
           "rarity": 31,
           "explanation": "Molarity uses solution volume; molality uses solvent mass. Normality depends on the reaction and equivalents.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.763447480735012,
+          "timeBonus": 6.763447480735012,
           "extraLives": 0
         },
         {
@@ -3163,7 +3163,7 @@
           "rarity": 33.5,
           "explanation": "Molarity uses solution volume; molality uses solvent mass. Normality depends on the reaction and equivalents.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 5.128557896520958,
+          "timeBonus": 7.128557896520958,
           "extraLives": 0
         }
       ]
@@ -3190,7 +3190,7 @@
           "rarity": 23.5,
           "explanation": "Vectors have magnitude and direction. Speed, distance, energy and work are scalars; torque is not an energy despite matching units.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 3.774112209524057,
+          "timeBonus": 5.774112209524057,
           "extraLives": 0
         },
         {
@@ -3203,7 +3203,7 @@
           "rarity": 26,
           "explanation": "Vectors have magnitude and direction. Speed, distance, energy and work are scalars; torque is not an energy despite matching units.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.085594447123326,
+          "timeBonus": 6.085594447123326,
           "extraLives": 0
         },
         {
@@ -3216,7 +3216,7 @@
           "rarity": 28.5,
           "explanation": "Vectors have magnitude and direction. Speed, distance, energy and work are scalars; torque is not an energy despite matching units.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.415595885036096,
+          "timeBonus": 6.415595885036096,
           "extraLives": 0
         },
         {
@@ -3229,7 +3229,7 @@
           "rarity": 31,
           "explanation": "Vectors have magnitude and direction. Speed, distance, energy and work are scalars; torque is not an energy despite matching units.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.763447480735012,
+          "timeBonus": 6.763447480735012,
           "extraLives": 0
         },
         {
@@ -3244,7 +3244,7 @@
           "rarity": 33.5,
           "explanation": "Vectors have magnitude and direction. Speed, distance, energy and work are scalars; torque is not an energy despite matching units.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 5.128557896520958,
+          "timeBonus": 7.128557896520958,
           "extraLives": 0
         },
         {
@@ -3257,7 +3257,7 @@
           "rarity": 36,
           "explanation": "Vectors have magnitude and direction. Speed, distance, energy and work are scalars; torque is not an energy despite matching units.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 5.510399195227624,
+          "timeBonus": 7.510399195227624,
           "extraLives": 0
         },
         {
@@ -3272,7 +3272,7 @@
           "rarity": 38.5,
           "explanation": "Vectors have magnitude and direction. Speed, distance, energy and work are scalars; torque is not an energy despite matching units.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 5.908496004369664,
+          "timeBonus": 7.908496004369664,
           "extraLives": 0
         }
       ]
@@ -3301,7 +3301,7 @@
           "rarity": 23.5,
           "explanation": "The pressure-form terms are P, ρv²/2 and ρgh. This model assumes steady, incompressible flow with appropriate negligible losses.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 3.774112209524057,
+          "timeBonus": 5.774112209524057,
           "extraLives": 0
         },
         {
@@ -3316,7 +3316,7 @@
           "rarity": 26,
           "explanation": "The pressure-form terms are P, ρv²/2 and ρgh. This model assumes steady, incompressible flow with appropriate negligible losses.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.085594447123326,
+          "timeBonus": 6.085594447123326,
           "extraLives": 0
         },
         {
@@ -3331,7 +3331,7 @@
           "rarity": 28.5,
           "explanation": "The pressure-form terms are P, ρv²/2 and ρgh. This model assumes steady, incompressible flow with appropriate negligible losses.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.415595885036096,
+          "timeBonus": 6.415595885036096,
           "extraLives": 0
         }
       ]
@@ -3358,7 +3358,7 @@
           "rarity": 23.5,
           "explanation": "RLC refers to resistance, inductance and capacitance. These element types store or dissipate energy differently.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 3.774112209524057,
+          "timeBonus": 5.774112209524057,
           "extraLives": 0
         },
         {
@@ -3371,7 +3371,7 @@
           "rarity": 26,
           "explanation": "RLC refers to resistance, inductance and capacitance. These element types store or dissipate energy differently.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.085594447123326,
+          "timeBonus": 6.085594447123326,
           "extraLives": 0
         },
         {
@@ -3384,7 +3384,7 @@
           "rarity": 28.5,
           "explanation": "RLC refers to resistance, inductance and capacitance. These element types store or dissipate energy differently.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.415595885036096,
+          "timeBonus": 6.415595885036096,
           "extraLives": 0
         }
       ]
@@ -3411,7 +3411,7 @@
           "rarity": 23.5,
           "explanation": "Conduction uses microscopic interactions, convection bulk fluid movement, and radiation electromagnetic waves.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 3.774112209524057,
+          "timeBonus": 5.774112209524057,
           "extraLives": 0
         },
         {
@@ -3424,7 +3424,7 @@
           "rarity": 26,
           "explanation": "Conduction uses microscopic interactions, convection bulk fluid movement, and radiation electromagnetic waves.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.085594447123326,
+          "timeBonus": 6.085594447123326,
           "extraLives": 0
         },
         {
@@ -3439,7 +3439,7 @@
           "rarity": 28.5,
           "explanation": "Conduction uses microscopic interactions, convection bulk fluid movement, and radiation electromagnetic waves.",
           "confidence": "Source-backed introductory set; rarity is an initial estimate",
-          "timeBonus": 4.415595885036096,
+          "timeBonus": 6.415595885036096,
           "extraLives": 0
         }
       ]
@@ -3468,7 +3468,7 @@
           "rarity": 26,
           "explanation": "Oxygen can appear in single bonds, carbonyl groups, or both. An amide counts because it contains a carbonyl oxygen.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.085594447123326,
+          "timeBonus": 6.085594447123326,
           "extraLives": 0
         },
         {
@@ -3481,7 +3481,7 @@
           "rarity": 27.5,
           "explanation": "Oxygen can appear in single bonds, carbonyl groups, or both. An amide counts because it contains a carbonyl oxygen.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.28141774520795,
+          "timeBonus": 6.28141774520795,
           "extraLives": 0
         },
         {
@@ -3494,7 +3494,7 @@
           "rarity": 29,
           "explanation": "Oxygen can appear in single bonds, carbonyl groups, or both. An amide counts because it contains a carbonyl oxygen.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.483758130344618,
+          "timeBonus": 6.483758130344618,
           "extraLives": 0
         },
         {
@@ -3507,7 +3507,7 @@
           "rarity": 30.5,
           "explanation": "Oxygen can appear in single bonds, carbonyl groups, or both. An amide counts because it contains a carbonyl oxygen.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.692478524835414,
+          "timeBonus": 6.692478524835414,
           "extraLives": 0
         },
         {
@@ -3522,7 +3522,7 @@
           "rarity": 32,
           "explanation": "Oxygen can appear in single bonds, carbonyl groups, or both. An amide counts because it contains a carbonyl oxygen.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.90745144336473,
+          "timeBonus": 6.90745144336473,
           "extraLives": 0
         },
         {
@@ -3535,7 +3535,7 @@
           "rarity": 33.5,
           "explanation": "Oxygen can appear in single bonds, carbonyl groups, or both. An amide counts because it contains a carbonyl oxygen.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 5.128557896520958,
+          "timeBonus": 7.128557896520958,
           "extraLives": 0
         },
         {
@@ -3548,7 +3548,7 @@
           "rarity": 35,
           "explanation": "Oxygen can appear in single bonds, carbonyl groups, or both. An amide counts because it contains a carbonyl oxygen.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 5.355686463880237,
+          "timeBonus": 7.355686463880237,
           "extraLives": 0
         },
         {
@@ -3563,7 +3563,7 @@
           "rarity": 36.5,
           "explanation": "Oxygen can appear in single bonds, carbonyl groups, or both. An amide counts because it contains a carbonyl oxygen.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 5.588732504181549,
+          "timeBonus": 7.588732504181549,
           "extraLives": 0
         },
         {
@@ -3579,7 +3579,7 @@
           "rarity": 38,
           "explanation": "Oxygen can appear in single bonds, carbonyl groups, or both. An amide counts because it contains a carbonyl oxygen.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 5.827597477438141,
+          "timeBonus": 7.827597477438141,
           "extraLives": 0
         },
         {
@@ -3592,7 +3592,7 @@
           "rarity": 39.5,
           "explanation": "Oxygen can appear in single bonds, carbonyl groups, or both. An amide counts because it contains a carbonyl oxygen.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 6.072188359270145,
+          "timeBonus": 8.072188359270145,
           "extraLives": 0
         },
         {
@@ -3605,7 +3605,7 @@
           "rarity": 41,
           "explanation": "Oxygen can appear in single bonds, carbonyl groups, or both. An amide counts because it contains a carbonyl oxygen.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 6.32241713184211,
+          "timeBonus": 8.32241713184211,
           "extraLives": 0
         },
         {
@@ -3618,7 +3618,7 @@
           "rarity": 42.5,
           "explanation": "Oxygen can appear in single bonds, carbonyl groups, or both. An amide counts because it contains a carbonyl oxygen.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 6.578200338915207,
+          "timeBonus": 8.578200338915206,
           "extraLives": 0
         }
       ]
@@ -3645,7 +3645,7 @@
           "rarity": 26,
           "explanation": "Acyclic saturated alkanes follow CₙH₂ₙ₊₂. Each successive member adds CH₂.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.085594447123326,
+          "timeBonus": 6.085594447123326,
           "extraLives": 0
         },
         {
@@ -3658,7 +3658,7 @@
           "rarity": 27.5,
           "explanation": "Acyclic saturated alkanes follow CₙH₂ₙ₊₂. Each successive member adds CH₂.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.28141774520795,
+          "timeBonus": 6.28141774520795,
           "extraLives": 0
         },
         {
@@ -3671,7 +3671,7 @@
           "rarity": 29,
           "explanation": "Acyclic saturated alkanes follow CₙH₂ₙ₊₂. Each successive member adds CH₂.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.483758130344618,
+          "timeBonus": 6.483758130344618,
           "extraLives": 0
         },
         {
@@ -3686,7 +3686,7 @@
           "rarity": 30.5,
           "explanation": "Acyclic saturated alkanes follow CₙH₂ₙ₊₂. Each successive member adds CH₂.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.692478524835414,
+          "timeBonus": 6.692478524835414,
           "extraLives": 0
         },
         {
@@ -3701,7 +3701,7 @@
           "rarity": 32,
           "explanation": "Acyclic saturated alkanes follow CₙH₂ₙ₊₂. Each successive member adds CH₂.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.90745144336473,
+          "timeBonus": 6.90745144336473,
           "extraLives": 0
         },
         {
@@ -3716,7 +3716,7 @@
           "rarity": 33.5,
           "explanation": "Acyclic saturated alkanes follow CₙH₂ₙ₊₂. Each successive member adds CH₂.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 5.128557896520958,
+          "timeBonus": 7.128557896520958,
           "extraLives": 0
         },
         {
@@ -3731,7 +3731,7 @@
           "rarity": 35,
           "explanation": "Acyclic saturated alkanes follow CₙH₂ₙ₊₂. Each successive member adds CH₂.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 5.355686463880237,
+          "timeBonus": 7.355686463880237,
           "extraLives": 0
         },
         {
@@ -3746,7 +3746,7 @@
           "rarity": 36.5,
           "explanation": "Acyclic saturated alkanes follow CₙH₂ₙ₊₂. Each successive member adds CH₂.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 5.588732504181549,
+          "timeBonus": 7.588732504181549,
           "extraLives": 0
         },
         {
@@ -3761,7 +3761,7 @@
           "rarity": 38,
           "explanation": "Acyclic saturated alkanes follow CₙH₂ₙ₊₂. Each successive member adds CH₂.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 5.827597477438141,
+          "timeBonus": 7.827597477438141,
           "extraLives": 0
         },
         {
@@ -3776,7 +3776,7 @@
           "rarity": 39.5,
           "explanation": "Acyclic saturated alkanes follow CₙH₂ₙ₊₂. Each successive member adds CH₂.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 6.072188359270145,
+          "timeBonus": 8.072188359270145,
           "extraLives": 0
         }
       ]
@@ -3807,7 +3807,7 @@
           "rarity": 26,
           "explanation": "Dispersion occurs in all molecules. Hydrogen bonding typically involves H bonded to N, O, or F interacting with a lone pair.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.085594447123326,
+          "timeBonus": 6.085594447123326,
           "extraLives": 0
         },
         {
@@ -3822,7 +3822,7 @@
           "rarity": 27.5,
           "explanation": "Dispersion occurs in all molecules. Hydrogen bonding typically involves H bonded to N, O, or F interacting with a lone pair.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.28141774520795,
+          "timeBonus": 6.28141774520795,
           "extraLives": 0
         },
         {
@@ -3837,7 +3837,7 @@
           "rarity": 29,
           "explanation": "Dispersion occurs in all molecules. Hydrogen bonding typically involves H bonded to N, O, or F interacting with a lone pair.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.483758130344618,
+          "timeBonus": 6.483758130344618,
           "extraLives": 0
         },
         {
@@ -3852,7 +3852,7 @@
           "rarity": 30.5,
           "explanation": "Dispersion occurs in all molecules. Hydrogen bonding typically involves H bonded to N, O, or F interacting with a lone pair.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.692478524835414,
+          "timeBonus": 6.692478524835414,
           "extraLives": 0
         },
         {
@@ -3865,7 +3865,7 @@
           "rarity": 32,
           "explanation": "Dispersion occurs in all molecules. Hydrogen bonding typically involves H bonded to N, O, or F interacting with a lone pair.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.90745144336473,
+          "timeBonus": 6.90745144336473,
           "extraLives": 0
         }
       ]
@@ -3892,7 +3892,7 @@
           "rarity": 26,
           "explanation": "Conformations interconvert through bond rotation or ring motions. A cyclohexane chair minimizes torsional and angle strain.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.085594447123326,
+          "timeBonus": 6.085594447123326,
           "extraLives": 0
         },
         {
@@ -3905,7 +3905,7 @@
           "rarity": 27.5,
           "explanation": "Conformations interconvert through bond rotation or ring motions. A cyclohexane chair minimizes torsional and angle strain.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.28141774520795,
+          "timeBonus": 6.28141774520795,
           "extraLives": 0
         },
         {
@@ -3918,7 +3918,7 @@
           "rarity": 29,
           "explanation": "Conformations interconvert through bond rotation or ring motions. A cyclohexane chair minimizes torsional and angle strain.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.483758130344618,
+          "timeBonus": 6.483758130344618,
           "extraLives": 0
         },
         {
@@ -3931,7 +3931,7 @@
           "rarity": 30.5,
           "explanation": "Conformations interconvert through bond rotation or ring motions. A cyclohexane chair minimizes torsional and angle strain.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.692478524835414,
+          "timeBonus": 6.692478524835414,
           "extraLives": 0
         },
         {
@@ -3944,7 +3944,7 @@
           "rarity": 32,
           "explanation": "Conformations interconvert through bond rotation or ring motions. A cyclohexane chair minimizes torsional and angle strain.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.90745144336473,
+          "timeBonus": 6.90745144336473,
           "extraLives": 0
         },
         {
@@ -3957,7 +3957,7 @@
           "rarity": 33.5,
           "explanation": "Conformations interconvert through bond rotation or ring motions. A cyclohexane chair minimizes torsional and angle strain.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 5.128557896520958,
+          "timeBonus": 7.128557896520958,
           "extraLives": 0
         },
         {
@@ -3973,7 +3973,7 @@
           "rarity": 35,
           "explanation": "Conformations interconvert through bond rotation or ring motions. A cyclohexane chair minimizes torsional and angle strain.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 5.355686463880237,
+          "timeBonus": 7.355686463880237,
           "extraLives": 0
         },
         {
@@ -3988,7 +3988,7 @@
           "rarity": 36.5,
           "explanation": "Conformations interconvert through bond rotation or ring motions. A cyclohexane chair minimizes torsional and angle strain.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 5.588732504181549,
+          "timeBonus": 7.588732504181549,
           "extraLives": 0
         }
       ]
@@ -4015,7 +4015,7 @@
           "rarity": 26,
           "explanation": "R/S describes absolute configuration; E/Z describes alkene geometry. Enantiomers are nonsuperimposable mirror images; diastereomers are stereoisomers that are not mirror images.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.085594447123326,
+          "timeBonus": 6.085594447123326,
           "extraLives": 0
         },
         {
@@ -4028,7 +4028,7 @@
           "rarity": 27.5,
           "explanation": "R/S describes absolute configuration; E/Z describes alkene geometry. Enantiomers are nonsuperimposable mirror images; diastereomers are stereoisomers that are not mirror images.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.28141774520795,
+          "timeBonus": 6.28141774520795,
           "extraLives": 0
         },
         {
@@ -4041,7 +4041,7 @@
           "rarity": 29,
           "explanation": "R/S describes absolute configuration; E/Z describes alkene geometry. Enantiomers are nonsuperimposable mirror images; diastereomers are stereoisomers that are not mirror images.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.483758130344618,
+          "timeBonus": 6.483758130344618,
           "extraLives": 0
         },
         {
@@ -4054,7 +4054,7 @@
           "rarity": 30.5,
           "explanation": "R/S describes absolute configuration; E/Z describes alkene geometry. Enantiomers are nonsuperimposable mirror images; diastereomers are stereoisomers that are not mirror images.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.692478524835414,
+          "timeBonus": 6.692478524835414,
           "extraLives": 0
         },
         {
@@ -4067,7 +4067,7 @@
           "rarity": 32,
           "explanation": "R/S describes absolute configuration; E/Z describes alkene geometry. Enantiomers are nonsuperimposable mirror images; diastereomers are stereoisomers that are not mirror images.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.90745144336473,
+          "timeBonus": 6.90745144336473,
           "extraLives": 0
         },
         {
@@ -4080,7 +4080,7 @@
           "rarity": 33.5,
           "explanation": "R/S describes absolute configuration; E/Z describes alkene geometry. Enantiomers are nonsuperimposable mirror images; diastereomers are stereoisomers that are not mirror images.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 5.128557896520958,
+          "timeBonus": 7.128557896520958,
           "extraLives": 0
         },
         {
@@ -4095,7 +4095,7 @@
           "rarity": 35,
           "explanation": "R/S describes absolute configuration; E/Z describes alkene geometry. Enantiomers are nonsuperimposable mirror images; diastereomers are stereoisomers that are not mirror images.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 5.355686463880237,
+          "timeBonus": 7.355686463880237,
           "extraLives": 0
         },
         {
@@ -4110,7 +4110,7 @@
           "rarity": 36.5,
           "explanation": "R/S describes absolute configuration; E/Z describes alkene geometry. Enantiomers are nonsuperimposable mirror images; diastereomers are stereoisomers that are not mirror images.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 5.588732504181549,
+          "timeBonus": 7.588732504181549,
           "extraLives": 0
         },
         {
@@ -4123,7 +4123,7 @@
           "rarity": 38,
           "explanation": "R/S describes absolute configuration; E/Z describes alkene geometry. Enantiomers are nonsuperimposable mirror images; diastereomers are stereoisomers that are not mirror images.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 5.827597477438141,
+          "timeBonus": 7.827597477438141,
           "extraLives": 0
         },
         {
@@ -4136,7 +4136,7 @@
           "rarity": 39.5,
           "explanation": "R/S describes absolute configuration; E/Z describes alkene geometry. Enantiomers are nonsuperimposable mirror images; diastereomers are stereoisomers that are not mirror images.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 6.072188359270145,
+          "timeBonus": 8.072188359270145,
           "extraLives": 0
         },
         {
@@ -4149,7 +4149,7 @@
           "rarity": 41,
           "explanation": "R/S describes absolute configuration; E/Z describes alkene geometry. Enantiomers are nonsuperimposable mirror images; diastereomers are stereoisomers that are not mirror images.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 6.32241713184211,
+          "timeBonus": 8.32241713184211,
           "extraLives": 0
         }
       ]
@@ -4179,7 +4179,7 @@
           "rarity": 26,
           "explanation": "Carbanions, amide anions, alkoxides, and thiolates are examples. Resonance, induction, orbital character, and the atom all affect stability.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.085594447123326,
+          "timeBonus": 6.085594447123326,
           "extraLives": 0
         },
         {
@@ -4194,7 +4194,7 @@
           "rarity": 27.5,
           "explanation": "Carbanions, amide anions, alkoxides, and thiolates are examples. Resonance, induction, orbital character, and the atom all affect stability.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.28141774520795,
+          "timeBonus": 6.28141774520795,
           "extraLives": 0
         },
         {
@@ -4209,7 +4209,7 @@
           "rarity": 29,
           "explanation": "Carbanions, amide anions, alkoxides, and thiolates are examples. Resonance, induction, orbital character, and the atom all affect stability.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.483758130344618,
+          "timeBonus": 6.483758130344618,
           "extraLives": 0
         },
         {
@@ -4224,7 +4224,7 @@
           "rarity": 30.5,
           "explanation": "Carbanions, amide anions, alkoxides, and thiolates are examples. Resonance, induction, orbital character, and the atom all affect stability.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.692478524835414,
+          "timeBonus": 6.692478524835414,
           "extraLives": 0
         }
       ]
@@ -4255,7 +4255,7 @@
           "rarity": 26,
           "explanation": "Compare the atom bearing charge, resonance delocalization, inductive effects, and orbital character. Solvation also influences acid–base equilibria.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.085594447123326,
+          "timeBonus": 6.085594447123326,
           "extraLives": 0
         },
         {
@@ -4268,7 +4268,7 @@
           "rarity": 27.5,
           "explanation": "Compare the atom bearing charge, resonance delocalization, inductive effects, and orbital character. Solvation also influences acid–base equilibria.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.28141774520795,
+          "timeBonus": 6.28141774520795,
           "extraLives": 0
         },
         {
@@ -4284,7 +4284,7 @@
           "rarity": 29,
           "explanation": "Compare the atom bearing charge, resonance delocalization, inductive effects, and orbital character. Solvation also influences acid–base equilibria.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.483758130344618,
+          "timeBonus": 6.483758130344618,
           "extraLives": 0
         },
         {
@@ -4299,7 +4299,7 @@
           "rarity": 30.5,
           "explanation": "Compare the atom bearing charge, resonance delocalization, inductive effects, and orbital character. Solvation also influences acid–base equilibria.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.692478524835414,
+          "timeBonus": 6.692478524835414,
           "extraLives": 0
         },
         {
@@ -4312,7 +4312,7 @@
           "rarity": 32,
           "explanation": "Compare the atom bearing charge, resonance delocalization, inductive effects, and orbital character. Solvation also influences acid–base equilibria.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.90745144336473,
+          "timeBonus": 6.90745144336473,
           "extraLives": 0
         }
       ]
@@ -4341,7 +4341,7 @@
           "rarity": 26,
           "explanation": "These reagents initiate different transformations. Products depend on the full reagent sequence: borane, ozone, and osmium tetroxide typically require subsequent workup.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.085594447123326,
+          "timeBonus": 6.085594447123326,
           "extraLives": 0
         },
         {
@@ -4356,7 +4356,7 @@
           "rarity": 27.5,
           "explanation": "These reagents initiate different transformations. Products depend on the full reagent sequence: borane, ozone, and osmium tetroxide typically require subsequent workup.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.28141774520795,
+          "timeBonus": 6.28141774520795,
           "extraLives": 0
         },
         {
@@ -4371,7 +4371,7 @@
           "rarity": 29,
           "explanation": "These reagents initiate different transformations. Products depend on the full reagent sequence: borane, ozone, and osmium tetroxide typically require subsequent workup.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.483758130344618,
+          "timeBonus": 6.483758130344618,
           "extraLives": 0
         },
         {
@@ -4386,7 +4386,7 @@
           "rarity": 30.5,
           "explanation": "These reagents initiate different transformations. Products depend on the full reagent sequence: borane, ozone, and osmium tetroxide typically require subsequent workup.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.692478524835414,
+          "timeBonus": 6.692478524835414,
           "extraLives": 0
         },
         {
@@ -4401,7 +4401,7 @@
           "rarity": 32,
           "explanation": "These reagents initiate different transformations. Products depend on the full reagent sequence: borane, ozone, and osmium tetroxide typically require subsequent workup.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.90745144336473,
+          "timeBonus": 6.90745144336473,
           "extraLives": 0
         },
         {
@@ -4418,7 +4418,7 @@
           "rarity": 33.5,
           "explanation": "These reagents initiate different transformations. Products depend on the full reagent sequence: borane, ozone, and osmium tetroxide typically require subsequent workup.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 5.128557896520958,
+          "timeBonus": 7.128557896520958,
           "extraLives": 0
         },
         {
@@ -4433,7 +4433,7 @@
           "rarity": 35,
           "explanation": "These reagents initiate different transformations. Products depend on the full reagent sequence: borane, ozone, and osmium tetroxide typically require subsequent workup.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 5.355686463880237,
+          "timeBonus": 7.355686463880237,
           "extraLives": 0
         },
         {
@@ -4448,7 +4448,7 @@
           "rarity": 36.5,
           "explanation": "These reagents initiate different transformations. Products depend on the full reagent sequence: borane, ozone, and osmium tetroxide typically require subsequent workup.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 5.588732504181549,
+          "timeBonus": 7.588732504181549,
           "extraLives": 0
         },
         {
@@ -4463,7 +4463,7 @@
           "rarity": 38,
           "explanation": "These reagents initiate different transformations. Products depend on the full reagent sequence: borane, ozone, and osmium tetroxide typically require subsequent workup.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 5.827597477438141,
+          "timeBonus": 7.827597477438141,
           "extraLives": 0
         },
         {
@@ -4478,7 +4478,7 @@
           "rarity": 39.5,
           "explanation": "These reagents initiate different transformations. Products depend on the full reagent sequence: borane, ozone, and osmium tetroxide typically require subsequent workup.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 6.072188359270145,
+          "timeBonus": 8.072188359270145,
           "extraLives": 0
         },
         {
@@ -4494,7 +4494,7 @@
           "rarity": 41,
           "explanation": "These reagents initiate different transformations. Products depend on the full reagent sequence: borane, ozone, and osmium tetroxide typically require subsequent workup.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 6.32241713184211,
+          "timeBonus": 8.32241713184211,
           "extraLives": 0
         }
       ]
@@ -4523,7 +4523,7 @@
           "rarity": 26,
           "explanation": "Good leaving groups are relatively stable after departure. Water can leave a protonated alcohol; unactivated hydroxide is a poor leaving group.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.085594447123326,
+          "timeBonus": 6.085594447123326,
           "extraLives": 0
         },
         {
@@ -4538,7 +4538,7 @@
           "rarity": 27.5,
           "explanation": "Good leaving groups are relatively stable after departure. Water can leave a protonated alcohol; unactivated hydroxide is a poor leaving group.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.28141774520795,
+          "timeBonus": 6.28141774520795,
           "extraLives": 0
         },
         {
@@ -4553,7 +4553,7 @@
           "rarity": 29,
           "explanation": "Good leaving groups are relatively stable after departure. Water can leave a protonated alcohol; unactivated hydroxide is a poor leaving group.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.483758130344618,
+          "timeBonus": 6.483758130344618,
           "extraLives": 0
         },
         {
@@ -4568,7 +4568,7 @@
           "rarity": 30.5,
           "explanation": "Good leaving groups are relatively stable after departure. Water can leave a protonated alcohol; unactivated hydroxide is a poor leaving group.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.692478524835414,
+          "timeBonus": 6.692478524835414,
           "extraLives": 0
         },
         {
@@ -4583,7 +4583,7 @@
           "rarity": 32,
           "explanation": "Good leaving groups are relatively stable after departure. Water can leave a protonated alcohol; unactivated hydroxide is a poor leaving group.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.90745144336473,
+          "timeBonus": 6.90745144336473,
           "extraLives": 0
         },
         {
@@ -4598,7 +4598,7 @@
           "rarity": 33.5,
           "explanation": "Good leaving groups are relatively stable after departure. Water can leave a protonated alcohol; unactivated hydroxide is a poor leaving group.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 5.128557896520958,
+          "timeBonus": 7.128557896520958,
           "extraLives": 0
         },
         {
@@ -4613,7 +4613,7 @@
           "rarity": 35,
           "explanation": "Good leaving groups are relatively stable after departure. Water can leave a protonated alcohol; unactivated hydroxide is a poor leaving group.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 5.355686463880237,
+          "timeBonus": 7.355686463880237,
           "extraLives": 0
         }
       ]
@@ -4642,7 +4642,7 @@
           "rarity": 26,
           "explanation": "SN1 and E1 involve a carbocation intermediate. SN2 and E2 are concerted. Substrate, reagent, solvent, and temperature affect competition.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.085594447123326,
+          "timeBonus": 6.085594447123326,
           "extraLives": 0
         },
         {
@@ -4657,7 +4657,7 @@
           "rarity": 27.5,
           "explanation": "SN1 and E1 involve a carbocation intermediate. SN2 and E2 are concerted. Substrate, reagent, solvent, and temperature affect competition.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.28141774520795,
+          "timeBonus": 6.28141774520795,
           "extraLives": 0
         },
         {
@@ -4670,7 +4670,7 @@
           "rarity": 29,
           "explanation": "SN1 and E1 involve a carbocation intermediate. SN2 and E2 are concerted. Substrate, reagent, solvent, and temperature affect competition.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.483758130344618,
+          "timeBonus": 6.483758130344618,
           "extraLives": 0
         },
         {
@@ -4683,7 +4683,7 @@
           "rarity": 30.5,
           "explanation": "SN1 and E1 involve a carbocation intermediate. SN2 and E2 are concerted. Substrate, reagent, solvent, and temperature affect competition.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.692478524835414,
+          "timeBonus": 6.692478524835414,
           "extraLives": 0
         }
       ]
@@ -4712,7 +4712,7 @@
           "rarity": 26,
           "explanation": "Primary alcohols can yield aldehydes or carboxylic acids depending on conditions. Secondary alcohols yield ketones; tertiary alcohols resist simple oxidation.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.085594447123326,
+          "timeBonus": 6.085594447123326,
           "extraLives": 0
         },
         {
@@ -4728,7 +4728,7 @@
           "rarity": 27.5,
           "explanation": "Primary alcohols can yield aldehydes or carboxylic acids depending on conditions. Secondary alcohols yield ketones; tertiary alcohols resist simple oxidation.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.28141774520795,
+          "timeBonus": 6.28141774520795,
           "extraLives": 0
         },
         {
@@ -4745,7 +4745,7 @@
           "rarity": 29,
           "explanation": "Primary alcohols can yield aldehydes or carboxylic acids depending on conditions. Secondary alcohols yield ketones; tertiary alcohols resist simple oxidation.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.483758130344618,
+          "timeBonus": 6.483758130344618,
           "extraLives": 0
         },
         {
@@ -4760,7 +4760,7 @@
           "rarity": 30.5,
           "explanation": "Primary alcohols can yield aldehydes or carboxylic acids depending on conditions. Secondary alcohols yield ketones; tertiary alcohols resist simple oxidation.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.692478524835414,
+          "timeBonus": 6.692478524835414,
           "extraLives": 0
         },
         {
@@ -4775,7 +4775,7 @@
           "rarity": 32,
           "explanation": "Primary alcohols can yield aldehydes or carboxylic acids depending on conditions. Secondary alcohols yield ketones; tertiary alcohols resist simple oxidation.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.90745144336473,
+          "timeBonus": 6.90745144336473,
           "extraLives": 0
         },
         {
@@ -4790,7 +4790,7 @@
           "rarity": 33.5,
           "explanation": "Primary alcohols can yield aldehydes or carboxylic acids depending on conditions. Secondary alcohols yield ketones; tertiary alcohols resist simple oxidation.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 5.128557896520958,
+          "timeBonus": 7.128557896520958,
           "extraLives": 0
         },
         {
@@ -4805,7 +4805,7 @@
           "rarity": 35,
           "explanation": "Primary alcohols can yield aldehydes or carboxylic acids depending on conditions. Secondary alcohols yield ketones; tertiary alcohols resist simple oxidation.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 5.355686463880237,
+          "timeBonus": 7.355686463880237,
           "extraLives": 0
         }
       ]
@@ -4834,7 +4834,7 @@
           "rarity": 26,
           "explanation": "Ethers have a C–O–C linkage. Epoxides are three-membered cyclic ethers and are unusually reactive because of ring strain.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.085594447123326,
+          "timeBonus": 6.085594447123326,
           "extraLives": 0
         },
         {
@@ -4849,7 +4849,7 @@
           "rarity": 27.5,
           "explanation": "Ethers have a C–O–C linkage. Epoxides are three-membered cyclic ethers and are unusually reactive because of ring strain.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.28141774520795,
+          "timeBonus": 6.28141774520795,
           "extraLives": 0
         },
         {
@@ -4864,7 +4864,7 @@
           "rarity": 29,
           "explanation": "Ethers have a C–O–C linkage. Epoxides are three-membered cyclic ethers and are unusually reactive because of ring strain.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.483758130344618,
+          "timeBonus": 6.483758130344618,
           "extraLives": 0
         },
         {
@@ -4879,7 +4879,7 @@
           "rarity": 30.5,
           "explanation": "Ethers have a C–O–C linkage. Epoxides are three-membered cyclic ethers and are unusually reactive because of ring strain.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.692478524835414,
+          "timeBonus": 6.692478524835414,
           "extraLives": 0
         },
         {
@@ -4894,7 +4894,7 @@
           "rarity": 32,
           "explanation": "Ethers have a C–O–C linkage. Epoxides are three-membered cyclic ethers and are unusually reactive because of ring strain.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.90745144336473,
+          "timeBonus": 6.90745144336473,
           "extraLives": 0
         },
         {
@@ -4909,7 +4909,7 @@
           "rarity": 33.5,
           "explanation": "Ethers have a C–O–C linkage. Epoxides are three-membered cyclic ethers and are unusually reactive because of ring strain.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 5.128557896520958,
+          "timeBonus": 7.128557896520958,
           "extraLives": 0
         },
         {
@@ -4924,7 +4924,7 @@
           "rarity": 35,
           "explanation": "Ethers have a C–O–C linkage. Epoxides are three-membered cyclic ethers and are unusually reactive because of ring strain.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 5.355686463880237,
+          "timeBonus": 7.355686463880237,
           "extraLives": 0
         },
         {
@@ -4939,7 +4939,7 @@
           "rarity": 36.5,
           "explanation": "Ethers have a C–O–C linkage. Epoxides are three-membered cyclic ethers and are unusually reactive because of ring strain.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 5.588732504181549,
+          "timeBonus": 7.588732504181549,
           "extraLives": 0
         },
         {
@@ -4954,7 +4954,7 @@
           "rarity": 38,
           "explanation": "Ethers have a C–O–C linkage. Epoxides are three-membered cyclic ethers and are unusually reactive because of ring strain.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 5.827597477438141,
+          "timeBonus": 7.827597477438141,
           "extraLives": 0
         }
       ]
@@ -4981,7 +4981,7 @@
           "rarity": 26,
           "explanation": "For simple first-order coupling to n equivalent neighboring spin-½ nuclei, the signal has n+1 lines. More complex coupling gives compound patterns.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.085594447123326,
+          "timeBonus": 6.085594447123326,
           "extraLives": 0
         },
         {
@@ -4994,7 +4994,7 @@
           "rarity": 27.5,
           "explanation": "For simple first-order coupling to n equivalent neighboring spin-½ nuclei, the signal has n+1 lines. More complex coupling gives compound patterns.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.28141774520795,
+          "timeBonus": 6.28141774520795,
           "extraLives": 0
         },
         {
@@ -5007,7 +5007,7 @@
           "rarity": 29,
           "explanation": "For simple first-order coupling to n equivalent neighboring spin-½ nuclei, the signal has n+1 lines. More complex coupling gives compound patterns.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.483758130344618,
+          "timeBonus": 6.483758130344618,
           "extraLives": 0
         },
         {
@@ -5020,7 +5020,7 @@
           "rarity": 30.5,
           "explanation": "For simple first-order coupling to n equivalent neighboring spin-½ nuclei, the signal has n+1 lines. More complex coupling gives compound patterns.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.692478524835414,
+          "timeBonus": 6.692478524835414,
           "extraLives": 0
         },
         {
@@ -5035,7 +5035,7 @@
           "rarity": 32,
           "explanation": "For simple first-order coupling to n equivalent neighboring spin-½ nuclei, the signal has n+1 lines. More complex coupling gives compound patterns.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.90745144336473,
+          "timeBonus": 6.90745144336473,
           "extraLives": 0
         },
         {
@@ -5048,7 +5048,7 @@
           "rarity": 33.5,
           "explanation": "For simple first-order coupling to n equivalent neighboring spin-½ nuclei, the signal has n+1 lines. More complex coupling gives compound patterns.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 5.128557896520958,
+          "timeBonus": 7.128557896520958,
           "extraLives": 0
         },
         {
@@ -5063,7 +5063,7 @@
           "rarity": 35,
           "explanation": "For simple first-order coupling to n equivalent neighboring spin-½ nuclei, the signal has n+1 lines. More complex coupling gives compound patterns.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 5.355686463880237,
+          "timeBonus": 7.355686463880237,
           "extraLives": 0
         },
         {
@@ -5076,7 +5076,7 @@
           "rarity": 36.5,
           "explanation": "For simple first-order coupling to n equivalent neighboring spin-½ nuclei, the signal has n+1 lines. More complex coupling gives compound patterns.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 5.588732504181549,
+          "timeBonus": 7.588732504181549,
           "extraLives": 0
         },
         {
@@ -5089,7 +5089,7 @@
           "rarity": 38,
           "explanation": "For simple first-order coupling to n equivalent neighboring spin-½ nuclei, the signal has n+1 lines. More complex coupling gives compound patterns.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 5.827597477438141,
+          "timeBonus": 7.827597477438141,
           "extraLives": 0
         },
         {
@@ -5104,7 +5104,7 @@
           "rarity": 39.5,
           "explanation": "For simple first-order coupling to n equivalent neighboring spin-½ nuclei, the signal has n+1 lines. More complex coupling gives compound patterns.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 6.072188359270145,
+          "timeBonus": 8.072188359270145,
           "extraLives": 0
         }
       ]
@@ -5133,7 +5133,7 @@
           "rarity": 26,
           "explanation": "Chemical shift reflects environment; integration reflects relative proton count; splitting and coupling constants reveal interactions between nuclei.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.085594447123326,
+          "timeBonus": 6.085594447123326,
           "extraLives": 0
         },
         {
@@ -5149,7 +5149,7 @@
           "rarity": 27.5,
           "explanation": "Chemical shift reflects environment; integration reflects relative proton count; splitting and coupling constants reveal interactions between nuclei.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.28141774520795,
+          "timeBonus": 6.28141774520795,
           "extraLives": 0
         },
         {
@@ -5165,7 +5165,7 @@
           "rarity": 29,
           "explanation": "Chemical shift reflects environment; integration reflects relative proton count; splitting and coupling constants reveal interactions between nuclei.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.483758130344618,
+          "timeBonus": 6.483758130344618,
           "extraLives": 0
         },
         {
@@ -5181,7 +5181,7 @@
           "rarity": 30.5,
           "explanation": "Chemical shift reflects environment; integration reflects relative proton count; splitting and coupling constants reveal interactions between nuclei.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.692478524835414,
+          "timeBonus": 6.692478524835414,
           "extraLives": 0
         },
         {
@@ -5196,7 +5196,7 @@
           "rarity": 32,
           "explanation": "Chemical shift reflects environment; integration reflects relative proton count; splitting and coupling constants reveal interactions between nuclei.",
           "confidence": "Initial educational estimate",
-          "timeBonus": 4.90745144336473,
+          "timeBonus": 6.90745144336473,
           "extraLives": 0
         }
       ]
