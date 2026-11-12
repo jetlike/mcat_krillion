@@ -1,47 +1,57 @@
-# Reaction Party
+# Reaction Party — MCAT
 
-Organic Chemistry I category recall, for one shared device or private online rooms.
+An extension of the original OChem recall game: solo challenge, online parties, shared-device play and untimed practice. Six MCAT subjects, 35 selectable subtopics, 48 bounded prompts and 292 canonical answers. CARS is excluded.
 
-## Run
+## Run and verify
 
-Node.js 20+ is required. There are no runtime dependencies or API keys.
+Requires **Node.js 24** (built-in SQLite). No runtime dependencies or AI keys.
 
 ```sh
+npm run build
+npm test
 npm start
 ```
 
-Open the server on port 3000. `PORT` overrides the default. Run `npm test` for answer-bank and multiplayer state-machine tests.
+Open http://localhost:3000. `PORT` overrides the port. `npm run test:e2e` runs desktop/mobile Chromium scenarios with two independent browser profiles. Set `PLAYWRIGHT_MODULE` and `CHROMIUM_PATH` to your installed Playwright module and Chromium executable; the defaults point to the managed cloud runtime. Test screenshots are written under ignored `test-results/`.
 
-## Online classroom pilot
+## Rules
 
-Choose **Create or join a room**. A host creates a four-letter code; 2–8 players join from their own browsers using unique nicknames. The host selects syllabus-based topics, a 30–90 second time bank per player per question, and 1–3 lives (default 3).
+Each player has a personal time balance that runs only on their turn. A correct unused answer adds `2 + 18 × (rarity/100)^1.6` seconds and passes the flask. Correct answers and prompt changes never reset clocks. Wrong answers leave the turn and deadline running. Every correct unused answer strictly above 90 earns exactly one life, without a cap; exactly 90 earns no life. Aliases resolve to the same canonical answer and cannot be rewarded twice. The server owns deadlines, rewards, eliminations and idempotent submission receipts.
 
-The server owns the timer, player order, answer validation, and life deductions. Each player has a personal time bank that counts down only during their turn. A valid unused answer passes the flask and freezes that player’s remaining time; their clock resumes when the flask returns. Finding every answer automatically advances to a new question, gives the next player the flask, and refreshes everyone’s time bank. Only the current player may answer. When a player’s bank expires, that player loses a life. The last player with lives wins. After a timeout, the host starts the next question with fresh clocks, pauses/resumes discussion, and can end a round without deducting a life.
+Timeout costs one life. A surviving player alone gets their starting time restored, then the next player continues without forced room review. Zero-life players are eliminated. The last survivor wins; solo ends at zero lives. Prompts recycle with their used-answer sets intact; fully exhausted prompts are removed. Exhausting all selected answers completes the match.
 
-State updates use Server-Sent Events with HTTP POST actions. WebSockets are not required. A temporary player token in sessionStorage restores a session after reloading the original tab; click **Reconnect to my room**. Connection loss disables answering until the connection returns. Closing the tab or clearing browser storage can lose your seat; host transfer and removing players are not included. Timers continue while players are disconnected.
+Banks show rarity, aliases, explanations, references, sorting and used markers. Viewing banks keeps the timer running. Opening a bank or review bank marks subsequent responses to that prompt assisted for this match; assistance is UI tracking, not a guarantee against outside help. Personal review never pauses a room. The host explicitly confirms room-wide review, which pauses everyone until the host continues.
 
-Rooms live in server memory, expire after 10 minutes without gameplay, and vanish on server restart. No accounts, persistent leaderboards, or public matchmaking. This is a classroom pilot, not a measured production concurrency guarantee.
+## Content and recognition
 
-## Deploy
+`taxonomy.js` defines hierarchical multi-selection; counts use distinct prompt IDs, including cross-tags. `content/approved-prompts.json` contains the reviewed examples and additional source-referenced sets. `scripts/build-content.mjs` combines those with the 14 original prompts from `questions.js`, validates aliases and score bounds, and creates the versioned `content/catalog.json`.
 
-Use a Node web service that supports long-lived HTTP responses (for example Render or Railway). Run `npm start`; configure the host's assigned `PORT`, HTTPS, and **one server instance**. No build step, database, or paid AI service is required. Static-only hosting cannot run the room server. Free hosting availability/limits must be checked with the provider; sleeping services and restarts interrupt rooms.
+Rarity preserves the approved `0.50 A + 0.30 Y + 0.20 P` baseline. A, Y and P are explicitly labeled educational estimates, **not observed MCAT frequencies**. Ten approved examples retain their reviewed values; additional content uses conservative documented estimates. Change the catalog version when modifying a released bank. Continuous rewards are computed on the server rather than trusting the browser.
 
-If using a reverse proxy, disable response buffering for `/api/events`, allow streaming, and retain the `Host` header and correct `X-Forwarded-Proto`. The server sends SSE heartbeats every 15 seconds. Do not log query strings for `/api/events` because its reconnect URL includes a temporary room token. Keep the app and API on the same origin.
+Matching uses normalization, curated aliases, then conservative unique typo matching. A protected scientific lexicon prevents nearby valid terms being silently corrected into different concepts (e.g. inulin/insulin, thymine/thiamine, PFK-1/PFK-2). Ambiguous van der Waals wording requests specificity. Missing bank answers can be submitted for review; suggestions never change live grading or rewards.
 
-Before a class, create a room and join from a second device on the actual deployed HTTPS URL. Start a round; submit a valid answer, pause/resume, reload/reconnect, and verify expiration and review on both screens. Multiple server replicas require shared room state/routing and are not supported by this version. No hosting deployment or account provisioning is performed by the repository itself.
+The private source corpus (PDFs, decks, extracted media and `content.sqlite`) is **not deployed or committed**. `scripts/curate-source-store.py /private/content.sqlite` adds an audited, reversible canonical overlay to that existing authoring store and archives this catalog, after making a SQLite backup. Original notes, fields, cards, clozes, tags, media and document pages remain unchanged. Cosmetic equivalence preserves scientific case, cloze syntax, math, superscripts and media identities; only six individually reviewed near-equivalent assertions are grouped across decks. Unique source details remain attached as variants. Inner-ear and misleading counterconditioning candidates remain separate. This is conservative canonicalization, not automatic conversion of every source fact into a playable bank.
 
-## Teaching content
+## Persistent learning history
 
-Six topic packs and 14 original prompts follow the supplied Fall 2026 OChem I syllabus's chapter scope. The syllabus itself, assessments, and course administration details are not served. Answer banks use explicit synonyms and normalized matching, not AI grading; a missing answer is not necessarily incorrect. Have a TA review the starter banks before classroom use. The host can pause to discuss an out-of-bank answer but cannot award an override during a live round.
+`history.js` safely adds prefixed `rp_` tables: migrations, anonymous users, actors, sessions, opportunities, attempts and suggestions. An existing unversioned SQLite file is backed up with `VACUUM INTO` before additive migration. Existing source tables are not replaced. SQLite uses WAL and foreign keys.
 
-Shared-device mode and untimed practice remain available. Fonts use Google Fonts with system fallbacks. No structure drawing or automated mechanism grading.
+History records canonical IDs, raw submissions, outcomes, server response times excluding host pauses, topics, rarity/rewards at the time, assistance, and complete review snapshots. My Performance separates assisted/unassisted cohorts, calculates accuracy, mean/median response speed, distributions, unique answers, rarity/rewards, subject/subtopic results and trends. Weakness suggestions require at least 5 opportunities and 10 scored attempts. Duplicate attempts are recorded but excluded from accuracy errors. One successful response is not permanent mastery.
 
-## Idle hosting costs
+Identity is an opaque HttpOnly browser cookie, stored as a hash on the server. Return with the same browser/cookie; clearing it loses access. There is no registered account, password recovery or cross-device sync. Shared-device names get separate actors under the owning browser. History is restricted to actors owned by that browser; complete shared-room review includes participant nicknames and match events. Export history as JSON via My Performance.
 
-Enable Railway’s Serverless/App Sleeping option in the service settings if your plan supports it. The application does not turn this hosting setting on automatically. An idle room closes after 10 minutes without a successful player action or a new player joining. Automatic game timer expiration, SSE heartbeats, reading state, and reconnects do not extend that window. This applies to lobbies, paused games, reviews, and completed games too.
+## Deploy on Railway
 
-Connected players get a warning during the final two minutes with a **Keep room open** button; using it starts another 10-minute window. Successful game actions also refresh the window. On expiry the server removes the room, sends a terminal event, and closes every room stream. The client stops reconnecting and clears its stale session. A reconnect to a missing/expired room returns HTTP 204 so EventSource also stops retrying if the browser missed the terminal event. Closure runs on the maintenance cycle (up to 15 seconds after the deadline).
+Use the existing GitHub-connected service, **one replica**, Node 24, `npm start`, assigned `PORT`, HTTPS and healthcheck `/api/health`. `npm run build` can be the build command; the validated catalog is also committed. Version 2.0.0 health reports catalog counts and whether Railway reports an attached volume.
 
-Once no rooms have open connections, their SSE heartbeats stop. Static pages and shared-device practice do not keep a background room connection. The app stays running until the hosting platform decides to sleep it; this change makes idle rooms stop generating traffic, but does not guarantee zero charges or a particular sleep time. Avoid external uptime monitors that continually hit the app if you want it to sleep. A first visit after sleep may take longer, and sleeping/restarting clears in-memory rooms. Keep one production replica and skip an always-on staging service to minimize pilot costs.
+**Attach a Railway persistent volume at `/data` and set `DATA_DIR=/data`.** The app also honors `RAILWAY_VOLUME_MOUNT_PATH` automatically. Without a volume, SQLite works locally but hosting deployments/replacements can erase history. The default local path is `data/learning.sqlite`; it is ignored by Git. No deployment credentials are stored in the app. Back up the volume/database regularly. For an online backup use SQLite's backup API; do not copy only the main file while WAL writes are in progress.
 
-The optional positive integer `ROOM_IDLE_TIMEOUT_MS` overrides the 10-minute timeout (in milliseconds), primarily for fast local validation. No extra environment variable is needed in production.
+Example environment settings are in `.env.example`; Node does not automatically load this file. Set production variables in Railway. Preserve `Host` and `X-Forwarded-Proto` at the proxy, disable buffering for `/api/events`, and allow long-lived SSE responses. Do not log the event-stream query string, which includes a temporary seat token. Public static serving is an allowlist; neither SQLite nor the private source corpus is accessible.
+
+Rooms remain in memory and clear after server restart. Reconnect from the original tab; disconnections keep timers running, and host transfer occurs when the host explicitly leaves. Multi-replica deployment requires shared room state and is not supported. Persistent history survives restarts only when the database resides on persistent storage. A cookie in the same browser restores history even after a room disappears.
+
+## Idle costs
+
+Rooms close after **10 minutes** without successful gameplay/keepalive or joins. Automatic timer expiration, bank viewing, SSE heartbeats and reconnects do not extend the window. Clients get a final-two-minute warning and Keep room open action. Expiry closes every room stream; stale reconnects return HTTP 204, ending retries. An optional `ROOM_IDLE_TIMEOUT_MS` overrides the window for tests.
+
+Enable Railway Serverless/App Sleeping in service settings if supported. The app's maintenance timers do not make network requests; once room streams close, heartbeat traffic stops. The platform decides when to sleep; zero cost and exact sleep timing are not guaranteed. Avoid uptime monitors and extra always-on staging services if minimizing pilot costs. Use one production instance and test locally first.

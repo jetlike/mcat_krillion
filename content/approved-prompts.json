@@ -1,0 +1,2901 @@
+{
+  "version": "mcat-rarity-v1",
+  "provenance": "Reviewed examples retained at exact approved scores. Additional bounded source-backed starter sets use explicit initial A/Y/P estimates, never card frequency.",
+  "prompts": [
+    {
+      "id": "glycolysis-steps",
+      "text": "Name an enzyme activity labeling one of the ten standard steps of human glycolysis. Isoenzymes for the same step count as one answer.",
+      "topics": [
+        "metabolism"
+      ],
+      "explanation": "Complete ten-step bank. This prompt credits reaction activities, not distinct isoenzyme genes. Hexokinase and glucokinase are NOT biochemical synonyms; either earns the same step-1 credit by explicit prompt scope. PFK-2, PDH and lactate dehydrogenase do not catalyze one of these ten steps.",
+      "scope": "Complete ten-step bank. This prompt credits reaction activities, not distinct isoenzyme genes. Hexokinase and glucokinase are NOT biochemical synonyms; either earns the same step-1 credit by explicit prompt scope. PFK-2, PDH and lactate dehydrogenase do not catalyze one of these ten steps.",
+      "references": [
+        "MILEDOWN PDF p.87 (glycolysis diagram); KAPLAN_BIOCHEM_2023 pp.525–534"
+      ],
+      "answers": [
+        {
+          "id": "glyco:pfk1",
+          "label": "Phosphofructokinase-1",
+          "aliases": [
+            "PFK-1",
+            "PFK1",
+            "phosphofructokinase 1"
+          ],
+          "A": 15,
+          "Y": 5,
+          "P": 5,
+          "rarity": 10.0,
+          "explanation": "Committed regulatory step and prominent study anchor; usually recalled early.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "glyco:hexokinase-step",
+          "label": "Hexokinase activity",
+          "aliases": [
+            "hexokinase",
+            "glucokinase"
+          ],
+          "A": 20,
+          "Y": 10,
+          "P": 5,
+          "rarity": 14.0,
+          "explanation": "First pathway step; glucokinase is an accepted step-equivalent isoenzyme response, not a synonym.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "glyco:pyruvate-kinase",
+          "label": "Pyruvate kinase",
+          "aliases": [
+            "PK"
+          ],
+          "A": 35,
+          "Y": 10,
+          "P": 10,
+          "rarity": 22.5,
+          "explanation": "Memorable ATP-producing terminal step, but less immediate than PFK-1.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "glyco:gapdh",
+          "label": "Glyceraldehyde-3-phosphate dehydrogenase",
+          "aliases": [
+            "GAPDH",
+            "glyceraldehyde 3 phosphate dehydrogenase"
+          ],
+          "A": 45,
+          "Y": 15,
+          "P": 15,
+          "rarity": 30.0,
+          "explanation": "NADH-generating step is emphasized; long name reduces spontaneous production.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "glyco:aldolase",
+          "label": "Fructose-bisphosphate aldolase",
+          "aliases": [
+            "aldolase",
+            "fructose 1,6 bisphosphate aldolase"
+          ],
+          "A": 50,
+          "Y": 20,
+          "P": 20,
+          "rarity": 35.0,
+          "explanation": "Recognizable cleavage step but less salient than irreversible steps.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "glyco:gpi",
+          "label": "Glucose-6-phosphate isomerase",
+          "aliases": [
+            "phosphoglucose isomerase",
+            "GPI",
+            "PGI",
+            "glucose phosphate isomerase"
+          ],
+          "A": 60,
+          "Y": 25,
+          "P": 25,
+          "rarity": 42.5,
+          "explanation": "Standard reversible conversion; full-name recall is less automatic.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "glyco:pgk",
+          "label": "Phosphoglycerate kinase",
+          "aliases": [
+            "PGK"
+          ],
+          "A": 70,
+          "Y": 15,
+          "P": 25,
+          "rarity": 44.5,
+          "explanation": "Important substrate-level ATP step: high educational yield does not guarantee quick name recall.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "glyco:enolase",
+          "label": "Enolase",
+          "aliases": [],
+          "A": 65,
+          "Y": 25,
+          "P": 30,
+          "rarity": 46.0,
+          "explanation": "Named dehydration step, moderately emphasized but not a first-choice anchor.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "glyco:tpi",
+          "label": "Triose-phosphate isomerase",
+          "aliases": [
+            "TPI",
+            "TIM",
+            "triose phosphate isomerase"
+          ],
+          "A": 65,
+          "Y": 30,
+          "P": 30,
+          "rarity": 47.5,
+          "explanation": "Standard pathway member with lower spontaneous salience.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "glyco:pgm",
+          "label": "Phosphoglycerate mutase",
+          "aliases": [
+            "PGAM",
+            "PGM",
+            "phosphoglycerate 2,3 mutase"
+          ],
+          "A": 75,
+          "Y": 35,
+          "P": 40,
+          "rarity": 56.0,
+          "explanation": "Less prominent reversible rearrangement; PGM accepted only in this glycolysis context, not glycogen context.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        }
+      ]
+    },
+    {
+      "id": "aromatic-standard-aa",
+      "text": "Name a standard proteinogenic amino acid whose side chain contains an aromatic ring.",
+      "topics": [
+        "amino-acids"
+      ],
+      "explanation": "Four chemically aromatic side chains: phenylalanine, tyrosine, tryptophan AND histidine (aromatic imidazole). Introductory charts often file histidine under basic rather than aromatic, but those categories are not chemically exclusive. Standard 20 only; no nonstandard analogues.",
+      "scope": "Four chemically aromatic side chains: phenylalanine, tyrosine, tryptophan AND histidine (aromatic imidazole). Introductory charts often file histidine under basic rather than aromatic, but those categories are not chemically exclusive. Standard 20 only; no nonstandard analogues.",
+      "references": [
+        "KAPLAN_BIOCHEM_2023 pp.68,71–74,105; MILEDOWN p.84"
+      ],
+      "answers": [
+        {
+          "id": "aa:phe",
+          "label": "Phenylalanine",
+          "aliases": [
+            "Phe",
+            "F"
+          ],
+          "A": 20,
+          "Y": 5,
+          "P": 5,
+          "rarity": 12.5,
+          "explanation": "Canonical benzene-containing aromatic amino acid.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "aa:tyr",
+          "label": "Tyrosine",
+          "aliases": [
+            "Tyr",
+            "Y"
+          ],
+          "A": 25,
+          "Y": 5,
+          "P": 5,
+          "rarity": 15.0,
+          "explanation": "Aromatic and polar; hydroxyl group does not remove aromaticity.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "aa:trp",
+          "label": "Tryptophan",
+          "aliases": [
+            "Trp",
+            "W"
+          ],
+          "A": 35,
+          "Y": 10,
+          "P": 10,
+          "rarity": 22.5,
+          "explanation": "Indole-containing aromatic amino acid; slightly less immediate but core MCAT material.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "aa:his",
+          "label": "Histidine",
+          "aliases": [
+            "His",
+            "H"
+          ],
+          "A": 80,
+          "Y": 10,
+          "P": 45,
+          "rarity": 52.0,
+          "explanation": "Chemically aromatic imidazole, usually taught under basic side chains. Very high MCAT yield but low spontaneous recall to the aromatic prompt; this is an intentionally surprising correct answer.",
+          "confidence": "Scientific H; rarity L (estimated)"
+        }
+      ]
+    },
+    {
+      "id": "anterior-pituitary-six",
+      "text": "Name one of the six major anterior-pituitary hormones in the conventional introductory endocrine set.",
+      "topics": [
+        "endocrine"
+      ],
+      "explanation": "Complete explicitly six-major-hormone set. This is deliberately narrower than every peptide released by the anterior pituitary. Beta-endorphin and related POMC peptides are valid broader answers but outside this scoped bank. Do not use an unqualified all-hormones prompt with this six-item key.",
+      "scope": "Complete explicitly six-major-hormone set. This is deliberately narrower than every peptide released by the anterior pituitary. Beta-endorphin and related POMC peptides are valid broader answers but outside this scoped bank. Do not use an unqualified all-hormones prompt with this six-item key.",
+      "references": [
+        "KAPLAN_BIO_2023 pp.337–342,368; MILEDOWN p.79"
+      ],
+      "answers": [
+        {
+          "id": "hormone:gh",
+          "label": "Growth hormone",
+          "aliases": [
+            "GH",
+            "somatotropin",
+            "somatotrophin"
+          ],
+          "A": 15,
+          "Y": 5,
+          "P": 5,
+          "rarity": 10.0,
+          "explanation": "Highly salient anterior-pituitary example.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "hormone:prl",
+          "label": "Prolactin",
+          "aliases": [
+            "PRL"
+          ],
+          "A": 20,
+          "Y": 10,
+          "P": 10,
+          "rarity": 15.0,
+          "explanation": "Prominent direct hormone for lactation.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "hormone:fsh",
+          "label": "Follicle-stimulating hormone",
+          "aliases": [
+            "FSH",
+            "follicle stimulating hormone"
+          ],
+          "A": 25,
+          "Y": 5,
+          "P": 10,
+          "rarity": 16.0,
+          "explanation": "Core reproductive-axis hormone.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "hormone:lh",
+          "label": "Luteinizing hormone",
+          "aliases": [
+            "LH",
+            "luteinising hormone",
+            "lutropin"
+          ],
+          "A": 25,
+          "Y": 5,
+          "P": 10,
+          "rarity": 16.0,
+          "explanation": "Core ovulation/Leydig-cell hormone; tied with FSH, not artificially separated.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "hormone:tsh",
+          "label": "Thyroid-stimulating hormone",
+          "aliases": [
+            "TSH",
+            "thyrotropin",
+            "thyrotrophin"
+          ],
+          "A": 35,
+          "Y": 10,
+          "P": 10,
+          "rarity": 22.5,
+          "explanation": "Core thyroid-axis hormone but often recalled after GH/reproductive examples.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "hormone:acth",
+          "label": "Adrenocorticotropic hormone",
+          "aliases": [
+            "ACTH",
+            "corticotropin",
+            "corticotrophin"
+          ],
+          "A": 40,
+          "Y": 10,
+          "P": 10,
+          "rarity": 25.0,
+          "explanation": "Core adrenal-axis hormone; longer expanded name.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        }
+      ]
+    },
+    {
+      "id": "epithelial-categories",
+      "text": "Name a standard human epithelial category classified by layering and cell shape. Count keratinized and nonkeratinized stratified squamous epithelium as one category.",
+      "topics": [
+        "cellular"
+      ],
+      "explanation": "Eight conventional morphology categories; ciliation/keratinization are not extra answers. Bare squamous/cuboidal/columnar lacks the required layer specification. Urothelium and transitional epithelium are one answer.",
+      "scope": "Eight conventional morphology categories; ciliation/keratinization are not extra answers. Bare squamous/cuboidal/columnar lacks the required layer specification. Urothelium and transitional epithelium are one answer.",
+      "references": [
+        "KAPLAN_BIO_2023 p.78; OpenStax Anatomy & Physiology 2e §4.2 (external-epithelium text saved as openstax-epithelium.txt)"
+      ],
+      "answers": [
+        {
+          "id": "epi:simple-squamous",
+          "label": "Simple squamous epithelium",
+          "aliases": [
+            "simple squamous"
+          ],
+          "A": 15,
+          "Y": 10,
+          "P": 10,
+          "rarity": 12.5,
+          "explanation": "Classic alveolar/capillary diffusion example.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "epi:simple-columnar",
+          "label": "Simple columnar epithelium",
+          "aliases": [
+            "simple columnar"
+          ],
+          "A": 30,
+          "Y": 20,
+          "P": 20,
+          "rarity": 25.0,
+          "explanation": "Well-known intestinal absorption example; same anchor score as cuboidal.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "epi:simple-cuboidal",
+          "label": "Simple cuboidal epithelium",
+          "aliases": [
+            "simple cuboidal"
+          ],
+          "A": 30,
+          "Y": 20,
+          "P": 20,
+          "rarity": 25.0,
+          "explanation": "Well-known renal-tubule example.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "epi:stratified-squamous",
+          "label": "Stratified squamous epithelium",
+          "aliases": [
+            "stratified squamous",
+            "keratinized stratified squamous epithelium",
+            "nonkeratinized stratified squamous epithelium"
+          ],
+          "A": 40,
+          "Y": 20,
+          "P": 20,
+          "rarity": 30.0,
+          "explanation": "Skin/mucosal protective category; the two qualified alternatives earn the same parent-category credit, not separate lives.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "epi:pseudostratified-columnar",
+          "label": "Pseudostratified columnar epithelium",
+          "aliases": [
+            "pseudostratified columnar",
+            "ciliated pseudostratified columnar epithelium"
+          ],
+          "A": 60,
+          "Y": 30,
+          "P": 35,
+          "rarity": 46.0,
+          "explanation": "Familiar airway histology but less readily named than simple categories.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "epi:transitional",
+          "label": "Transitional epithelium",
+          "aliases": [
+            "transitional",
+            "urothelium",
+            "urothelial epithelium"
+          ],
+          "A": 65,
+          "Y": 35,
+          "P": 45,
+          "rarity": 52.0,
+          "explanation": "Urinary stretching specialization; moderately less salient.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "epi:stratified-cuboidal",
+          "label": "Stratified cuboidal epithelium",
+          "aliases": [
+            "stratified cuboidal"
+          ],
+          "A": 91,
+          "Y": 80,
+          "P": 75,
+          "rarity": 84.5,
+          "explanation": "Uncommon gland/duct category with limited prominence in the supplied MCAT summaries. High recall uncertainty.",
+          "confidence": "Scientific H; rarity L (estimated)"
+        },
+        {
+          "id": "epi:stratified-columnar",
+          "label": "Stratified columnar epithelium",
+          "aliases": [
+            "stratified columnar"
+          ],
+          "A": 97,
+          "Y": 92,
+          "P": 90,
+          "rarity": 94.1,
+          "explanation": "Valid rare gland/duct category independently checked in OpenStax; exceptionally low predicted spontaneous production, but the >90 classification is unmeasured.",
+          "confidence": "Scientific H; rarity L (estimated)"
+        }
+      ]
+    },
+    {
+      "id": "defense-mechanisms",
+      "text": "Name a psychological defense mechanism.",
+      "topics": [
+        "motivation"
+      ],
+      "explanation": "Fourteen source-supported examples, not an exhaustive universal taxonomy. Other valid mechanisms must be reviewed rather than labeled scientifically wrong. Coping/defense categories vary; suppression is consciously postponing attention to a distressing thought, not proof that it becomes unconscious.",
+      "scope": "Fourteen source-supported examples, not an exhaustive universal taxonomy. Other valid mechanisms must be reviewed rather than labeled scientifically wrong. Coping/defense categories vary; suppression is consciously postponing attention to a distressing thought, not proof that it becomes unconscious.",
+      "references": [
+        "KA_PS PDF pp.155–156; parsed imported Anki fields corroborate individual terms (source-match-preview.json)"
+      ],
+      "answers": [
+        {
+          "id": "defense:denial",
+          "label": "Denial",
+          "aliases": [],
+          "A": 20,
+          "Y": 10,
+          "P": 10,
+          "rarity": 15.0,
+          "explanation": "Everyday label and foundational example.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "defense:repression",
+          "label": "Repression",
+          "aliases": [],
+          "A": 30,
+          "Y": 10,
+          "P": 10,
+          "rarity": 20.0,
+          "explanation": "Foundational unconscious exclusion of distressing content; distinct from suppression.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "defense:projection",
+          "label": "Projection",
+          "aliases": [],
+          "A": 35,
+          "Y": 15,
+          "P": 15,
+          "rarity": 25.0,
+          "explanation": "Commonly taught attribution of unacceptable feelings to someone else.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "defense:displacement",
+          "label": "Displacement",
+          "aliases": [],
+          "A": 45,
+          "Y": 20,
+          "P": 20,
+          "rarity": 32.5,
+          "explanation": "Redirecting affect toward a safer target; standard vignette.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "defense:rationalization",
+          "label": "Rationalization",
+          "aliases": [
+            "rationalisation"
+          ],
+          "A": 45,
+          "Y": 20,
+          "P": 20,
+          "rarity": 32.5,
+          "explanation": "Self-protective explanation for behavior; standard vignette, tied with two equally salient examples.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "defense:sublimation",
+          "label": "Sublimation",
+          "aliases": [],
+          "A": 45,
+          "Y": 20,
+          "P": 20,
+          "rarity": 32.5,
+          "explanation": "Channeling impulses into socially acceptable activity is a standard mature-defense example.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "defense:regression",
+          "label": "Regression",
+          "aliases": [],
+          "A": 55,
+          "Y": 25,
+          "P": 25,
+          "rarity": 40.0,
+          "explanation": "Return to an earlier behavioral pattern under stress.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "defense:reaction-formation",
+          "label": "Reaction formation",
+          "aliases": [],
+          "A": 60,
+          "Y": 25,
+          "P": 25,
+          "rarity": 42.5,
+          "explanation": "Expressing the opposite of an unacceptable impulse; needs a clear definition.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "defense:intellectualization",
+          "label": "Intellectualization",
+          "aliases": [
+            "intellectualisation"
+          ],
+          "A": 65,
+          "Y": 30,
+          "P": 35,
+          "rarity": 48.5,
+          "explanation": "Focusing on abstraction to distance affect; not automatically the same as isolation of affect.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "defense:suppression",
+          "label": "Suppression",
+          "aliases": [],
+          "A": 70,
+          "Y": 40,
+          "P": 40,
+          "rarity": 55.0,
+          "explanation": "Conscious setting aside, often confused with repression. Lower spontaneous recall despite clear distinction.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "defense:humor",
+          "label": "Humor",
+          "aliases": [
+            "humour"
+          ],
+          "A": 82,
+          "Y": 65,
+          "P": 65,
+          "rarity": 73.5,
+          "explanation": "A defense-function use of humor, not every joke; less obvious as a technical category.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "defense:altruism",
+          "label": "Altruism",
+          "aliases": [],
+          "A": 85,
+          "Y": 65,
+          "P": 65,
+          "rarity": 75.0,
+          "explanation": "Service to others can function as a mature defense; the prompt-specific role matters, not every helping act.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "defense:passive-aggression",
+          "label": "Passive aggression",
+          "aliases": [
+            "passive-aggression",
+            "passive aggressiveness",
+            "passive-aggressiveness"
+          ],
+          "A": 88,
+          "Y": 70,
+          "P": 75,
+          "rarity": 80.0,
+          "explanation": "Indirect expression of hostility; less often first produced as a defense label.",
+          "confidence": "Scientific H; rarity L (estimated)"
+        },
+        {
+          "id": "defense:projective-identification",
+          "label": "Projective identification",
+          "aliases": [],
+          "A": 98,
+          "Y": 93,
+          "P": 90,
+          "rarity": 94.9,
+          "explanation": "More specialized interpersonal defense involving projection and the other person being induced to experience/embody projected material. Not an alias of projection; supplied notes p.155 explicitly discuss it.",
+          "confidence": "Scientific M; rarity L (estimated)"
+        }
+      ]
+    },
+    {
+      "id": "gestalt-principles",
+      "text": "Name a Gestalt principle of visual perceptual organization.",
+      "topics": [
+        "perception"
+      ],
+      "explanation": "Eight standard review-bank principles; not a universal closed list. Other valid principles such as common region or uniform connectedness deserve reviewed additions. Do not merge closure with simplicity or figure-ground with proximity.",
+      "scope": "Eight standard review-bank principles; not a universal closed list. Other valid principles such as common region or uniform connectedness deserve reviewed additions. Do not merge closure with simplicity or figure-ground with proximity.",
+      "references": [
+        "KA_PS PDF pp.16–18; OpenStax Psychology 2e §5.6 (openstax-gestalt.txt)"
+      ],
+      "answers": [
+        {
+          "id": "gestalt:closure",
+          "label": "Closure",
+          "aliases": [
+            "law of closure"
+          ],
+          "A": 20,
+          "Y": 10,
+          "P": 10,
+          "rarity": 15.0,
+          "explanation": "Most familiar complete-the-missing-shape example.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "gestalt:proximity",
+          "label": "Proximity",
+          "aliases": [
+            "law of proximity"
+          ],
+          "A": 25,
+          "Y": 10,
+          "P": 10,
+          "rarity": 17.5,
+          "explanation": "Core spatial grouping example.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "gestalt:similarity",
+          "label": "Similarity",
+          "aliases": [
+            "law of similarity"
+          ],
+          "A": 25,
+          "Y": 10,
+          "P": 10,
+          "rarity": 17.5,
+          "explanation": "Core feature-based grouping example; tied with proximity.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "gestalt:figure-ground",
+          "label": "Figure–ground organization",
+          "aliases": [
+            "figure-ground",
+            "figure ground",
+            "figure-ground relationship"
+          ],
+          "A": 30,
+          "Y": 15,
+          "P": 15,
+          "rarity": 22.5,
+          "explanation": "Separating object from background is a standard perceptual-organization example.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "gestalt:continuity",
+          "label": "Good continuation",
+          "aliases": [
+            "continuity",
+            "law of continuity",
+            "good continuation"
+          ],
+          "A": 40,
+          "Y": 20,
+          "P": 20,
+          "rarity": 30.0,
+          "explanation": "Preferring smooth continuous contours.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "gestalt:common-fate",
+          "label": "Common fate",
+          "aliases": [
+            "law of common fate"
+          ],
+          "A": 75,
+          "Y": 50,
+          "P": 55,
+          "rarity": 63.5,
+          "explanation": "Grouping by shared movement; less prominent than static grouping cues.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "gestalt:symmetry",
+          "label": "Symmetry",
+          "aliases": [
+            "law of symmetry"
+          ],
+          "A": 85,
+          "Y": 65,
+          "P": 65,
+          "rarity": 75.0,
+          "explanation": "Grouping symmetric forms; secondary prominence in the supplied notes.",
+          "confidence": "Scientific H; rarity L (estimated)"
+        },
+        {
+          "id": "gestalt:pragnanz",
+          "label": "Prägnanz",
+          "aliases": [
+            "pragnanz",
+            "prägnanz",
+            "law of simplicity",
+            "simplicity",
+            "good form",
+            "law of good form"
+          ],
+          "A": 88,
+          "Y": 65,
+          "P": 70,
+          "rarity": 77.5,
+          "explanation": "Good/simple organization; unfamiliar terminology adds recall difficulty without making this an invented >90 answer.",
+          "confidence": "Scientific H; rarity L (estimated)"
+        }
+      ]
+    },
+    {
+      "id": "neutral-imf",
+      "text": "Name one of the three standard intermolecular attraction categories between neutral molecules used in introductory MCAT chemistry.",
+      "topics": [
+        "interactions"
+      ],
+      "explanation": "Complete conventional three-category introductory set: dispersion, permanent dipole–dipole, and hydrogen bonding. The classification explicitly includes hydrogen bonding separately despite its relationship to electrostatic dipolar interactions. Ion–dipole is outside this neutral-molecule scope. This is not a full microscopic taxonomy.",
+      "scope": "Complete conventional three-category introductory set: dispersion, permanent dipole–dipole, and hydrogen bonding. The classification explicitly includes hydrogen bonding separately despite its relationship to electrostatic dipolar interactions. Ion–dipole is outside this neutral-molecule scope. This is not a full microscopic taxonomy.",
+      "references": [
+        "KAPLAN_GENCHEM_2023 pp.209–214,217–218"
+      ],
+      "answers": [
+        {
+          "id": "imf:hydrogen-bond",
+          "label": "Hydrogen bonding",
+          "aliases": [
+            "hydrogen bond",
+            "hydrogen bonds",
+            "H bonding"
+          ],
+          "A": 20,
+          "Y": 5,
+          "P": 5,
+          "rarity": 12.5,
+          "explanation": "Highly familiar biomolecular interaction.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "imf:london",
+          "label": "London dispersion forces",
+          "aliases": [
+            "London dispersion",
+            "dispersion forces",
+            "London forces",
+            "instantaneous dipole-induced dipole forces",
+            "induced dipole-induced dipole forces"
+          ],
+          "A": 30,
+          "Y": 10,
+          "P": 10,
+          "rarity": 20.0,
+          "explanation": "Standard universal attraction, with many names for the same category.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "imf:dipole-dipole",
+          "label": "Permanent dipole–dipole interactions",
+          "aliases": [
+            "dipole dipole",
+            "dipole-dipole forces",
+            "dipole–dipole interactions",
+            "Keesom interactions"
+          ],
+          "A": 35,
+          "Y": 10,
+          "P": 10,
+          "rarity": 22.5,
+          "explanation": "Standard attraction between permanent dipoles. Do not accept bare van der Waals as a unique synonym: it can cover multiple categories.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        }
+      ]
+    },
+    {
+      "id": "acyl-families",
+      "text": "Name a carboxylic-acid derivative functional-group family used in organic or biochemical acyl-transfer reactions. Count cyclic members within their parent family.",
+      "topics": [
+        "organic-reactions"
+      ],
+      "explanation": "Five core families identified and validated here, not a claim that no other acyl derivative exists. Family names are required; specific substrates such as acetyl-CoA or acetyl chloride prompt clarification to thioester/acyl-halide family. Acyl phosphates belong to mixed anhydrides in this family-level bank; no independent extra credit. Carboxylic acid itself is the parent, not an answer.",
+      "scope": "Five core families identified and validated here, not a claim that no other acyl derivative exists. Family names are required; specific substrates such as acetyl-CoA or acetyl chloride prompt clarification to thioester/acyl-halide family. Acyl phosphates belong to mixed anhydrides in this family-level bank; no independent extra credit. Carboxylic acid itself is the parent, not an answer.",
+      "references": [
+        "KAPLAN_ORGO_2023 pp.425–445; KAPLAN quicksheets p.19; KAPLAN_BIOCHEM_2023 p.588 for thioesters"
+      ],
+      "answers": [
+        {
+          "id": "acyl:ester",
+          "label": "Ester",
+          "aliases": [
+            "esters",
+            "carboxylic ester"
+          ],
+          "A": 25,
+          "Y": 10,
+          "P": 10,
+          "rarity": 17.5,
+          "explanation": "Prominent oxygen-linked acyl derivative; a lactone is a cyclic ester, not a second family.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "acyl:amide",
+          "label": "Amide",
+          "aliases": [
+            "amides",
+            "carboxamide"
+          ],
+          "A": 30,
+          "Y": 10,
+          "P": 10,
+          "rarity": 20.0,
+          "explanation": "Prominent peptide-related acyl derivative; lactams count within this family.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "acyl:anhydride",
+          "label": "Acid anhydride",
+          "aliases": [
+            "carboxylic anhydride",
+            "anhydride",
+            "carboxylic acid anhydride"
+          ],
+          "A": 60,
+          "Y": 25,
+          "P": 30,
+          "rarity": 43.5,
+          "explanation": "Named acyl derivative, less immediate than ester/amide; mixed anhydride cases need context.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "acyl:thioester",
+          "label": "Thioester",
+          "aliases": [
+            "thioesters",
+            "thiol ester"
+          ],
+          "A": 75,
+          "Y": 25,
+          "P": 40,
+          "rarity": 53.0,
+          "explanation": "Important in acetyl-CoA biochemistry yet less likely to be volunteered to an organic derivative prompt.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "acyl:halide",
+          "label": "Acyl halide",
+          "aliases": [
+            "acid halide",
+            "acyl halides",
+            "acid halides"
+          ],
+          "A": 65,
+          "Y": 45,
+          "P": 45,
+          "rarity": 55.0,
+          "explanation": "Common in broader OChem but less emphasized in the MCAT-specific derivative chapters. The weighted formula can rank it rarer than thioesters despite easier recall—a model concern.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        }
+      ]
+    },
+    {
+      "id": "nmr-multiplicity",
+      "text": "Name a simple first-order proton NMR multiplicity produced by coupling to one set of n equivalent spin-½ neighbors, for n from 0 through 6.",
+      "topics": [
+        "organic-lab"
+      ],
+      "explanation": "Complete seven-answer n+1 bank under the stated idealized coupling model. Do not include multiplet, octet, dd or dt: generic/compound patterns or n=7 are outside this scope. Septet/heptet are aliases. Equivalent protons do not ordinarily split one another.",
+      "scope": "Complete seven-answer n+1 bank under the stated idealized coupling model. Do not include multiplet, octet, dd or dt: generic/compound patterns or n=7 are outside this scope. Septet/heptet are aliases. Equivalent protons do not ordinarily split one another.",
+      "references": [
+        "KAPLAN_ORGO_2023 pp.512–515, especially n+1 table on p.515; MILEDOWN p.26"
+      ],
+      "answers": [
+        {
+          "id": "nmr:singlet",
+          "label": "Singlet",
+          "aliases": [
+            "s"
+          ],
+          "A": 15,
+          "Y": 10,
+          "P": 10,
+          "rarity": 12.5,
+          "explanation": "Zero equivalent coupling neighbors, one line.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "nmr:doublet",
+          "label": "Doublet",
+          "aliases": [
+            "d"
+          ],
+          "A": 20,
+          "Y": 10,
+          "P": 10,
+          "rarity": 15.0,
+          "explanation": "One equivalent neighbor, two lines.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "nmr:triplet",
+          "label": "Triplet",
+          "aliases": [
+            "t"
+          ],
+          "A": 25,
+          "Y": 10,
+          "P": 10,
+          "rarity": 17.5,
+          "explanation": "Two equivalent neighbors, three lines.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "nmr:quartet",
+          "label": "Quartet",
+          "aliases": [
+            "q"
+          ],
+          "A": 40,
+          "Y": 15,
+          "P": 15,
+          "rarity": 27.5,
+          "explanation": "Three equivalent neighbors, four lines.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "nmr:septet",
+          "label": "Septet",
+          "aliases": [
+            "heptet"
+          ],
+          "A": 75,
+          "Y": 45,
+          "P": 50,
+          "rarity": 61.0,
+          "explanation": "Six equivalent neighbors, seven lines. Isopropyl examples make it more salient than a generic sextet despite higher n.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "nmr:quintet",
+          "label": "Quintet",
+          "aliases": [
+            "pentet"
+          ],
+          "A": 70,
+          "Y": 55,
+          "P": 55,
+          "rarity": 62.5,
+          "explanation": "Four equivalent neighbors, five lines; less routinely named.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "nmr:sextet",
+          "label": "Sextet",
+          "aliases": [],
+          "A": 80,
+          "Y": 65,
+          "P": 65,
+          "rarity": 72.5,
+          "explanation": "Five equivalent neighbors, six lines; textbook pattern less often encountered.",
+          "confidence": "Scientific H; rarity L (estimated)"
+        }
+      ]
+    },
+    {
+      "id": "em-bands",
+      "text": "Name one of the seven broad bands of the electromagnetic spectrum, counting visible light as one band.",
+      "topics": [
+        "light-sound"
+      ],
+      "explanation": "Complete conventional seven-band review set. Radio excludes microwaves for this gameplay taxonomy even though microwaves can be treated as a radio subband in other classifications. UV-A/UV-B and visible colors do not create extra answers.",
+      "scope": "Complete conventional seven-band review set. Radio excludes microwaves for this gameplay taxonomy even though microwaves can be treated as a radio subband in other classifications. UV-A/UV-B and visible colors do not create extra answers.",
+      "references": [
+        "KAPLAN_PHYSICS_2023 pp.470–473,511; MILEDOWN p.71"
+      ],
+      "answers": [
+        {
+          "id": "em:visible",
+          "label": "Visible light",
+          "aliases": [
+            "visible",
+            "visible spectrum"
+          ],
+          "A": 20,
+          "Y": 10,
+          "P": 10,
+          "rarity": 15.0,
+          "explanation": "Most immediately familiar band.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "em:ir",
+          "label": "Infrared",
+          "aliases": [
+            "IR",
+            "infrared radiation",
+            "infrared light"
+          ],
+          "A": 25,
+          "Y": 10,
+          "P": 10,
+          "rarity": 17.5,
+          "explanation": "Highly familiar IR/spectroscopy context; tied with UV.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "em:uv",
+          "label": "Ultraviolet",
+          "aliases": [
+            "UV",
+            "ultraviolet radiation",
+            "ultraviolet light"
+          ],
+          "A": 25,
+          "Y": 10,
+          "P": 10,
+          "rarity": 17.5,
+          "explanation": "Highly familiar UV/biomolecule context.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "em:radio",
+          "label": "Radio waves",
+          "aliases": [
+            "radio",
+            "radiofrequency",
+            "RF"
+          ],
+          "A": 40,
+          "Y": 15,
+          "P": 15,
+          "rarity": 27.5,
+          "explanation": "Core broad band, relevant to NMR, sometimes recalled after visible/IR/UV.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "em:xray",
+          "label": "X-rays",
+          "aliases": [
+            "X ray",
+            "X rays",
+            "X-ray radiation"
+          ],
+          "A": 40,
+          "Y": 20,
+          "P": 20,
+          "rarity": 30.0,
+          "explanation": "Common diagnostic high-energy band.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "em:gamma",
+          "label": "Gamma rays",
+          "aliases": [
+            "gamma radiation",
+            "gamma ray",
+            "γ rays"
+          ],
+          "A": 45,
+          "Y": 25,
+          "P": 25,
+          "rarity": 35.0,
+          "explanation": "Recognizable high-energy endpoint.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        },
+        {
+          "id": "em:microwave",
+          "label": "Microwaves",
+          "aliases": [
+            "microwave radiation",
+            "microwave"
+          ],
+          "A": 60,
+          "Y": 35,
+          "P": 40,
+          "rarity": 48.5,
+          "explanation": "Often omitted from a quick list despite familiarity.",
+          "confidence": "Scientific H; rarity M (estimated)"
+        }
+      ]
+    },
+    {
+      "id": "neural-signals",
+      "text": "Name a small-molecule neurotransmitter from the standard introductory MCAT set.",
+      "topics": [
+        "behavior-biology"
+      ],
+      "explanation": "These transmit neural signals; their effects depend on receptor and circuit. This finite review set excludes peptide transmitters.",
+      "scope": "These transmit neural signals; their effects depend on receptor and circuit. This finite review set excludes peptide transmitters.",
+      "references": [
+        "Kaplan Biology pp.264–307; KA Psychology/Sociology pp.117–118"
+      ],
+      "answers": [
+        {
+          "id": "neural-signals:1",
+          "label": "Acetylcholine",
+          "aliases": [
+            "ACh"
+          ],
+          "A": 25,
+          "Y": 20,
+          "P": 25,
+          "rarity": 23.5,
+          "explanation": "These transmit neural signals; their effects depend on receptor and circuit. This finite review set excludes peptide transmitters.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "neural-signals:2",
+          "label": "Dopamine",
+          "aliases": [
+            "DA"
+          ],
+          "A": 30,
+          "Y": 20,
+          "P": 25,
+          "rarity": 26.0,
+          "explanation": "These transmit neural signals; their effects depend on receptor and circuit. This finite review set excludes peptide transmitters.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "neural-signals:3",
+          "label": "Serotonin",
+          "aliases": [
+            "5-HT",
+            "5 hydroxytryptamine"
+          ],
+          "A": 35,
+          "Y": 20,
+          "P": 25,
+          "rarity": 28.5,
+          "explanation": "These transmit neural signals; their effects depend on receptor and circuit. This finite review set excludes peptide transmitters.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "neural-signals:4",
+          "label": "Norepinephrine",
+          "aliases": [
+            "noradrenaline"
+          ],
+          "A": 40,
+          "Y": 20,
+          "P": 25,
+          "rarity": 31.0,
+          "explanation": "These transmit neural signals; their effects depend on receptor and circuit. This finite review set excludes peptide transmitters.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "neural-signals:5",
+          "label": "Epinephrine",
+          "aliases": [
+            "adrenaline"
+          ],
+          "A": 45,
+          "Y": 20,
+          "P": 25,
+          "rarity": 33.5,
+          "explanation": "These transmit neural signals; their effects depend on receptor and circuit. This finite review set excludes peptide transmitters.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "neural-signals:6",
+          "label": "GABA",
+          "aliases": [
+            "gamma aminobutyric acid"
+          ],
+          "A": 50,
+          "Y": 20,
+          "P": 25,
+          "rarity": 36.0,
+          "explanation": "These transmit neural signals; their effects depend on receptor and circuit. This finite review set excludes peptide transmitters.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "neural-signals:7",
+          "label": "Glutamate",
+          "aliases": [
+            "glutamic acid"
+          ],
+          "A": 55,
+          "Y": 20,
+          "P": 25,
+          "rarity": 38.5,
+          "explanation": "These transmit neural signals; their effects depend on receptor and circuit. This finite review set excludes peptide transmitters.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "neural-signals:8",
+          "label": "Glycine",
+          "aliases": [],
+          "A": 60,
+          "Y": 20,
+          "P": 25,
+          "rarity": 41.0,
+          "explanation": "These transmit neural signals; their effects depend on receptor and circuit. This finite review set excludes peptide transmitters.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        }
+      ]
+    },
+    {
+      "id": "reinforcement-schedules",
+      "text": "Name one of the four standard intermittent operant reinforcement schedules.",
+      "topics": [
+        "learning"
+      ],
+      "explanation": "Ratio counts responses; interval counts time. Fixed is predictable; variable varies. Continuous reinforcement is outside this intermittent set.",
+      "scope": "Ratio counts responses; interval counts time. Fixed is predictable; variable varies. Continuous reinforcement is outside this intermittent set.",
+      "references": [
+        "KA Psychology/Sociology pp.200–203; MileDown p.54"
+      ],
+      "answers": [
+        {
+          "id": "reinforcement-schedules:1",
+          "label": "Fixed ratio",
+          "aliases": [
+            "FR"
+          ],
+          "A": 25,
+          "Y": 20,
+          "P": 25,
+          "rarity": 23.5,
+          "explanation": "Ratio counts responses; interval counts time. Fixed is predictable; variable varies. Continuous reinforcement is outside this intermittent set.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "reinforcement-schedules:2",
+          "label": "Variable ratio",
+          "aliases": [
+            "VR"
+          ],
+          "A": 30,
+          "Y": 20,
+          "P": 25,
+          "rarity": 26.0,
+          "explanation": "Ratio counts responses; interval counts time. Fixed is predictable; variable varies. Continuous reinforcement is outside this intermittent set.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "reinforcement-schedules:3",
+          "label": "Fixed interval",
+          "aliases": [
+            "FI"
+          ],
+          "A": 35,
+          "Y": 20,
+          "P": 25,
+          "rarity": 28.5,
+          "explanation": "Ratio counts responses; interval counts time. Fixed is predictable; variable varies. Continuous reinforcement is outside this intermittent set.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "reinforcement-schedules:4",
+          "label": "Variable interval",
+          "aliases": [
+            "VI"
+          ],
+          "A": 40,
+          "Y": 20,
+          "P": 25,
+          "rarity": 31.0,
+          "explanation": "Ratio counts responses; interval counts time. Fixed is predictable; variable varies. Continuous reinforcement is outside this intermittent set.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        }
+      ]
+    },
+    {
+      "id": "cluster-b",
+      "text": "Name a DSM-5 cluster B personality disorder.",
+      "topics": [
+        "disorders"
+      ],
+      "explanation": "These are the conventional four cluster B diagnoses. Names are for educational classification, not diagnosing oneself or others.",
+      "scope": "These are the conventional four cluster B diagnoses. Names are for educational classification, not diagnosing oneself or others.",
+      "references": [
+        "KA Psychology/Sociology pp.169–170; MileDown p.58"
+      ],
+      "answers": [
+        {
+          "id": "cluster-b:1",
+          "label": "Antisocial personality disorder",
+          "aliases": [
+            "antisocial"
+          ],
+          "A": 25,
+          "Y": 20,
+          "P": 25,
+          "rarity": 23.5,
+          "explanation": "These are the conventional four cluster B diagnoses. Names are for educational classification, not diagnosing oneself or others.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "cluster-b:2",
+          "label": "Borderline personality disorder",
+          "aliases": [
+            "borderline"
+          ],
+          "A": 30,
+          "Y": 20,
+          "P": 25,
+          "rarity": 26.0,
+          "explanation": "These are the conventional four cluster B diagnoses. Names are for educational classification, not diagnosing oneself or others.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "cluster-b:3",
+          "label": "Histrionic personality disorder",
+          "aliases": [
+            "histrionic"
+          ],
+          "A": 35,
+          "Y": 20,
+          "P": 25,
+          "rarity": 28.5,
+          "explanation": "These are the conventional four cluster B diagnoses. Names are for educational classification, not diagnosing oneself or others.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "cluster-b:4",
+          "label": "Narcissistic personality disorder",
+          "aliases": [
+            "narcissistic"
+          ],
+          "A": 40,
+          "Y": 20,
+          "P": 25,
+          "rarity": 31.0,
+          "explanation": "These are the conventional four cluster B diagnoses. Names are for educational classification, not diagnosing oneself or others.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        }
+      ]
+    },
+    {
+      "id": "sociological-lenses",
+      "text": "Name a sociological theoretical perspective discussed in introductory MCAT review.",
+      "topics": [
+        "sociology"
+      ],
+      "explanation": "These are theoretical lenses with different assumptions and levels of analysis, not interchangeable synonyms. Additional valid perspectives may be suggested.",
+      "scope": "These are theoretical lenses with different assumptions and levels of analysis, not interchangeable synonyms. Additional valid perspectives may be suggested.",
+      "references": [
+        "KA Psychology/Sociology pp.263–270"
+      ],
+      "answers": [
+        {
+          "id": "sociological-lenses:1",
+          "label": "Functionalism",
+          "aliases": [
+            "structural functionalism"
+          ],
+          "A": 25,
+          "Y": 20,
+          "P": 25,
+          "rarity": 23.5,
+          "explanation": "These are theoretical lenses with different assumptions and levels of analysis, not interchangeable synonyms. Additional valid perspectives may be suggested.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "sociological-lenses:2",
+          "label": "Conflict theory",
+          "aliases": [
+            "conflict perspective"
+          ],
+          "A": 30,
+          "Y": 20,
+          "P": 25,
+          "rarity": 26.0,
+          "explanation": "These are theoretical lenses with different assumptions and levels of analysis, not interchangeable synonyms. Additional valid perspectives may be suggested.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "sociological-lenses:3",
+          "label": "Symbolic interactionism",
+          "aliases": [],
+          "A": 35,
+          "Y": 20,
+          "P": 25,
+          "rarity": 28.5,
+          "explanation": "These are theoretical lenses with different assumptions and levels of analysis, not interchangeable synonyms. Additional valid perspectives may be suggested.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "sociological-lenses:4",
+          "label": "Social constructionism",
+          "aliases": [],
+          "A": 40,
+          "Y": 20,
+          "P": 25,
+          "rarity": 31.0,
+          "explanation": "These are theoretical lenses with different assumptions and levels of analysis, not interchangeable synonyms. Additional valid perspectives may be suggested.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "sociological-lenses:5",
+          "label": "Feminist theory",
+          "aliases": [
+            "feminism"
+          ],
+          "A": 45,
+          "Y": 20,
+          "P": 25,
+          "rarity": 33.5,
+          "explanation": "These are theoretical lenses with different assumptions and levels of analysis, not interchangeable synonyms. Additional valid perspectives may be suggested.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "sociological-lenses:6",
+          "label": "Rational choice theory",
+          "aliases": [],
+          "A": 50,
+          "Y": 20,
+          "P": 25,
+          "rarity": 36.0,
+          "explanation": "These are theoretical lenses with different assumptions and levels of analysis, not interchangeable synonyms. Additional valid perspectives may be suggested.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "sociological-lenses:7",
+          "label": "Social exchange theory",
+          "aliases": [
+            "exchange theory"
+          ],
+          "A": 55,
+          "Y": 20,
+          "P": 25,
+          "rarity": 38.5,
+          "explanation": "These are theoretical lenses with different assumptions and levels of analysis, not interchangeable synonyms. Additional valid perspectives may be suggested.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        }
+      ]
+    },
+    {
+      "id": "social-support",
+      "text": "Name a type of social support in the five-category emotional, esteem, informational, instrumental and companionship model.",
+      "topics": [
+        "identity"
+      ],
+      "explanation": "Classifications vary. This question explicitly uses five categories; instrumental/tangible are one answer.",
+      "scope": "Classifications vary. This question explicitly uses five categories; instrumental/tangible are one answer.",
+      "references": [
+        "KA Psychology/Sociology p.246"
+      ],
+      "answers": [
+        {
+          "id": "social-support:1",
+          "label": "Emotional support",
+          "aliases": [
+            "emotional"
+          ],
+          "A": 25,
+          "Y": 20,
+          "P": 25,
+          "rarity": 23.5,
+          "explanation": "Classifications vary. This question explicitly uses five categories; instrumental/tangible are one answer.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "social-support:2",
+          "label": "Esteem support",
+          "aliases": [
+            "esteem"
+          ],
+          "A": 30,
+          "Y": 20,
+          "P": 25,
+          "rarity": 26.0,
+          "explanation": "Classifications vary. This question explicitly uses five categories; instrumental/tangible are one answer.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "social-support:3",
+          "label": "Informational support",
+          "aliases": [
+            "informational"
+          ],
+          "A": 35,
+          "Y": 20,
+          "P": 25,
+          "rarity": 28.5,
+          "explanation": "Classifications vary. This question explicitly uses five categories; instrumental/tangible are one answer.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "social-support:4",
+          "label": "Instrumental support",
+          "aliases": [
+            "tangible support",
+            "instrumental",
+            "tangible"
+          ],
+          "A": 40,
+          "Y": 20,
+          "P": 25,
+          "rarity": 31.0,
+          "explanation": "Classifications vary. This question explicitly uses five categories; instrumental/tangible are one answer.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "social-support:5",
+          "label": "Companionship support",
+          "aliases": [
+            "companion support",
+            "companionship"
+          ],
+          "A": 45,
+          "Y": 20,
+          "P": 25,
+          "rarity": 33.5,
+          "explanation": "Classifications vary. This question explicitly uses five categories; instrumental/tangible are one answer.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        }
+      ]
+    },
+    {
+      "id": "social-institutions",
+      "text": "Name a major social institution covered in introductory sociology.",
+      "topics": [
+        "demographics"
+      ],
+      "explanation": "Institutions organize persistent social roles and practices. This is a starter set, not a claim that no other institution exists.",
+      "scope": "Institutions organize persistent social roles and practices. This is a starter set, not a claim that no other institution exists.",
+      "references": [
+        "KA Psychology/Sociology pp.258–262; MileDown p.62"
+      ],
+      "answers": [
+        {
+          "id": "social-institutions:1",
+          "label": "Family",
+          "aliases": [],
+          "A": 25,
+          "Y": 20,
+          "P": 25,
+          "rarity": 23.5,
+          "explanation": "Institutions organize persistent social roles and practices. This is a starter set, not a claim that no other institution exists.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "social-institutions:2",
+          "label": "Education",
+          "aliases": [],
+          "A": 30,
+          "Y": 20,
+          "P": 25,
+          "rarity": 26.0,
+          "explanation": "Institutions organize persistent social roles and practices. This is a starter set, not a claim that no other institution exists.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "social-institutions:3",
+          "label": "Religion",
+          "aliases": [],
+          "A": 35,
+          "Y": 20,
+          "P": 25,
+          "rarity": 28.5,
+          "explanation": "Institutions organize persistent social roles and practices. This is a starter set, not a claim that no other institution exists.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "social-institutions:4",
+          "label": "Government",
+          "aliases": [
+            "political institutions"
+          ],
+          "A": 40,
+          "Y": 20,
+          "P": 25,
+          "rarity": 31.0,
+          "explanation": "Institutions organize persistent social roles and practices. This is a starter set, not a claim that no other institution exists.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "social-institutions:5",
+          "label": "Economy",
+          "aliases": [
+            "economic institutions"
+          ],
+          "A": 45,
+          "Y": 20,
+          "P": 25,
+          "rarity": 33.5,
+          "explanation": "Institutions organize persistent social roles and practices. This is a starter set, not a claim that no other institution exists.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "social-institutions:6",
+          "label": "Medicine",
+          "aliases": [
+            "healthcare",
+            "health care"
+          ],
+          "A": 50,
+          "Y": 20,
+          "P": 25,
+          "rarity": 36.0,
+          "explanation": "Institutions organize persistent social roles and practices. This is a starter set, not a claim that no other institution exists.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        }
+      ]
+    },
+    {
+      "id": "enzyme-classes",
+      "text": "Name one of the seven modern EC enzyme classes.",
+      "topics": [
+        "enzymes"
+      ],
+      "explanation": "Traditional prep sources list six; modern EC classification adds translocases. Classes describe reaction types.",
+      "scope": "Traditional prep sources list six; modern EC classification adds translocases. Classes describe reaction types.",
+      "references": [
+        "Kaplan Biochemistry pp.128–134; IUBMB enzyme nomenclature, EC 1–7: https://iubmb.qmul.ac.uk/enzyme/"
+      ],
+      "answers": [
+        {
+          "id": "enzyme-classes:1",
+          "label": "Oxidoreductase",
+          "aliases": [
+            "oxidoreductases"
+          ],
+          "A": 25,
+          "Y": 20,
+          "P": 25,
+          "rarity": 23.5,
+          "explanation": "Traditional prep sources list six; modern EC classification adds translocases. Classes describe reaction types.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "enzyme-classes:2",
+          "label": "Transferase",
+          "aliases": [
+            "transferases"
+          ],
+          "A": 30,
+          "Y": 20,
+          "P": 25,
+          "rarity": 26.0,
+          "explanation": "Traditional prep sources list six; modern EC classification adds translocases. Classes describe reaction types.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "enzyme-classes:3",
+          "label": "Hydrolase",
+          "aliases": [
+            "hydrolases"
+          ],
+          "A": 35,
+          "Y": 20,
+          "P": 25,
+          "rarity": 28.5,
+          "explanation": "Traditional prep sources list six; modern EC classification adds translocases. Classes describe reaction types.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "enzyme-classes:4",
+          "label": "Lyase",
+          "aliases": [
+            "lyases"
+          ],
+          "A": 40,
+          "Y": 20,
+          "P": 25,
+          "rarity": 31.0,
+          "explanation": "Traditional prep sources list six; modern EC classification adds translocases. Classes describe reaction types.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "enzyme-classes:5",
+          "label": "Isomerase",
+          "aliases": [
+            "isomerases"
+          ],
+          "A": 45,
+          "Y": 20,
+          "P": 25,
+          "rarity": 33.5,
+          "explanation": "Traditional prep sources list six; modern EC classification adds translocases. Classes describe reaction types.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "enzyme-classes:6",
+          "label": "Ligase",
+          "aliases": [
+            "ligases"
+          ],
+          "A": 50,
+          "Y": 20,
+          "P": 25,
+          "rarity": 36.0,
+          "explanation": "Traditional prep sources list six; modern EC classification adds translocases. Classes describe reaction types.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "enzyme-classes:7",
+          "label": "Translocase",
+          "aliases": [
+            "translocases"
+          ],
+          "A": 55,
+          "Y": 20,
+          "P": 25,
+          "rarity": 38.5,
+          "explanation": "Traditional prep sources list six; modern EC classification adds translocases. Classes describe reaction types.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        }
+      ]
+    },
+    {
+      "id": "nucleobases",
+      "text": "Name a nitrogenous base used in standard DNA or RNA.",
+      "topics": [
+        "biomolecules"
+      ],
+      "explanation": "A/G are purines; C/T/U are pyrimidines. Adenosine is a nucleoside, not an alias for adenine.",
+      "scope": "A/G are purines; C/T/U are pyrimidines. Adenosine is a nucleoside, not an alias for adenine.",
+      "references": [
+        "Kaplan Biochemistry pp.332–345"
+      ],
+      "answers": [
+        {
+          "id": "nucleobases:1",
+          "label": "Adenine",
+          "aliases": [
+            "A"
+          ],
+          "A": 25,
+          "Y": 20,
+          "P": 25,
+          "rarity": 23.5,
+          "explanation": "A/G are purines; C/T/U are pyrimidines. Adenosine is a nucleoside, not an alias for adenine.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "nucleobases:2",
+          "label": "Guanine",
+          "aliases": [
+            "G"
+          ],
+          "A": 30,
+          "Y": 20,
+          "P": 25,
+          "rarity": 26.0,
+          "explanation": "A/G are purines; C/T/U are pyrimidines. Adenosine is a nucleoside, not an alias for adenine.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "nucleobases:3",
+          "label": "Cytosine",
+          "aliases": [
+            "C"
+          ],
+          "A": 35,
+          "Y": 20,
+          "P": 25,
+          "rarity": 28.5,
+          "explanation": "A/G are purines; C/T/U are pyrimidines. Adenosine is a nucleoside, not an alias for adenine.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "nucleobases:4",
+          "label": "Thymine",
+          "aliases": [
+            "T"
+          ],
+          "A": 40,
+          "Y": 20,
+          "P": 25,
+          "rarity": 31.0,
+          "explanation": "A/G are purines; C/T/U are pyrimidines. Adenosine is a nucleoside, not an alias for adenine.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "nucleobases:5",
+          "label": "Uracil",
+          "aliases": [
+            "U"
+          ],
+          "A": 45,
+          "Y": 20,
+          "P": 25,
+          "rarity": 33.5,
+          "explanation": "A/G are purines; C/T/U are pyrimidines. Adenosine is a nucleoside, not an alias for adenine.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        }
+      ]
+    },
+    {
+      "id": "protein-separation",
+      "text": "Name a protein separation method covered in MCAT biochemistry.",
+      "topics": [
+        "biochem-lab"
+      ],
+      "explanation": "Methods exploit size, charge, pI or specific binding. Native and SDS-PAGE are distinct because denaturation and charge treatment differ.",
+      "scope": "Methods exploit size, charge, pI or specific binding. Native and SDS-PAGE are distinct because denaturation and charge treatment differ.",
+      "references": [
+        "Kaplan Biochemistry pp.200–214,222–223"
+      ],
+      "answers": [
+        {
+          "id": "protein-separation:1",
+          "label": "Native PAGE",
+          "aliases": [
+            "native gel electrophoresis"
+          ],
+          "A": 25,
+          "Y": 20,
+          "P": 25,
+          "rarity": 23.5,
+          "explanation": "Methods exploit size, charge, pI or specific binding. Native and SDS-PAGE are distinct because denaturation and charge treatment differ.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "protein-separation:2",
+          "label": "SDS-PAGE",
+          "aliases": [
+            "SDS PAGE"
+          ],
+          "A": 30,
+          "Y": 20,
+          "P": 25,
+          "rarity": 26.0,
+          "explanation": "Methods exploit size, charge, pI or specific binding. Native and SDS-PAGE are distinct because denaturation and charge treatment differ.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "protein-separation:3",
+          "label": "Isoelectric focusing",
+          "aliases": [
+            "IEF"
+          ],
+          "A": 35,
+          "Y": 20,
+          "P": 25,
+          "rarity": 28.5,
+          "explanation": "Methods exploit size, charge, pI or specific binding. Native and SDS-PAGE are distinct because denaturation and charge treatment differ.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "protein-separation:4",
+          "label": "Ion exchange chromatography",
+          "aliases": [
+            "ion-exchange chromatography"
+          ],
+          "A": 40,
+          "Y": 20,
+          "P": 25,
+          "rarity": 31.0,
+          "explanation": "Methods exploit size, charge, pI or specific binding. Native and SDS-PAGE are distinct because denaturation and charge treatment differ.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "protein-separation:5",
+          "label": "Size exclusion chromatography",
+          "aliases": [
+            "gel filtration",
+            "size-exclusion chromatography"
+          ],
+          "A": 45,
+          "Y": 20,
+          "P": 25,
+          "rarity": 33.5,
+          "explanation": "Methods exploit size, charge, pI or specific binding. Native and SDS-PAGE are distinct because denaturation and charge treatment differ.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "protein-separation:6",
+          "label": "Affinity chromatography",
+          "aliases": [],
+          "A": 50,
+          "Y": 20,
+          "P": 25,
+          "rarity": 36.0,
+          "explanation": "Methods exploit size, charge, pI or specific binding. Native and SDS-PAGE are distinct because denaturation and charge treatment differ.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        }
+      ]
+    },
+    {
+      "id": "rna-processing",
+      "text": "Name a standard processing step for eukaryotic protein-coding pre-mRNA.",
+      "topics": [
+        "molecular"
+      ],
+      "explanation": "Processing usually adds a 5′ cap, removes introns and adds a poly(A) tail. Histone mRNAs illustrate exceptions; this asks for standard steps, not universality.",
+      "scope": "Processing usually adds a 5′ cap, removes introns and adds a poly(A) tail. Histone mRNAs illustrate exceptions; this asks for standard steps, not universality.",
+      "references": [
+        "Kaplan Biochemistry pp.421–428"
+      ],
+      "answers": [
+        {
+          "id": "rna-processing:1",
+          "label": "5 prime capping",
+          "aliases": [
+            "5′ capping",
+            "5 end capping",
+            "capping"
+          ],
+          "A": 25,
+          "Y": 20,
+          "P": 25,
+          "rarity": 23.5,
+          "explanation": "Processing usually adds a 5′ cap, removes introns and adds a poly(A) tail. Histone mRNAs illustrate exceptions; this asks for standard steps, not universality.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "rna-processing:2",
+          "label": "Polyadenylation",
+          "aliases": [
+            "poly A tail addition",
+            "poly-A tailing"
+          ],
+          "A": 30,
+          "Y": 20,
+          "P": 25,
+          "rarity": 26.0,
+          "explanation": "Processing usually adds a 5′ cap, removes introns and adds a poly(A) tail. Histone mRNAs illustrate exceptions; this asks for standard steps, not universality.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "rna-processing:3",
+          "label": "RNA splicing",
+          "aliases": [
+            "splicing",
+            "intron removal"
+          ],
+          "A": 35,
+          "Y": 20,
+          "P": 25,
+          "rarity": 28.5,
+          "explanation": "Processing usually adds a 5′ cap, removes introns and adds a poly(A) tail. Histone mRNAs illustrate exceptions; this asks for standard steps, not universality.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        }
+      ]
+    },
+    {
+      "id": "standard-blots",
+      "text": "Name one of the three conventional Southern/Northern/Western blot methods for DNA, RNA or protein.",
+      "topics": [
+        "bio-research"
+      ],
+      "explanation": "Southern detects DNA, Northern RNA, and Western protein. Other named methods are outside this explicit three-method set.",
+      "scope": "Southern detects DNA, Northern RNA, and Western protein. Other named methods are outside this explicit three-method set.",
+      "references": [
+        "Kaplan Biochemistry pp.369–390; MileDown p.80"
+      ],
+      "answers": [
+        {
+          "id": "standard-blots:1",
+          "label": "Southern blot",
+          "aliases": [
+            "Southern blotting",
+            "Southern"
+          ],
+          "A": 25,
+          "Y": 20,
+          "P": 25,
+          "rarity": 23.5,
+          "explanation": "Southern detects DNA, Northern RNA, and Western protein. Other named methods are outside this explicit three-method set.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "standard-blots:2",
+          "label": "Northern blot",
+          "aliases": [
+            "Northern blotting",
+            "Northern"
+          ],
+          "A": 30,
+          "Y": 20,
+          "P": 25,
+          "rarity": 26.0,
+          "explanation": "Southern detects DNA, Northern RNA, and Western protein. Other named methods are outside this explicit three-method set.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "standard-blots:3",
+          "label": "Western blot",
+          "aliases": [
+            "Western blotting",
+            "Western",
+            "immunoblot"
+          ],
+          "A": 35,
+          "Y": 20,
+          "P": 25,
+          "rarity": 28.5,
+          "explanation": "Southern detects DNA, Northern RNA, and Western protein. Other named methods are outside this explicit three-method set.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        }
+      ]
+    },
+    {
+      "id": "hardy-weinberg",
+      "text": "Name an assumption of the standard Hardy–Weinberg equilibrium model.",
+      "topics": [
+        "genetics"
+      ],
+      "explanation": "The ideal model excludes forces that change allele frequencies. A very large population approximates negligible drift; random sampling and random mating are distinct.",
+      "scope": "The ideal model excludes forces that change allele frequencies. A very large population approximates negligible drift; random sampling and random mating are distinct.",
+      "references": [
+        "Kaplan Biology pp.725–738"
+      ],
+      "answers": [
+        {
+          "id": "hardy-weinberg:1",
+          "label": "Random mating",
+          "aliases": [],
+          "A": 25,
+          "Y": 20,
+          "P": 25,
+          "rarity": 23.5,
+          "explanation": "The ideal model excludes forces that change allele frequencies. A very large population approximates negligible drift; random sampling and random mating are distinct.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "hardy-weinberg:2",
+          "label": "No mutation",
+          "aliases": [
+            "absence of mutation"
+          ],
+          "A": 30,
+          "Y": 20,
+          "P": 25,
+          "rarity": 26.0,
+          "explanation": "The ideal model excludes forces that change allele frequencies. A very large population approximates negligible drift; random sampling and random mating are distinct.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "hardy-weinberg:3",
+          "label": "No migration",
+          "aliases": [
+            "no gene flow",
+            "absence of migration"
+          ],
+          "A": 35,
+          "Y": 20,
+          "P": 25,
+          "rarity": 28.5,
+          "explanation": "The ideal model excludes forces that change allele frequencies. A very large population approximates negligible drift; random sampling and random mating are distinct.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "hardy-weinberg:4",
+          "label": "No natural selection",
+          "aliases": [
+            "absence of natural selection"
+          ],
+          "A": 40,
+          "Y": 20,
+          "P": 25,
+          "rarity": 31.0,
+          "explanation": "The ideal model excludes forces that change allele frequencies. A very large population approximates negligible drift; random sampling and random mating are distinct.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "hardy-weinberg:5",
+          "label": "Infinitely large population",
+          "aliases": [
+            "very large population",
+            "no genetic drift",
+            "absence of genetic drift"
+          ],
+          "A": 45,
+          "Y": 20,
+          "P": 25,
+          "rarity": 33.5,
+          "explanation": "The ideal model excludes forces that change allele frequencies. A very large population approximates negligible drift; random sampling and random mating are distinct.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        }
+      ]
+    },
+    {
+      "id": "cell-cycle",
+      "text": "Name a mammalian cell-cycle phase, including the G0 quiescent state.",
+      "topics": [
+        "reproduction"
+      ],
+      "explanation": "DNA replication occurs in S. G0 is quiescence. Individual mitotic stages are not additional cell-cycle phases for this question.",
+      "scope": "DNA replication occurs in S. G0 is quiescence. Individual mitotic stages are not additional cell-cycle phases for this question.",
+      "references": [
+        "Kaplan Biology pp.143–157,187"
+      ],
+      "answers": [
+        {
+          "id": "cell-cycle:1",
+          "label": "G1",
+          "aliases": [
+            "G1 phase"
+          ],
+          "A": 25,
+          "Y": 20,
+          "P": 25,
+          "rarity": 23.5,
+          "explanation": "DNA replication occurs in S. G0 is quiescence. Individual mitotic stages are not additional cell-cycle phases for this question.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "cell-cycle:2",
+          "label": "S",
+          "aliases": [
+            "S phase",
+            "synthesis phase"
+          ],
+          "A": 30,
+          "Y": 20,
+          "P": 25,
+          "rarity": 26.0,
+          "explanation": "DNA replication occurs in S. G0 is quiescence. Individual mitotic stages are not additional cell-cycle phases for this question.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "cell-cycle:3",
+          "label": "G2",
+          "aliases": [
+            "G2 phase"
+          ],
+          "A": 35,
+          "Y": 20,
+          "P": 25,
+          "rarity": 28.5,
+          "explanation": "DNA replication occurs in S. G0 is quiescence. Individual mitotic stages are not additional cell-cycle phases for this question.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "cell-cycle:4",
+          "label": "M",
+          "aliases": [
+            "M phase",
+            "mitotic phase"
+          ],
+          "A": 40,
+          "Y": 20,
+          "P": 25,
+          "rarity": 31.0,
+          "explanation": "DNA replication occurs in S. G0 is quiescence. Individual mitotic stages are not additional cell-cycle phases for this question.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "cell-cycle:5",
+          "label": "G0",
+          "aliases": [
+            "G0 phase",
+            "quiescence"
+          ],
+          "A": 45,
+          "Y": 20,
+          "P": 25,
+          "rarity": 33.5,
+          "explanation": "DNA replication occurs in S. G0 is quiescence. Individual mitotic stages are not additional cell-cycle phases for this question.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        }
+      ]
+    },
+    {
+      "id": "heart-valves",
+      "text": "Name one of the four human heart valves.",
+      "topics": [
+        "circulation"
+      ],
+      "explanation": "Tricuspid/mitral are AV valves; pulmonary/aortic are semilunar valves.",
+      "scope": "Tricuspid/mitral are AV valves; pulmonary/aortic are semilunar valves.",
+      "references": [
+        "Kaplan Biology pp.428–448; MileDown p.77"
+      ],
+      "answers": [
+        {
+          "id": "heart-valves:1",
+          "label": "Tricuspid valve",
+          "aliases": [
+            "tricuspid"
+          ],
+          "A": 25,
+          "Y": 20,
+          "P": 25,
+          "rarity": 23.5,
+          "explanation": "Tricuspid/mitral are AV valves; pulmonary/aortic are semilunar valves.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "heart-valves:2",
+          "label": "Pulmonary valve",
+          "aliases": [
+            "pulmonic valve",
+            "pulmonary semilunar valve"
+          ],
+          "A": 30,
+          "Y": 20,
+          "P": 25,
+          "rarity": 26.0,
+          "explanation": "Tricuspid/mitral are AV valves; pulmonary/aortic are semilunar valves.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "heart-valves:3",
+          "label": "Mitral valve",
+          "aliases": [
+            "bicuspid valve",
+            "mitral"
+          ],
+          "A": 35,
+          "Y": 20,
+          "P": 25,
+          "rarity": 28.5,
+          "explanation": "Tricuspid/mitral are AV valves; pulmonary/aortic are semilunar valves.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "heart-valves:4",
+          "label": "Aortic valve",
+          "aliases": [
+            "aortic semilunar valve"
+          ],
+          "A": 40,
+          "Y": 20,
+          "P": 25,
+          "rarity": 31.0,
+          "explanation": "Tricuspid/mitral are AV valves; pulmonary/aortic are semilunar valves.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        }
+      ]
+    },
+    {
+      "id": "small-intestine",
+      "text": "Name one of the three sections of the small intestine.",
+      "topics": [
+        "digestion"
+      ],
+      "explanation": "The order is duodenum, jejunum, ileum. Ileum is not ilium, a pelvic bone.",
+      "scope": "The order is duodenum, jejunum, ileum. Ileum is not ilium, a pelvic bone.",
+      "references": [
+        "Kaplan Biology pp.560–588"
+      ],
+      "answers": [
+        {
+          "id": "small-intestine:1",
+          "label": "Duodenum",
+          "aliases": [],
+          "A": 25,
+          "Y": 20,
+          "P": 25,
+          "rarity": 23.5,
+          "explanation": "The order is duodenum, jejunum, ileum. Ileum is not ilium, a pelvic bone.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "small-intestine:2",
+          "label": "Jejunum",
+          "aliases": [],
+          "A": 30,
+          "Y": 20,
+          "P": 25,
+          "rarity": 26.0,
+          "explanation": "The order is duodenum, jejunum, ileum. Ileum is not ilium, a pelvic bone.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "small-intestine:3",
+          "label": "Ileum",
+          "aliases": [],
+          "A": 35,
+          "Y": 20,
+          "P": 25,
+          "rarity": 28.5,
+          "explanation": "The order is duodenum, jejunum, ileum. Ileum is not ilium, a pelvic bone.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        }
+      ]
+    },
+    {
+      "id": "muscle-types",
+      "text": "Name a human muscle tissue type.",
+      "topics": [
+        "musculoskeletal"
+      ],
+      "explanation": "Skeletal/cardiac muscle are striated. Smooth muscle lacks striations. Innervation, nuclei and control also differ.",
+      "scope": "Skeletal/cardiac muscle are striated. Smooth muscle lacks striations. Innervation, nuclei and control also differ.",
+      "references": [
+        "Kaplan Biology pp.654–672"
+      ],
+      "answers": [
+        {
+          "id": "muscle-types:1",
+          "label": "Skeletal muscle",
+          "aliases": [
+            "skeletal"
+          ],
+          "A": 25,
+          "Y": 20,
+          "P": 25,
+          "rarity": 23.5,
+          "explanation": "Skeletal/cardiac muscle are striated. Smooth muscle lacks striations. Innervation, nuclei and control also differ.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "muscle-types:2",
+          "label": "Cardiac muscle",
+          "aliases": [
+            "cardiac"
+          ],
+          "A": 30,
+          "Y": 20,
+          "P": 25,
+          "rarity": 26.0,
+          "explanation": "Skeletal/cardiac muscle are striated. Smooth muscle lacks striations. Innervation, nuclei and control also differ.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "muscle-types:3",
+          "label": "Smooth muscle",
+          "aliases": [
+            "smooth"
+          ],
+          "A": 35,
+          "Y": 20,
+          "P": 25,
+          "rarity": 28.5,
+          "explanation": "Skeletal/cardiac muscle are striated. Smooth muscle lacks striations. Innervation, nuclei and control also differ.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        }
+      ]
+    },
+    {
+      "id": "antibody-isotypes",
+      "text": "Name one of the five human immunoglobulin isotypes.",
+      "topics": [
+        "immunity"
+      ],
+      "explanation": "Isotypes differ in constant heavy-chain regions and biological roles; subclasses are not separate answers.",
+      "scope": "Isotypes differ in constant heavy-chain regions and biological roles; subclasses are not separate answers.",
+      "references": [
+        "Kaplan Biology pp.513–536"
+      ],
+      "answers": [
+        {
+          "id": "antibody-isotypes:1",
+          "label": "IgG",
+          "aliases": [
+            "immunoglobulin G"
+          ],
+          "A": 25,
+          "Y": 20,
+          "P": 25,
+          "rarity": 23.5,
+          "explanation": "Isotypes differ in constant heavy-chain regions and biological roles; subclasses are not separate answers.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "antibody-isotypes:2",
+          "label": "IgA",
+          "aliases": [
+            "immunoglobulin A"
+          ],
+          "A": 30,
+          "Y": 20,
+          "P": 25,
+          "rarity": 26.0,
+          "explanation": "Isotypes differ in constant heavy-chain regions and biological roles; subclasses are not separate answers.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "antibody-isotypes:3",
+          "label": "IgM",
+          "aliases": [
+            "immunoglobulin M"
+          ],
+          "A": 35,
+          "Y": 20,
+          "P": 25,
+          "rarity": 28.5,
+          "explanation": "Isotypes differ in constant heavy-chain regions and biological roles; subclasses are not separate answers.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "antibody-isotypes:4",
+          "label": "IgE",
+          "aliases": [
+            "immunoglobulin E"
+          ],
+          "A": 40,
+          "Y": 20,
+          "P": 25,
+          "rarity": 31.0,
+          "explanation": "Isotypes differ in constant heavy-chain regions and biological roles; subclasses are not separate answers.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "antibody-isotypes:5",
+          "label": "IgD",
+          "aliases": [
+            "immunoglobulin D"
+          ],
+          "A": 45,
+          "Y": 20,
+          "P": 25,
+          "rarity": 33.5,
+          "explanation": "Isotypes differ in constant heavy-chain regions and biological roles; subclasses are not separate answers.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        }
+      ]
+    },
+    {
+      "id": "quantum-numbers",
+      "text": "Name one of the four quantum numbers describing an electron in an atom.",
+      "topics": [
+        "atomic"
+      ],
+      "explanation": "These specify shell, subshell, orbital orientation and spin projection. Quantum numbers are not literal electron paths.",
+      "scope": "These specify shell, subshell, orbital orientation and spin projection. Quantum numbers are not literal electron paths.",
+      "references": [
+        "Kaplan General Chemistry pp.89–106"
+      ],
+      "answers": [
+        {
+          "id": "quantum-numbers:1",
+          "label": "Principal quantum number",
+          "aliases": [
+            "n"
+          ],
+          "A": 25,
+          "Y": 20,
+          "P": 25,
+          "rarity": 23.5,
+          "explanation": "These specify shell, subshell, orbital orientation and spin projection. Quantum numbers are not literal electron paths.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "quantum-numbers:2",
+          "label": "Azimuthal quantum number",
+          "aliases": [
+            "angular momentum quantum number",
+            "orbital angular momentum quantum number",
+            "l"
+          ],
+          "A": 30,
+          "Y": 20,
+          "P": 25,
+          "rarity": 26.0,
+          "explanation": "These specify shell, subshell, orbital orientation and spin projection. Quantum numbers are not literal electron paths.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "quantum-numbers:3",
+          "label": "Magnetic quantum number",
+          "aliases": [
+            "ml",
+            "m_l"
+          ],
+          "A": 35,
+          "Y": 20,
+          "P": 25,
+          "rarity": 28.5,
+          "explanation": "These specify shell, subshell, orbital orientation and spin projection. Quantum numbers are not literal electron paths.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "quantum-numbers:4",
+          "label": "Spin quantum number",
+          "aliases": [
+            "ms",
+            "m_s"
+          ],
+          "A": 40,
+          "Y": 20,
+          "P": 25,
+          "rarity": 31.0,
+          "explanation": "These specify shell, subshell, orbital orientation and spin projection. Quantum numbers are not literal electron paths.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        }
+      ]
+    },
+    {
+      "id": "thermo-processes",
+      "text": "Name a standard thermodynamic process defined by constant temperature, pressure, volume, or zero heat transfer.",
+      "topics": [
+        "thermo-kinetics"
+      ],
+      "explanation": "Isothermal: constant T; isobaric: P; isochoric: V; adiabatic: Q=0. Adiabatic does not mean constant temperature.",
+      "scope": "Isothermal: constant T; isobaric: P; isochoric: V; adiabatic: Q=0. Adiabatic does not mean constant temperature.",
+      "references": [
+        "Kaplan General Chemistry pp.386–440"
+      ],
+      "answers": [
+        {
+          "id": "thermo-processes:1",
+          "label": "Isothermal",
+          "aliases": [
+            "isothermal process"
+          ],
+          "A": 25,
+          "Y": 20,
+          "P": 25,
+          "rarity": 23.5,
+          "explanation": "Isothermal: constant T; isobaric: P; isochoric: V; adiabatic: Q=0. Adiabatic does not mean constant temperature.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "thermo-processes:2",
+          "label": "Isobaric",
+          "aliases": [
+            "isobaric process"
+          ],
+          "A": 30,
+          "Y": 20,
+          "P": 25,
+          "rarity": 26.0,
+          "explanation": "Isothermal: constant T; isobaric: P; isochoric: V; adiabatic: Q=0. Adiabatic does not mean constant temperature.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "thermo-processes:3",
+          "label": "Isochoric",
+          "aliases": [
+            "isovolumetric",
+            "isochoric process"
+          ],
+          "A": 35,
+          "Y": 20,
+          "P": 25,
+          "rarity": 28.5,
+          "explanation": "Isothermal: constant T; isobaric: P; isochoric: V; adiabatic: Q=0. Adiabatic does not mean constant temperature.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "thermo-processes:4",
+          "label": "Adiabatic",
+          "aliases": [
+            "adiabatic process"
+          ],
+          "A": 40,
+          "Y": 20,
+          "P": 25,
+          "rarity": 31.0,
+          "explanation": "Isothermal: constant T; isobaric: P; isochoric: V; adiabatic: Q=0. Adiabatic does not mean constant temperature.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        }
+      ]
+    },
+    {
+      "id": "concentration-measures",
+      "text": "Name a common concentration measure used in introductory chemistry.",
+      "topics": [
+        "solutions"
+      ],
+      "explanation": "Molarity uses solution volume; molality uses solvent mass. Normality depends on the reaction and equivalents.",
+      "scope": "Molarity uses solution volume; molality uses solvent mass. Normality depends on the reaction and equivalents.",
+      "references": [
+        "Kaplan General Chemistry pp.520–565"
+      ],
+      "answers": [
+        {
+          "id": "concentration-measures:1",
+          "label": "Molarity",
+          "aliases": [
+            "molar concentration"
+          ],
+          "A": 25,
+          "Y": 20,
+          "P": 25,
+          "rarity": 23.5,
+          "explanation": "Molarity uses solution volume; molality uses solvent mass. Normality depends on the reaction and equivalents.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "concentration-measures:2",
+          "label": "Molality",
+          "aliases": [
+            "molal concentration"
+          ],
+          "A": 30,
+          "Y": 20,
+          "P": 25,
+          "rarity": 26.0,
+          "explanation": "Molarity uses solution volume; molality uses solvent mass. Normality depends on the reaction and equivalents.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "concentration-measures:3",
+          "label": "Mole fraction",
+          "aliases": [],
+          "A": 35,
+          "Y": 20,
+          "P": 25,
+          "rarity": 28.5,
+          "explanation": "Molarity uses solution volume; molality uses solvent mass. Normality depends on the reaction and equivalents.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "concentration-measures:4",
+          "label": "Mass percent",
+          "aliases": [
+            "mass percentage",
+            "percent by mass"
+          ],
+          "A": 40,
+          "Y": 20,
+          "P": 25,
+          "rarity": 31.0,
+          "explanation": "Molarity uses solution volume; molality uses solvent mass. Normality depends on the reaction and equivalents.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "concentration-measures:5",
+          "label": "Normality",
+          "aliases": [
+            "equivalent concentration"
+          ],
+          "A": 45,
+          "Y": 20,
+          "P": 25,
+          "rarity": 33.5,
+          "explanation": "Molarity uses solution volume; molality uses solvent mass. Normality depends on the reaction and equivalents.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        }
+      ]
+    },
+    {
+      "id": "vector-quantities",
+      "text": "Name a vector quantity commonly used in mechanics.",
+      "topics": [
+        "mechanics"
+      ],
+      "explanation": "Vectors have magnitude and direction. Speed, distance, energy and work are scalars; torque is not an energy despite matching units.",
+      "scope": "Vectors have magnitude and direction. Speed, distance, energy and work are scalars; torque is not an energy despite matching units.",
+      "references": [
+        "Kaplan Physics pp.70–119"
+      ],
+      "answers": [
+        {
+          "id": "vector-quantities:1",
+          "label": "Displacement",
+          "aliases": [],
+          "A": 25,
+          "Y": 20,
+          "P": 25,
+          "rarity": 23.5,
+          "explanation": "Vectors have magnitude and direction. Speed, distance, energy and work are scalars; torque is not an energy despite matching units.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "vector-quantities:2",
+          "label": "Velocity",
+          "aliases": [],
+          "A": 30,
+          "Y": 20,
+          "P": 25,
+          "rarity": 26.0,
+          "explanation": "Vectors have magnitude and direction. Speed, distance, energy and work are scalars; torque is not an energy despite matching units.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "vector-quantities:3",
+          "label": "Acceleration",
+          "aliases": [],
+          "A": 35,
+          "Y": 20,
+          "P": 25,
+          "rarity": 28.5,
+          "explanation": "Vectors have magnitude and direction. Speed, distance, energy and work are scalars; torque is not an energy despite matching units.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "vector-quantities:4",
+          "label": "Force",
+          "aliases": [],
+          "A": 40,
+          "Y": 20,
+          "P": 25,
+          "rarity": 31.0,
+          "explanation": "Vectors have magnitude and direction. Speed, distance, energy and work are scalars; torque is not an energy despite matching units.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "vector-quantities:5",
+          "label": "Linear momentum",
+          "aliases": [
+            "momentum"
+          ],
+          "A": 45,
+          "Y": 20,
+          "P": 25,
+          "rarity": 33.5,
+          "explanation": "Vectors have magnitude and direction. Speed, distance, energy and work are scalars; torque is not an energy despite matching units.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "vector-quantities:6",
+          "label": "Angular momentum",
+          "aliases": [],
+          "A": 50,
+          "Y": 20,
+          "P": 25,
+          "rarity": 36.0,
+          "explanation": "Vectors have magnitude and direction. Speed, distance, energy and work are scalars; torque is not an energy despite matching units.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "vector-quantities:7",
+          "label": "Torque",
+          "aliases": [
+            "moment of force"
+          ],
+          "A": 55,
+          "Y": 20,
+          "P": 25,
+          "rarity": 38.5,
+          "explanation": "Vectors have magnitude and direction. Speed, distance, energy and work are scalars; torque is not an energy despite matching units.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        }
+      ]
+    },
+    {
+      "id": "bernoulli-terms",
+      "text": "Name a pressure contribution in the standard Bernoulli equation.",
+      "topics": [
+        "fluids"
+      ],
+      "explanation": "The pressure-form terms are P, ρv²/2 and ρgh. This model assumes steady, incompressible flow with appropriate negligible losses.",
+      "scope": "The pressure-form terms are P, ρv²/2 and ρgh. This model assumes steady, incompressible flow with appropriate negligible losses.",
+      "references": [
+        "Kaplan Physics pp.247–264"
+      ],
+      "answers": [
+        {
+          "id": "bernoulli-terms:1",
+          "label": "Static pressure",
+          "aliases": [
+            "pressure term"
+          ],
+          "A": 25,
+          "Y": 20,
+          "P": 25,
+          "rarity": 23.5,
+          "explanation": "The pressure-form terms are P, ρv²/2 and ρgh. This model assumes steady, incompressible flow with appropriate negligible losses.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "bernoulli-terms:2",
+          "label": "Dynamic pressure",
+          "aliases": [
+            "kinetic pressure"
+          ],
+          "A": 30,
+          "Y": 20,
+          "P": 25,
+          "rarity": 26.0,
+          "explanation": "The pressure-form terms are P, ρv²/2 and ρgh. This model assumes steady, incompressible flow with appropriate negligible losses.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "bernoulli-terms:3",
+          "label": "Hydrostatic pressure",
+          "aliases": [
+            "gravitational pressure"
+          ],
+          "A": 35,
+          "Y": 20,
+          "P": 25,
+          "rarity": 28.5,
+          "explanation": "The pressure-form terms are P, ρv²/2 and ρgh. This model assumes steady, incompressible flow with appropriate negligible losses.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        }
+      ]
+    },
+    {
+      "id": "rlc-elements",
+      "text": "Name one of the three passive element types in an RLC circuit.",
+      "topics": [
+        "electricity"
+      ],
+      "explanation": "RLC refers to resistance, inductance and capacitance. These element types store or dissipate energy differently.",
+      "scope": "RLC refers to resistance, inductance and capacitance. These element types store or dissipate energy differently.",
+      "references": [
+        "Kaplan Physics pp.354–390"
+      ],
+      "answers": [
+        {
+          "id": "rlc-elements:1",
+          "label": "Resistor",
+          "aliases": [],
+          "A": 25,
+          "Y": 20,
+          "P": 25,
+          "rarity": 23.5,
+          "explanation": "RLC refers to resistance, inductance and capacitance. These element types store or dissipate energy differently.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "rlc-elements:2",
+          "label": "Inductor",
+          "aliases": [],
+          "A": 30,
+          "Y": 20,
+          "P": 25,
+          "rarity": 26.0,
+          "explanation": "RLC refers to resistance, inductance and capacitance. These element types store or dissipate energy differently.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "rlc-elements:3",
+          "label": "Capacitor",
+          "aliases": [],
+          "A": 35,
+          "Y": 20,
+          "P": 25,
+          "rarity": 28.5,
+          "explanation": "RLC refers to resistance, inductance and capacitance. These element types store or dissipate energy differently.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        }
+      ]
+    },
+    {
+      "id": "heat-transfer",
+      "text": "Name a mode of heat transfer.",
+      "topics": [
+        "physics-thermo"
+      ],
+      "explanation": "Conduction uses microscopic interactions, convection bulk fluid movement, and radiation electromagnetic waves.",
+      "scope": "Conduction uses microscopic interactions, convection bulk fluid movement, and radiation electromagnetic waves.",
+      "references": [
+        "Kaplan Physics pp.192–210"
+      ],
+      "answers": [
+        {
+          "id": "heat-transfer:1",
+          "label": "Conduction",
+          "aliases": [],
+          "A": 25,
+          "Y": 20,
+          "P": 25,
+          "rarity": 23.5,
+          "explanation": "Conduction uses microscopic interactions, convection bulk fluid movement, and radiation electromagnetic waves.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "heat-transfer:2",
+          "label": "Convection",
+          "aliases": [],
+          "A": 30,
+          "Y": 20,
+          "P": 25,
+          "rarity": 26.0,
+          "explanation": "Conduction uses microscopic interactions, convection bulk fluid movement, and radiation electromagnetic waves.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        },
+        {
+          "id": "heat-transfer:3",
+          "label": "Radiation",
+          "aliases": [
+            "thermal radiation"
+          ],
+          "A": 35,
+          "Y": 20,
+          "P": 25,
+          "rarity": 28.5,
+          "explanation": "Conduction uses microscopic interactions, convection bulk fluid movement, and radiation electromagnetic waves.",
+          "confidence": "Source-backed introductory set; rarity is an initial estimate"
+        }
+      ]
+    }
+  ]
+}
