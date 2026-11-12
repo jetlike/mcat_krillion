@@ -19,10 +19,16 @@ export class RoomStore {
  advance(r){const alive=r.players.filter(p=>p.lives>0&&!p.left);if(!alive.length)return;do{r.turn=(r.turn+1)%r.players.length;}while(r.players[r.turn].lives<=0||r.players[r.turn].left);}
  finish(r,reason){r.phase='finished';r.paused=false;r.result=reason;r.endedAt=this.now();this.touch(r,false);}
  ending(r){const alive=r.players.filter(p=>p.lives>0&&!p.left);if(!alive.length){this.finish(r,'Game over — no lives remaining.');return true;}if(r.initialPlayers>1&&alive.length===1){this.finish(r,alive[0].name+' wins!');return true;}return false;}
- choose(r){const eligible=r.pool.filter(p=>p.answers.some(a=>!r.usedByPrompt.get(p.id)?.has(a.id)));if(!eligible.length){this.finish(r,'Selected content completed — every available answer has been used.');return false;}const fresh=eligible.filter(p=>!r.cycle.has(p.id));let choices=fresh.length?fresh:eligible;if(!fresh.length)r.cycle.clear();const nonrepeat=choices.filter(p=>p.id!==r.q?.id);if(nonrepeat.length)choices=nonrepeat;r.q=choices[randomInt(choices.length)];r.cycle.add(r.q.id);r.round++;if(!r.encountered.includes(r.q.id))r.encountered.push(r.q.id);r.usedByPrompt.set(r.q.id,r.usedByPrompt.get(r.q.id)||new Set());return true;}
+ choose(r){const eligible=r.pool.filter(p=>p.answers.some(a=>!r.usedByPrompt.get(p.id)?.has(a.id)));if(!eligible.length){this.finish(r,'Selected content completed — every available answer has been used.');return false;}const fresh=eligible.filter(p=>!r.cycle.has(p.id));let choices=fresh.length?fresh:eligible;if(!fresh.length)r.cycle.clear();const nonrepeat=choices.filter(p=>p.id!==r.q?.id);if(nonrepeat.length)choices=nonrepeat;r.q=choices[randomInt(choices.length)];r.cycle.add(r.q.id);r.answeredThisVisit=new Set();r.round++;if(!r.encountered.includes(r.q.id))r.encountered.push(r.q.id);r.usedByPrompt.set(r.q.id,r.usedByPrompt.get(r.q.id)||new Set());return true;}
+ completeTurn(r,p){
+  r.answeredThisVisit.add(p.id);this.advance(r);
+  const everyoneAnswered=r.players.filter(p=>p.lives>0&&!p.left).every(p=>r.answeredThisVisit.has(p.id));
+  if(everyoneAnswered||r.q.answers.every(a=>r.usedByPrompt.get(r.q.id).has(a.id)))this.next(r);
+  else{while(r.answeredThisVisit.has(r.players[r.turn].id))this.advance(r);this.beginTurn(r);this.touch(r,false);}
+ }
  next(r){if(this.choose(r))this.beginTurn(r);this.touch(r,false);}
  event(r,p,data){const e={id:randomUUID(),at:this.now(),playerId:p.id,player:p.name,promptId:r.q.id,round:r.round,responseMs:Math.max(0,this.elapsed(r)),assisted:r.assisted.has(p.id+':'+r.q.id),...data};r.events.push(e);this.history?.attempt(r,p,e);return e;}
- expire(r){if(r.phase!=='playing'||r.paused||r.mode==='practice'||this.now()<r.deadline)return false;const p=r.players[r.turn];p.remaining=0;p.lives--;const e=this.event(r,p,{type:'life-lost',outcome:'timeout',submitted:'',remainingLives:p.lives,answerBank:r.q.answers,prompt:r.q.text});r.lastNotice=e;if(this.ending(r))return true;if(p.lives>0)p.remaining=r.duration*1000;this.advance(r);this.next(r);return true;}
+ expire(r){if(r.phase!=='playing'||r.paused||r.mode==='practice'||this.now()<r.deadline)return false;const p=r.players[r.turn];p.remaining=0;p.lives--;const e=this.event(r,p,{type:'life-lost',outcome:'timeout',submitted:'',remainingLives:p.lives,answerBank:r.q.answers,prompt:r.q.text});r.lastNotice=e;if(this.ending(r))return true;if(p.lives>0)p.remaining=r.duration*1000;this.completeTurn(r,p);return true;}
  action(code,token,data){const r=this.get(code),p=this.auth(r,token);this.expire(r);const requestId=data.requestId;if(requestId&&r.receipts.has(p.id+':'+requestId)){r.actionResult=r.receipts.get(p.id+':'+requestId);return r;}r.actionResult=null;const host=p.id===r.host;
  switch(data.action){
  case 'stay':this.touch(r);break;
@@ -32,7 +38,7 @@ export class RoomStore {
   if(r.phase!=='playing'||r.paused)this.fail('The game is not accepting answers.');if(p.id!==r.players[r.turn].id)this.fail('Wait for your turn.');if(data.version!==r.version)this.fail('The game moved on. Please use your current turn.');if(typeof data.answer!=='string'||!data.answer.trim()||data.answer.length>180)this.fail('Enter an answer up to 180 characters.');
   const result=matchAnswer(r.q,data.answer,r.usedByPrompt.get(r.q.id));const a=result.answer;const correct=result.status==='correct';const e=this.event(r,p,{type:'answer',outcome:correct?'correct':result.status==='duplicate'?'duplicate':'invalid',submitted:data.answer.trim(),answer:correct?a.label:undefined,answerId:correct?a.id:undefined,rarity:correct?a.rarity:0,bonus:correct?timeBonus(a.rarity):0,extraLives:correct?extraLife(a.rarity):0,method:result.method,message:result.message});
   r.actionResult={...e,status:result.status};if(requestId)r.receipts.set(p.id+':'+requestId,r.actionResult);
-  if(correct){this.saveTime(r);p.remaining+=e.bonus*1000;p.lives+=e.extraLives;r.usedByPrompt.get(r.q.id).add(a.id);this.advance(r);if(r.q.answers.every(a=>r.usedByPrompt.get(r.q.id).has(a.id))){this.next(r);}else this.beginTurn(r);}
+  if(correct){this.saveTime(r);p.remaining+=e.bonus*1000;p.lives+=e.extraLives;r.usedByPrompt.get(r.q.id).add(a.id);this.completeTurn(r,p);}
   this.touch(r);break;}
  case 'bank':{
   if(!r.matchId)this.fail('Start a game first.');const promptId=data.promptId||r.q?.id;if(!r.pool.some(q=>q.id===promptId))this.fail('Prompt is not in this match.');r.assisted.add(p.id+':'+promptId);this.history?.assist(r,p,promptId);this.touch(r,false);break;}
@@ -42,7 +48,7 @@ export class RoomStore {
  case 'skip':if(!host||r.phase!=='playing')this.fail('Only the host can move to another prompt.');this.saveTime(r);this.next(r);this.touch(r);break;
  case 'leave':{
   p.left=true;p.lives=0;if(r.host===p.id)r.host=r.players.find(x=>!x.left)?.id||null;
-  if(r.matchId&&['playing','review'].includes(r.phase)){if(!this.ending(r)){if(r.players[r.turn].id===p.id){this.advance(r);r.phase='playing';r.paused=false;this.next(r);}this.touch(r);}}else this.touch(r);
+  if(r.matchId&&['playing','review'].includes(r.phase)){if(!this.ending(r)){if(r.players[r.turn].id===p.id){r.phase='playing';r.paused=false;this.completeTurn(r,p);}this.touch(r);}}else this.touch(r);
   if(r.players.every(p=>p.left)){if(r.matchId&&r.phase!=='finished')this.finish(r,'Everyone left the room.');this.rooms.delete(r.code);}break;}
  default:this.fail('Unknown action.');}
  return r;

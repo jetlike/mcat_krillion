@@ -15,5 +15,24 @@ test('strict >90 life threshold and no cap; idempotent replay awards exactly onc
 test('simultaneous/stale submissions cannot reward twice or act for wrong player',()=>{const x=setup(),r=x.r,v=r.version,a=r.q.answers[0].label;x.answer(a);const events=r.events.length;assert.throws(()=>x.s.action(r.code,x.players[0].token,{action:'answer',answer:a,version:v}));assert.throws(()=>x.s.action(r.code,x.players[1].token,{action:'answer',answer:a,version:v}));assert.equal(r.events.length,events);});
 test('pause excludes discussion from response time; reconnect snapshot preserves balances',()=>{const x=setup(1),r=x.r;x.tick(4000);x.act('pause');x.tick(100000);assert(!x.s.expire(r));assert.equal(x.s.view(r).players[0].remaining,26000);x.act('pause');x.tick(1000);x.answer(r.q.answers[0].label);assert.equal(r.events[0].responseMs,5000);});
 test('banks and personal review snapshot never change clocks/rewards/phase; host room review pauses',()=>{const x=setup(),r=x.r,deadline=r.deadline;x.tick(2000);x.act('bank',{promptId:r.q.id},x.players[1]);x.s.review(r);assert.equal(r.deadline,deadline);assert.equal(r.phase,'playing');assert.equal(r.events.length,0);assert.throws(()=>x.act('review',{},x.players[1]));x.act('review',{},x.players[0]);assert.equal(r.phase,'review');assert.equal(r.players[0].remaining,28000);x.tick(60000);assert(!x.s.expire(r));x.act('next',{},x.players[0]);assert.equal(r.phase,'playing');assert.equal(r.players[0].remaining,28000);});
-test('recycling preserves used IDs and personal clocks; all eligible answers gives completion',()=>{const x=setup(1,3,'practice'),r=x.r;const first=r.q,answer=first.answers[0];x.answer(answer.label);x.act('skip');x.act('skip');assert.equal(r.q.id,first.id);x.answer(answer.label);assert.equal(r.events.at(-1).outcome,'duplicate');for(let i=0;i<20&&r.phase==='playing';i++){const a=r.q.answers.find(a=>!r.usedByPrompt.get(r.q.id).has(a.id));x.answer(a.label);}assert.equal(r.phase,'finished');assert.match(r.result,/content completed/);assert.equal(r.events.filter(e=>e.outcome==='correct').length,5);});
+test('solo advances after each correct answer, visits all prompts before recycling, keeps used aliases blocked',()=>{
+ const third=q('three',[['f','Protons',20],['g','Positrons',30]]),x=setup(1,3,'practice',[...pool,third]),r=x.r;
+ const first=r.q,answer=first.answers[0],seen=new Set([first.id]);x.answer('not an answer');assert.equal(r.q.id,first.id);
+ for(let i=0;i<2;i++){x.answer(r.q.answers[0].label);assert(!seen.has(r.q.id));seen.add(r.q.id);}
+ assert.equal(seen.size,3);x.answer(r.q.answers[0].label);assert.equal(r.round,4);
+ while(r.q.id!==first.id)x.act('skip');const round=r.round;x.answer(answer.aliases[0]||answer.label);assert.equal(r.events.at(-1).outcome,'duplicate');assert.equal(r.round,round);
+ for(let i=0;i<20&&r.phase==='playing';i++){const a=r.q.answers.find(a=>!r.usedByPrompt.get(r.q.id).has(a.id));x.answer(a.label);}
+ assert.equal(r.phase,'finished');assert.match(r.result,/content completed/);assert.equal(r.events.filter(e=>e.outcome==='correct').length,7);
+});
+test('multiplayer advances after one correct answer per active player and retains personal balances',()=>{
+ const many=pool.map(p=>({...p,answers:[...p.answers,...['extra','another'].map(s=>({id:p.id+s,label:p.id+s,rarity:20,aliases:[]}))]}));const x=setup(3,3,'party',many),r=x.r,first=r.q;
+ for(let i=0;i<3;i++){assert.equal(r.turn,i);x.tick(1000);x.answer(first.answers[i].label);assert.equal(r.players[i].remaining,29000+timeBonus(first.answers[i].rarity)*1000);if(i<2)assert.equal(r.q.id,first.id);}
+ assert.notEqual(r.q.id,first.id);assert.equal(r.round,2);assert.equal(r.turn,0);assert.equal(r.usedByPrompt.get(first.id).size,3);assert(first.answers.length>3);
+});
+test('timeout uses that player’s opportunity without skipping the other players on the prompt',()=>{
+ const x=setup(3),r=x.r,first=r.q.id;x.tick(30000);x.s.expire(r);assert.equal(r.q.id,first);assert.equal(r.turn,1);x.answer(r.q.answers[0].label);assert.equal(r.q.id,first);x.answer(r.q.answers.find(a=>!r.usedByPrompt.get(r.q.id).has(a.id)).label);assert.notEqual(r.q.id,first);
+});
+test('players leaving do not prevent completion of a prompt’s remaining turns',()=>{
+ const x=setup(4,3,'party',[pool[0]]),r=x.r;x.answer('H bonds');x.act('leave',{},x.players[2]);assert.equal(r.turn,1);x.answer('Covalent bonds');assert.equal(r.turn,3);x.answer('Ionic bonds');assert.equal(r.phase,'finished');
+});
 test('leaving transfers host; all players leaving cleans the room',()=>{const x=setup(3);x.act('leave',{},x.players[0]);assert.equal(x.r.host,x.players[1].id);x.act('leave',{},x.players[1]);assert.equal(x.r.phase,'finished');x.act('leave',{},x.players[2]);assert(!x.s.rooms.has(x.r.code));});
